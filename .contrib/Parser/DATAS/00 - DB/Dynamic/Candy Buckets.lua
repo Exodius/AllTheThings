@@ -11,7 +11,7 @@ local CANDY_BUCKET_OBJECT_DATA = {
 		ru = "Кулек конфет",
 		ko = "사탕 바구니",
 		cn = "糖罐",
-		-- tw = "Candy Bucket",
+		tw = "糖果桶",
 	},
 };
 
