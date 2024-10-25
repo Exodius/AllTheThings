@@ -240,6 +240,10 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		i(128424, {	-- Brightpaw (PET!)
 			["timeline"] = { ADDED_6_2_3 },
 		}),
+		i(229366, {	-- Brrrgl (PET!)
+			["description"] = "Available with the purchase of an Ice Murloc Funko Pop from the Blizzard Gear Store to a U.S. mailing address. The code will be emailed and can be redeemed on Battle.net or the launcher.",
+			["timeline"] = { ADDED_11_0_5 },
+		}),
 		i(92707, {	-- Cinder Kitten (PET!)
 			["timeline"] = { ADDED_5_1_0 },
 		}),

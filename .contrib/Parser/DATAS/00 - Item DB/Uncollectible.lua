@@ -12,13 +12,14 @@ i(828);		-- Small Blue Pouch
 i(1725);	-- Large Knapsack
 i(5571);	-- Small Black Pouch
 i(5572);	-- Small Green Pouch
-i(3914);	-- neyman's Backpack \\ Journeyman's Backpack
+i(3914);	-- Journeyman's Backpack
+i(44435);	-- Windle's Lighter
 i(102144);	-- Kor'kron Cage Key
 i(180786);	-- Empty Binding
 -- Legion
-i(139398);	-- Pant Loaf \\ Loaf
-i(147348);	-- Bulky Armor Set \\ y Armor Set
-i(147349);	-- Spiked Armor Set \\ ed Armor Set
+i(139398);	-- Pant Loaf
+i(147348);	-- Bulky Armor Set
+i(147349);	-- Spiked Armor Set
 -- BFA Minor Visions
 i(169294);	-- Resilient Soul
 i(173888);	-- Shard of Self Sacrifice \\ Lingering Soul

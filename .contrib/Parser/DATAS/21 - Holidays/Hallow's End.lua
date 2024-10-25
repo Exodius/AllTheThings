@@ -3146,7 +3146,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 				}),
 				candybucket(84564, {	-- Candy Bucket — Isle of Dorn, Dornogal
 					["provider"] = { "o", 464911 },	-- Candy Bucket
-					["coord"] = { 45, 47.3, ISLE_OF_DORN },
+					["coord"] = { 45, 47.3, DORNOGAL },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				candybucket(84566, {	-- Candy Bucket — Isle of Dorn, Freywold Village

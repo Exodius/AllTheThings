@@ -200,7 +200,6 @@ root(ROOTS.Unsorted, {
 				i(226081),	-- Timely Tourist's Shoulderguards
 				i(226083),	-- Timely Tourist's Bracers
 				i(226084),	-- Timely Tourist's Vest
-				i(226085),	-- Timely Tourist's Boots
 				i(226087),	-- Timely Tourist's Headgear
 				i(226090),	-- Timely Tourist's Sash
 				i(226092),	-- Timely Tourist's Robes

@@ -2579,6 +2579,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 						i(226064),	-- Timely Tourist's Beacon Staff
 						i(226082),	-- Timely Tourist's Belt
 						i(226091),	-- Timely Tourist's Bindings
+						i(226085),	-- Timely Tourist's Boots
 						i(226076),	-- Timely Tourist's Chainmail
 						i(226098),	-- Timely Tourist's Cord
 						i(226089),	-- Timely Tourist's Epaulets
