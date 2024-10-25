@@ -3291,14 +3291,14 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline
 		q(84282),	-- second WB kill of day/event or maybe Sha
 		q(84256),	-- third WB kill of day/event or maybe Archavon
 		q(85168),	-- fourth WB kill of day/event or mayba Kazzak
-		q(84629),	-- triggered with turnin of 'Meet and Greet' [84254] (Bronze Cel Token lockout?)
-		q(84630),	-- triggered with turnin of 'Shopping Spree!' [84489] (Bronze Cel Token lockout?)
-		q(84604),	-- triggered with turnin of 'Chromie's Codex' [82783] (Bronze Cel Token lockout?)
 		q(84878),	-- triggered with turnin of 'Chromie's Codex' [82783] (Bronze Cel Cache lockout?)
-		q(84606),	-- triggered with turnin of 'Timely Gate Crashers' [60215] (Bronze Cel Token lockout?)
 		q(84665),	-- triggered with turnin of 'Timely Gate Crashers' [60215] (Bronze Cel Cache lockout?)
 		q(86202, name(HEADERS.Item, 233014)),	-- opening first Bronze Celebration Cache of week
 		-- Warband weekly Bronze Celebration Tokens
+		q(84629),	-- triggered with turnin of 'Meet and Greet' [84254] (Bronze Cel Token lockout?)
+		q(84630),	-- triggered with turnin of 'Shopping Spree!' [84489] (Bronze Cel Token lockout?)
+		q(84604),	-- triggered with turnin of 'Chromie's Codex' [82783] (Bronze Cel Token lockout?)
+		q(84606),	-- triggered with turnin of 'Timely Gate Crashers' [60215] (Bronze Cel Token lockout?)
 		q(84596),	-- Spreading The Lights
 		q(84609),	-- Forge the Pact (All Pacts)
 		q(84610),	-- Theater Troupe
@@ -3307,6 +3307,7 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline
 		q(84614),	-- WB (Azj-Kahet)
 		q(84598),	-- Wax weekly quest
 		q(85833),	-- Precussive Archaeology
+		q(84608),	-- Token lock from 'An Original Path Through Time' [85947]
 		-- Blackrock Depths
 		q(86278),	-- High Interrogator Gerstahn (LFR)
 		q(86290),	-- High Interrogator Gerstahn (H)
