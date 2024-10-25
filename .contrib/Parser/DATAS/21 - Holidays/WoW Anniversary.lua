@@ -2576,12 +2576,14 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				["g"] = {
 					i(229355, {	-- Chromie's Premium Goodie Bag
 						i(226046),	-- Timely Tourist's Band
+						i(226064),	-- Timely Tourist's Beacon Staff
 						i(226082),	-- Timely Tourist's Belt
 						i(226091),	-- Timely Tourist's Bindings
 						i(226076),	-- Timely Tourist's Chainmail
 						i(226098),	-- Timely Tourist's Cord
 						i(226089),	-- Timely Tourist's Epaulets
 						i(226086),	-- Timely Tourist's Gloves
+						i(226072),	-- Timely Tourist's Legguards
 						i(226088),	-- Timely Tourist's Pants
 						i(226048),	-- Timely Tourist's Ring
 						i(226069),	-- Timely Tourist's Sabatons
@@ -3129,6 +3131,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 					i(227606),	-- Malevolent Gladiator's Leather Legguards
 					i(227622),	-- Malevolent Gladiator's Links of Cruelty
 					i(227630),	-- Malevolent Gladiator's Mooncloth Gloves
+					i(227633),	-- Malevolent Gladiator's Mooncloth Leggings
 					i(227651),	-- Malevolent Gladiator's Plate Legguards
 					i(227646),	-- Malevolent Gladiator's Ornamented Gloves
 					i(227649),	-- Malevolent Gladiator's Ornamented Legplates

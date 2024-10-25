@@ -185,14 +185,12 @@ root(ROOTS.Unsorted, {
 				i(226061),	-- Timely Tourist's Spade
 				i(226062),	-- Timely Tourist's Polearm
 				i(226063),	-- Timely Tourist's Drill-Tipped Stave
-				i(226064),	-- Timely Tourist's Beacon Staff
 				i(226065),	-- Timely Tourist's Lantern
 				i(226066),	-- Timely Tourist's Shield
 				i(226067),	-- Timely Tourist's Glaive
 				i(226068),	-- Timely Tourist's Breastplate
 				i(226070),	-- Timely Tourist's Gauntlets
 				i(226071),	-- Timely Tourist's Helm
-				i(226072),	-- Timely Tourist's Legguards
 				i(226073),	-- Timely Tourist's Pauldrons
 				i(226074),	-- Timely Tourist's Girdle
 				i(226075),	-- Timely Tourist's Vambraces
@@ -246,7 +244,6 @@ root(ROOTS.Unsorted, {
 				i(227595),	-- Red Crane Gauntlets
 				i(227596),	-- Red Crane Handwraps
 				i(227597),	-- Red Crane Legwraps
-				i(227633),	-- Malevolent Gladiator's Mooncloth Leggings
 			}),
 			filter(COSMETIC, {
 				i(229047),	-- Night Elf Crest
@@ -283,7 +280,6 @@ root(ROOTS.Unsorted, {
 				i(230039),	-- Prowler's Brick Shoulder Cape
 				i(230040),	-- Prowler's Camo Shoulder Cape
 				i(230041),	-- Prowler's Lively Shoulder Cape
-				i(230042),	-- Prowler's Faded Shoulder Cape
 				i(230043),	-- Prowler's Icy Shoulder Cape
 				i(230044),	-- Prowler's Pink Shoulder Cape
 				i(230045),	-- Prowler's Carrot Shoulder Cape
@@ -303,7 +299,6 @@ root(ROOTS.Unsorted, {
 				i(230060),	-- Prowler's Camo Cowl
 				i(230061),	-- Prowler's Brick Cowl
 				i(230062),	-- Prowler's Lively Cowl
-				i(230063),	-- Prowler's Faded Cowl
 				i(230064),	-- Prowler's Icy Cowl
 				i(230065),	-- Prowler's Pink Cowl
 				i(230066),	-- Prowler's Carrot Cowl
@@ -323,7 +318,6 @@ root(ROOTS.Unsorted, {
 				i(230080),	-- Prowler's Camo Mask
 				i(230081),	-- Prowler's Brick Mask
 				i(230082),	-- Prowler's Lively Mask
-				i(230083),	-- Prowler's Faded Mask
 				i(230084),	-- Prowler's Icy Mask
 				i(230085),	-- Prowler's Pink Mask
 				i(230086),	-- Prowler's Carrot Mask
@@ -343,7 +337,6 @@ root(ROOTS.Unsorted, {
 				i(230170),	-- Ensemble: Prowler's Camo Headgear
 				i(230171),	-- Ensemble: Prowler's Brick Headgear
 				i(230172),	-- Ensemble: Prowler's Lively Headgear
-				i(230173),	-- Ensemble: Prowler's Faded Headgear
 				i(230174),	-- Ensemble: Prowler's Icy Headgear
 				i(230175),	-- Ensemble: Prowler's Pink Headgear
 				i(230176),	-- Ensemble: Prowler's Carrot Headgear

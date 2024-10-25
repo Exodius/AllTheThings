@@ -931,6 +931,7 @@ q(85591)	-- Ensemble: Brunnhildar Scout's Kit
 q(85594)	-- Ensemble: Coldarra Spellbinder's Regalia
 q(85590)	-- Ensemble: Drakkari Stalker's Trappings
 q(85592)	-- Ensemble: Jotunheim Berserker's Battleplate
+q(85127)	-- Ensemble: Prowler's Faded Headgear
 q(85587)	-- Ensemble: Shadowmoon Warlock's Vestments
 q(85585)	-- Ensemble: Telhamat Anchorite's Raiment
 q(85593)	-- Ensemble: Ymirjar Deathbringer's Battleplate

@@ -32,7 +32,6 @@ local CANDY_AND_TOY_VENDOR_GROUPS = {
 		["cost"] = { { "i", 33226, 450 } },	-- 450x Tricky Treat
 		["sym"] = { { "fill" } },	-- simply fill this item
 	}),
-	-- This wasn't showing on WoWHead, might not be there yet?
 	i(187997, {	-- Eternal Heirloom Armor Casing
 		["timeline"] = { ADDED_9_1_5 },
 		["cost"] = { { "i", 33226, 450 } },	-- 450x Tricky Treat
@@ -103,6 +102,10 @@ local CANDY_AND_TOY_VENDOR_GROUPS = {
 	i(37585, {	-- Chewy Fel Taffy
 		["cost"] = { { "i", 33226, 2 }, },	-- 2x Tricky Treat
 	}),
+	iensemble(230173, {	-- Ensemble: Prowler's Faded Headgear
+		["timeline"] = { ADDED_11_0_5 },
+		["cost"] = { { "i", 33226, 150 }, },	-- 150x Tricky Treat
+	}),
 	i(128643, {	-- Exquisite Costume Set: "Deathwing"
 		["timeline"] = { ADDED_6_2_2 },
 		["cost"] = { { "i", 33226, 200 }, },	-- 200x Tricky Treat
@@ -144,6 +147,18 @@ local CANDY_AND_TOY_VENDOR_GROUPS = {
 	i(37011, {	-- Magic Broom (MOUNT!)
 		["cost"] = { { "i", 33226, 150 }, },	-- 150x Tricky Treat
 		["collectible"] = false,
+	}),
+	i(226427, {	-- Patched Harvester's Claw
+		["timeline"] = { ADDED_11_0_5 },
+		["cost"] = { { "i", 33226, 100 }, },	-- 100x Tricky Treat
+	}),
+	i(226453, {	-- Patched Harvest Golem's Post
+		["timeline"] = { ADDED_11_0_5 },
+		["cost"] = { { "i", 33226, 100 }, },	-- 100x Tricky Treat
+	}),
+	i(230042, {	-- Prowler's Faded Shoulder Cape
+		["timeline"] = { ADDED_11_0_5 },
+		["cost"] = { { "i", 33226, 50 }, },	-- 50x Tricky Treat
 	}),
 	i(37582, {	-- Pyroblast Cinnamon Ball
 		["cost"] = { { "i", 33226, 2 }, },	-- 2x Tricky Treat
@@ -929,6 +944,27 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 					i(37011, {	-- Magic Broom (MOUNT!)
 						["timeline"] = { ADDED_2_4_3 },
 						["collectible"] = false,
+					}),
+					i(226461, {	-- Patched Harvest Golem's Belt
+						["timeline"] = { ADDED_11_0_5 },
+					}),
+					i(226458, {	-- Patched Harvest Golem's Boots
+						["timeline"] = { ADDED_11_0_5 },
+					}),
+					i(226457, {	-- Patched Harvest Golem's Chest
+						["timeline"] = { ADDED_11_0_5 },
+					}),
+					i(226456, {	-- Patched Harvest Golem's Gloves
+						["timeline"] = { ADDED_11_0_5 },
+					}),
+					i(226690, {	-- Patched Harvest Golem's Head
+						["timeline"] = { ADDED_11_0_5 },
+					}),
+					i(226455, {	-- Patched Harvest Golem's Pants
+						["timeline"] = { ADDED_11_0_5 },
+					}),
+					i(226454, {	-- Patched Harvest Golem's Pauldrons
+						["timeline"] = { ADDED_11_0_5 },
 					}),
 					i(33154, {	-- Sinister Squashling (PET!)
 						["timeline"] = { ADDED_2_2_2 },
