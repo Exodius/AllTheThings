@@ -2590,6 +2590,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 						i(226093),	-- Timely Tourist's Sandals
 						i(226050),	-- Timely Tourist's Shawl
 						i(226168),	-- Timely Tourist's Spellblade
+						i(226057),	-- Timely Tourist's Sword
 					}),
 				},
 			})),

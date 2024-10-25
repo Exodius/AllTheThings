@@ -264,6 +264,9 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		pet(3175, {	-- Murkastrasza (PET!)
 			["timeline"] = { ADDED_10_2_0 },
 		}),
+		i(231294, {	-- Reven (PET!)
+			["timeline"] = { ADDED_11_0_5 },	-- Available through January 7, 2025
+		}),
 		i(151234, {	-- Shadow (PET!)
 			["timeline"] = { ADDED_7_3_0 },
 		}),
@@ -534,6 +537,9 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		}),
 		i(95474, {	-- Jewel of the Firelord
 			["timeline"] = { ADDED_5_4_0, REMOVED_8_3_0 },
+		}),
+		i(231290, {	-- Reven's Comfy Carrier
+			["timeline"] = { ADDED_11_0_5 },	-- Available through January 7, 2025
 		}),
 		i(188260, {	-- Ruby Wings of Awakening
 			["timeline"] = { ADDED_10_2_0 },

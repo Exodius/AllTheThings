@@ -178,7 +178,6 @@ root(ROOTS.Unsorted, {
 				i(226054),	-- Timely Tourist's Pummeler
 				i(226055),	-- Timely Tourist's Hammer
 				i(226056),	-- Timely Tourist's Blade
-				i(226057),	-- Timely Tourist's Sword
 				i(226058),	-- Timely Tourist's Sharpshooter
 				i(226059),	-- Timely Tourist's Torch
 				i(226060),	-- Timely Tourist's Waraxe
