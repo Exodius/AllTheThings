@@ -361,7 +361,7 @@ root(ROOTS.NeverImplemented, {
 				}),
 			}),
 			expansion(EXPANSION.TWW, {
-				expansion(EXPANSION.TWW, patch(0,01), {		
+				expansion(EXPANSION.TWW, patch(0,5), {
 					i(231344),	-- Obsidian Gladiator's Greatsword
 				}),
 			}),
