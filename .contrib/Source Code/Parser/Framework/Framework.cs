@@ -2227,13 +2227,16 @@ namespace ATT
                         if (ObjectDB.Any())
                         {
                             // Export the new format.
-                            var builder = new StringBuilder("-----------------------------------------------------\n--   O B J E C T   D A T A B A S E   M O D U L E   --\n-----------------------------------------------------\n");
+                            var dbbuilder = new StringBuilder("-----------------------------------------------------\n--   O B J E C T   D A T A B A S E   M O D U L E   --\n-----------------------------------------------------\n");
                             var keys = ObjectDB.Keys.ToList();
                             keys.Sort();
-                            builder.Append("local ObjectDB = ObjectDB; for objectID,objectData in pairs({").AppendLine();
+                            dbbuilder.Append("local ObjectDB = ObjectDB; for objectID,objectData in pairs({").AppendLine();
+                            var dynamicbuilder = new StringBuilder(dbbuilder.ToString());
                             foreach (var key in keys)
                             {
+                                // We export dynamic object data to a different file.
                                 Dictionary<string, object> objectData = ObjectDB[key];
+                                var builder = objectData.TryGetValue("dynamic", out bool isDynamic) && isDynamic ? dynamicbuilder : dbbuilder;
                                 builder.Append("\t[").Append(key).AppendLine("] = {");
 
                                 // Attempt to get the text locale data object.
@@ -2282,8 +2285,10 @@ namespace ATT
                                 }
                                 builder.AppendLine("\t},");
                             }
-                            builder.AppendLine("})").AppendLine("do ObjectDB[objectID] = objectData; end");
-                            File.WriteAllText(Path.Combine(debugFolder.FullName, "ObjectDB.lua"), builder.ToString(), Encoding.UTF8);
+                            dbbuilder.AppendLine("})").AppendLine("do ObjectDB[objectID] = objectData; end");
+                            dynamicbuilder.AppendLine("})").AppendLine("do ObjectDB[objectID] = objectData; end");
+                            File.WriteAllText(Path.Combine(debugFolder.FullName, "ObjectDB.lua"), dbbuilder.ToString(), Encoding.UTF8);
+                            File.WriteAllText(Path.Combine(debugFolder.FullName, "ObjectDB (Dynamic).lua"), dynamicbuilder.ToString(), Encoding.UTF8);
                         }
 
                         // Export the Phases file.
