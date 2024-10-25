@@ -248,7 +248,6 @@ localize(L.HEADER_NAMES, {
 	[-1000083] = BLACK_MARKET_AUCTION_HOUSE,
 	[-1000093] = FACTION_ALLIANCE,
 	[-1000095] = FACTION_HORDE,
-	[-1000096] = COMBATLOG_FILTER_STRING_NEUTRAL_UNITS,
 	[-1000099] = ITEM_QUALITY1_DESC,
 	[-1000104] = ITEM_QUALITY5_DESC,
 	[-1000106] = ITEM_QUALITY0_DESC,
@@ -433,7 +432,6 @@ localize(L.HEADER_ICONS, {
 	[-1000083] = _.asset("category_blackmarket"),
 	[-1000093] = 374217,
 	[-1000095] = 374221,
-	[-1000096] = 374222,
 	[-1000099] = 135030,
 	[-1000104] = _.asset("weapon_type_legendary"),
 	[-1000106] = 135025,
@@ -586,7 +584,6 @@ _.Modules.Events.SetEventInformation(141, {
 	_.Modules.Events.CreateSchedule({["hour"]=10,["minute"]=0,["month"]=12,["monthDay"]=16,["weekday"]=3,["year"]=2025},{["hour"]=6,["minute"]=0,["month"]=1,["monthDay"]=2,["weekday"]=6,["year"]=2026})
 });
 _.Modules.Events.SetEventInformation(479, {
-	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=7,["weekday"]=2,["year"]=2024},{["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=14,["weekday"]=2,["year"]=2024},{["remappedID"]=375}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=21,["weekday"]=2,["year"]=2024},{["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=28,["weekday"]=2,["year"]=2024},{["remappedID"]=374}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=11,["monthDay"]=4,["weekday"]=2,["year"]=2024},{["hour"]=0,["minute"]=0,["month"]=11,["monthDay"]=11,["weekday"]=2,["year"]=2024},{["remappedID"]=375}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=11,["monthDay"]=18,["weekday"]=2,["year"]=2024},{["hour"]=0,["minute"]=0,["month"]=11,["monthDay"]=25,["weekday"]=2,["year"]=2024},{["remappedID"]=374}),
@@ -612,7 +609,8 @@ _.Modules.Events.SetEventInformation(479, {
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=8,["monthDay"]=25,["weekday"]=2,["year"]=2025},{["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=1,["weekday"]=2,["year"]=2025},{["remappedID"]=374}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=8,["weekday"]=2,["year"]=2025},{["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=15,["weekday"]=2,["year"]=2025},{["remappedID"]=375}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=22,["weekday"]=2,["year"]=2025},{["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=29,["weekday"]=2,["year"]=2025},{["remappedID"]=374}),
-	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=6,["weekday"]=2,["year"]=2025},{["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=13,["weekday"]=2,["year"]=2025},{["remappedID"]=375})
+	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=6,["weekday"]=2,["year"]=2025},{["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=13,["weekday"]=2,["year"]=2025},{["remappedID"]=375}),
+	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=20,["weekday"]=2,["year"]=2025},{["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=27,["weekday"]=2,["year"]=2025},{["remappedID"]=374})
 });
 _.Modules.Events.SetEventInformation(201, {
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=1,["weekday"]=2,["year"]=2023},{["hour"]=23,["minute"]=59,["month"]=5,["monthDay"]=7,["weekday"]=1,["year"]=2023}),
@@ -862,7 +860,7 @@ _.FlightPathNames = {
 }
 
 -- Object Database Module
-_.ObjectNames = {
+local ObjectNames = {
 	[31] = "Old Lion Statue",
 	[32] = "Sunken Chest",
 	[33] = "Locked Chest",
@@ -1702,8 +1700,8 @@ _.ObjectNames = {
 	[462236] = "Mysterious Chest",
 	[100000000] = "Archaeologist's Cart",
 	[100000001] = "Unlit Torch",
-}
-_.ObjectIcons = {
+}; _.ObjectNames = ObjectNames;
+local ObjectIcons = {
 	[31] = 464140,
 	[34] = 132798,
 	[55] = 133730,
@@ -2017,8 +2015,8 @@ _.ObjectIcons = {
 	[190483] = 134943,
 	[190484] = 134943,
 	[100000001] = 135434,
-}
-_.ObjectModels = {
+}; _.ObjectIcons = ObjectIcons;
+local ObjectModels = {
 	[31] = 189908,
 	[32] = 196976,
 	[33] = 196979,
@@ -2830,7 +2828,7 @@ _.ObjectModels = {
 	[462233] = 219531,
 	[462236] = 219372,
 	[100000001] = 201129,
-}
+}; _.ObjectModels = ObjectModels;
 
 -- Phase Database Module
 _.PhaseConstants = {
@@ -3893,7 +3891,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "Artefakte",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Alte Löwenstatue",
 	[32] = "Versunkene Truhe",
 	[33] = "Verschlossene Truhe",
@@ -5079,7 +5077,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "Artéfact",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Statue du vieux lion",
 	[32] = "Coffre englouti",
 	[33] = "Coffre verrouillé",
@@ -6244,7 +6242,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000377] = "Lancia Polymorph sulle creature affette da Wild Polymorph per trasformarle di nuovo in apprendisti. Ognuno ti darà una nota. Raccogli 6 note per imparare la runa.",
 	[-1000380] = "Questo elenco contiene elementi non ottenibili che ATT Discord ha segnalato come bug che Blizzard deve ancora correggere.\n\nNOTA: tutti i filtri vengono ignorati in questo elenco per motivi di visibilità. In questo elenco sono presenti solo gli oggetti rimossi dal gioco a causa di negligenza e non un gigantesco drago sputafuoco.\n\nAgli sviluppatori Blizzard: correggete gli oggetti e gli incontri elencati di seguito.",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Vecchia Statua di Leone",
 	[34] = "Vecchio Fiasco",
 	[35] = "Scrigno del Capitano",
@@ -6934,7 +6932,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000377] = "Lance Polymorph em criaturas afetadas por Wild Polymorph para transformá-las novamente em aprendizes. Cada um lhe dará uma nota. Colete 6 notas para aprender a runa.",
 	[-1000380] = "Esta lista contém itens inacessíveis que o ATT Discord relatou como bugs que a Blizzard ainda não corrigiu.\n\nNOTA: Todos os filtros são ignorados nesta lista para visibilidade. Apenas itens removidos do jogo por negligência, em vez de um gigantesco dragão cuspidor de fogo, estão presentes nesta lista.\n\nPara os desenvolvedores da Blizzard: Corrijam os itens e encontros listados abaixo.",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Estátua de Leão Antiga",
 	[32] = "Baú Afundado",
 	[33] = "Baú Trancado",
@@ -7980,7 +7978,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "Артефакты",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Статуя старого льва",
 	[32] = "Затонувший сундук",
 	[33] = "Запертый сундук",
@@ -9208,7 +9206,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000377] = "야생 변이에 걸린 동물에게 변이를 시전하여 그들을 다시 견습생으로 되돌리세요. 각자가 당신에게 메모를 줄 것입니다. 노트 6개를 모아 룬을 배워보세요.",
 	[-1000380] = "이 목록에는 ATT Discord에서 Blizzard가 아직 수정하지 않은 버그로 보고한 얻을 수 없는 항목이 포함되어 있습니다.\n\n참고: 가시성을 위해 이 목록 내에서 모든 필터는 무시됩니다. 거대한 불을 뿜는 용이 아닌 부주의로 인해 게임에서 제거된 아이템만 이 목록에 있습니다.\n\n블리자드 개발자 여러분께: 아래 나열된 아이템과 만남을 수정해 주세요.",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "오래된 사자상",
 	[32] = "가라앉은 상자",
 	[33] = "잠긴 궤짝",
@@ -10276,7 +10274,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000377] = "Lanza Polymorph sobre criaturas afectadas por Wild Polymorph para convertirlas nuevamente en aprendices. Cada uno te dará una nota. Recoge 6 notas para aprender la runa.",
 	[-1000380] = "Esta lista contiene elementos inalcanzables que ATT Discord ha informado como errores que Blizzard aún no ha solucionado.\n\nNOTA: Todos los filtros se ignoran en esta lista para mayor visibilidad. En esta lista solo están presentes los elementos eliminados del juego debido a negligencia y no a un gigantesco dragón que escupe fuego.\n\nA los desarrolladores de Blizzard: arreglen los elementos y encuentros que se enumeran a continuación.",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Estatua de león antigua",
 	[32] = "Cofre sumergido",
 	[33] = "Cofre cerrado",
@@ -11731,7 +11729,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "神器",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "陈旧的石狮子",
 	[32] = "沉没的箱子",
 	[34] = "旧罐子",
@@ -12693,6 +12691,10 @@ for key,value in pairs({
 })
 do achievementCategories[key].name = value; end
 if GetLocale():sub(3,4):lower() == "tw" then
+localize(L.HEADER_NAMES, {
+	[-1000038] = "寶箱",
+	[-1000044] = "地區掉落",
+});
 for key,value in pairs({
 	[1] = "從未實裝",
 	[2] = "已從遊戲中移除",

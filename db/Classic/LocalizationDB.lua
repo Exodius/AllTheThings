@@ -247,7 +247,6 @@ localize(L.HEADER_NAMES, {
 	[-1000083] = BLACK_MARKET_AUCTION_HOUSE,
 	[-1000093] = FACTION_ALLIANCE,
 	[-1000095] = FACTION_HORDE,
-	[-1000096] = COMBATLOG_FILTER_STRING_NEUTRAL_UNITS,
 	[-1000099] = ITEM_QUALITY1_DESC,
 	[-1000104] = ITEM_QUALITY5_DESC,
 	[-1000106] = ITEM_QUALITY0_DESC,
@@ -382,7 +381,6 @@ localize(L.HEADER_ICONS, {
 	[-1000083] = _.asset("category_blackmarket"),
 	[-1000093] = 374217,
 	[-1000095] = 374221,
-	[-1000096] = 374222,
 	[-1000099] = 135030,
 	[-1000104] = _.asset("weapon_type_legendary"),
 	[-1000106] = 135025,
@@ -762,7 +760,7 @@ _.FlightPathNames = {
 }
 
 -- Object Database Module
-_.ObjectNames = {
+local ObjectNames = {
 	[31] = "Old Lion Statue",
 	[32] = "Sunken Chest",
 	[33] = "Locked Chest",
@@ -1443,8 +1441,8 @@ _.ObjectNames = {
 	[375544] = "Wooden Figurine",
 	[100000000] = "Archaeologist's Cart",
 	[100000001] = "Unlit Torch",
-}
-_.ObjectIcons = {
+}; _.ObjectNames = ObjectNames;
+local ObjectIcons = {
 	[31] = 464140,
 	[34] = 132798,
 	[55] = 133730,
@@ -1757,8 +1755,8 @@ _.ObjectIcons = {
 	[190483] = 134943,
 	[190484] = 134943,
 	[100000001] = 135434,
-}
-_.ObjectModels = {
+}; _.ObjectIcons = ObjectIcons;
+local ObjectModels = {
 	[31] = 189908,
 	[32] = 196976,
 	[33] = 196979,
@@ -2423,7 +2421,7 @@ _.ObjectModels = {
 	[207724] = 219411,
 	[375544] = 201094,
 	[100000001] = 201129,
-}
+}; _.ObjectModels = ObjectModels;
 
 -- Phase Database Module
 _.PhaseConstants = {
@@ -3505,7 +3503,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "Artefakte",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Alte Löwenstatue",
 	[32] = "Versunkene Truhe",
 	[33] = "Verschlossene Truhe",
@@ -4521,7 +4519,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "Artéfact",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Statue du vieux lion",
 	[32] = "Coffre englouti",
 	[33] = "Coffre verrouillé",
@@ -5513,7 +5511,7 @@ localize(L.HEADER_NAMES, {
 localize(L.HEADER_DESCRIPTIONS, {
 	[-1000380] = "Questo elenco contiene elementi non ottenibili che ATT Discord ha segnalato come bug che Blizzard deve ancora correggere.\n\nNOTA: tutti i filtri vengono ignorati in questo elenco per motivi di visibilità. In questo elenco sono presenti solo gli oggetti rimossi dal gioco a causa di negligenza e non un gigantesco drago sputafuoco.\n\nAgli sviluppatori Blizzard: correggete gli oggetti e gli incontri elencati di seguito.",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Vecchia Statua di Leone",
 	[34] = "Vecchio Fiasco",
 	[35] = "Scrigno del Capitano",
@@ -6174,7 +6172,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000040] = "Um mestre de armas é um NPC que oferece aos personagens a oportunidade de aprender habilidades específicas com armas, cuja disponibilidade varia de um mestre de armas para outro. Todas as habilidades com armas podem ser treinadas no nível 1, exceto as armas de haste, que exigem nível 20.\n\nO treinamento com um mestre de armas tornou-se obsoleto no Patch 4.0.1, já que todas as proficiências de armas apropriadas à classe agora são aprendidas por cada classe após a criação. Os mestres de armas foram removidos do jogo logo depois.",
 	[-1000380] = "Esta lista contém itens inacessíveis que o ATT Discord relatou como bugs que a Blizzard ainda não corrigiu.\n\nNOTA: Todos os filtros são ignorados nesta lista para visibilidade. Apenas itens removidos do jogo por negligência, em vez de um gigantesco dragão cuspidor de fogo, estão presentes nesta lista.\n\nPara os desenvolvedores da Blizzard: Corrijam os itens e encontros listados abaixo.",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Estátua de Leão Antiga",
 	[32] = "Baú Afundado",
 	[33] = "Baú Trancado",
@@ -7137,7 +7135,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "Артефакты",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Статуя старого льва",
 	[32] = "Затонувший сундук",
 	[33] = "Запертый сундук",
@@ -8219,7 +8217,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000040] = "웨폰 마스터는 캐릭터에게 특정 무기 기술을 배울 수 있는 기회를 제공하는 NPC로, 사용 가능 여부는 웨폰 마스터마다 다릅니다. 모든 무기 기술은 레벨 20이 필요한 폴암을 제외하고 레벨 1에서 훈련할 수 있습니다.\n\n4.0.1 패치에서는 각 병과가 생성 시 모든 병과에 적합한 무기 숙련도를 배우게 되므로 무기 전문가와의 훈련은 더 이상 필요하지 않게 되었습니다. 무기 마스터는 곧 게임에서 제거되었습니다.",
 	[-1000380] = "이 목록에는 ATT Discord에서 Blizzard가 아직 수정하지 않은 버그로 보고한 얻을 수 없는 항목이 포함되어 있습니다.\n\n참고: 가시성을 위해 이 목록 내에서 모든 필터는 무시됩니다. 거대한 불을 뿜는 용이 아닌 부주의로 인해 게임에서 제거된 아이템만 이 목록에 있습니다.\n\n블리자드 개발자 여러분께: 아래 나열된 아이템과 만남을 수정해 주세요.",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "오래된 사자상",
 	[32] = "가라앉은 상자",
 	[33] = "잠긴 궤짝",
@@ -9162,7 +9160,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000040] = "Un maestro de armas es un PNJ que ofrece a los personajes la oportunidad de aprender habilidades específicas con armas, cuya disponibilidad varía de un maestro de armas a otro. Todas las habilidades con armas se pueden entrenar en el nivel 1, excepto las armas de asta que requieren el nivel 20.\n\nEl entrenamiento con un maestro de armas quedó obsoleto en el parche 4.0.1, ya que cada clase ahora aprende todas las competencias de armas apropiadas para la clase en el momento de la creación. Los maestros de armas se eliminaron del juego poco después.",
 	[-1000380] = "Esta lista contiene elementos inalcanzables que ATT Discord ha informado como errores que Blizzard aún no ha solucionado.\n\nNOTA: Todos los filtros se ignoran en esta lista para mayor visibilidad. En esta lista solo están presentes los elementos eliminados del juego debido a negligencia y no a un gigantesco dragón que escupe fuego.\n\nA los desarrolladores de Blizzard: arreglen los elementos y encuentros que se enumeran a continuación.",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "Estatua de león antigua",
 	[32] = "Cofre sumergido",
 	[33] = "Cofre cerrado",
@@ -10491,7 +10489,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "神器",
 });
-localize(_.ObjectNames, {
+localize(ObjectNames, {
 	[31] = "陈旧的石狮子",
 	[32] = "沉没的箱子",
 	[34] = "旧罐子",
@@ -11391,6 +11389,10 @@ for key,value in pairs({
 })
 do achievementCategories[key].name = value; end
 if GetLocale():sub(3,4):lower() == "tw" then
+localize(L.HEADER_NAMES, {
+	[-1000038] = "寶箱",
+	[-1000044] = "地區掉落",
+});
 for key,value in pairs({
 	[1] = "從未實裝",
 	[2] = "已從遊戲中移除",
