@@ -419,6 +419,7 @@ local SPECTRAL_GROG = i(104316, {	-- Spectral Grog
 -- CRIEVE NOTE: Use this function for candy buckets. :)
 local CANDY_BUCKET_OBJECT_DATA = {
 	readable = "Candy Bucket",
+	consolidate = true,	-- This tells parser that we need to export this as a group to clean up duplicated data.
 	dynamic = true,	-- This tells parser to not include it in the export of ObjectDB when it consolidates it.
 	model = 200946,
 	text = {
