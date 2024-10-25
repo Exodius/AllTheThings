@@ -3054,93 +3054,93 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 
 				-- The War within
 				q(84579, {	-- Candy Bucket — Azj-Kahet, Faerin's Advance
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464926 },	-- Candy Bucket
+					["coord"] = { 59, 18.6, AZJ_KAHET },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84580, {	-- Candy Bucket — Azj-Kahet, Mmarl
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464927 },	-- Candy Bucket
+					["coord"] = { 78, 62.8, AZJ_KAHET },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84582, {	-- Candy Bucket — Azj-Kahet, Weaver's Lair
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464929 },	-- Candy Bucket
+					["coord"] = { 56.9, 39, AZJ_KAHET },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84581, {	-- Candy Bucket — Azj-Kahet, Wildcamp Ul'ar
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464928 },	-- Candy Bucket
+					["coord"] = { 44.8, 66.3, AZJ_KAHET },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84576, {	-- Candy Bucket — City of Threads, High Hollows
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464923 },	-- Candy Bucket
+					["coord"] = { 62, 41.4, NERUBAR },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84578, {	-- Candy Bucket — City of Threads, Umbral Bazzar
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464925 },	-- Candy Bucket
+					["coord"] = { 49.7, 22.3, NERUBAR },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84577, {	-- Candy Bucket — City of Threads - Lower, The Burrows
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464924 },	-- Candy Bucket
+					["coord"] = { 57.4, 38.5, NERUBAR_LOWER },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84572, {	-- Candy Bucket — Hallowfall, Dunelle's Kindness
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464919 },	-- Candy Bucket
+					["coord"] = { 69.1, 45.7, HALLOWFALL },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84574, {	-- Candy Bucket — Hallowfall, Light's Redoubt
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464921 },	-- Candy Bucket
+					["coord"] = { 40.6, 68, HALLOWFALL },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84573, {	-- Candy Bucket — Hallowfall, Lorel's Crossing
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464920 },	-- Candy Bucket
+					["coord"] = { 49.1, 39.5, HALLOWFALL },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84575, {	-- Candy Bucket — Hallowfall, Mereldar
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464922 },	-- Candy Bucket
+					["coord"] = { 42.8, 55.7, HALLOWFALL },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84564, {	-- Candy Bucket — Isle of Dorn, Dornogal
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464911 },	-- Candy Bucket
+					["coord"] = { 45, 47.3, ISLE_OF_DORN },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84566, {	-- Candy Bucket — Isle of Dorn, Freywold Village
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464913 },	-- Candy Bucket
+					["coord"] = { 42, 74.4, ISLE_OF_DORN },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84567, {	-- Candy Bucket — Isle of Dorn, Rambleshire
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464914 },	-- Candy Bucket
+					["coord"] = { 58.2, 27.1, ISLE_OF_DORN },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84568, {	-- Candy Bucket — The Ringing Deeps, Camp Murroch
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464915 },	-- Candy Bucket
+					["coord"] = { 59.5, 64.1, THE_RINGING_DEEPS },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84569, {	-- Candy Bucket — The Ringing Deeps, Gundargaz
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464916 },	-- Candy Bucket
+					["coord"] = { 47.9, 32.1, THE_RINGING_DEEPS },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84570, {	-- Candy Bucket — The Ringing Deeps, Opportunity Point
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464917 },	-- Candy Bucket
+					["coord"] = { 63.4, 79, THE_RINGING_DEEPS },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 				q(84571, {	-- Candy Bucket — The Ringing Deeps, Shadowvein Point
-					--["provider"] = { "o", ??? },	-- ???
-					--["coord"] = { x, y, map },
+					["provider"] = { "o", 464918 },	-- Candy Bucket
+					["coord"] = { 61.9, 46.3, THE_RINGING_DEEPS },
 					["timeline"] = { ADDED_11_0_2 },
 				}),
 			}),
