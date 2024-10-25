@@ -3718,25 +3718,7 @@ namespace ATT
                 Objects.ExportAutoItemSources(Config["root-data"] ?? "./DATAS");
 
                 // Attempt to find some dirty objects and write them to a dynamic file.
-                var dirtyObjectsFilePath = Path.Combine(Config["root-data"] ?? "./DATAS", "00 - DB/Dynamic/", $"DynamicObjectDB_{DateTime.UtcNow.Ticks}.lua");
-                /*
-                // This is the bulk harvester. It grabs aaaaaalll of them!
-                for (int objectID = 111911; objectID > 163; --objectID)
-                {
-                    if (!ObjectDB.TryGetValue(objectID, out Dictionary<string, object> objectData))
-                    {
-                        // If not, get new object information from WoWHead.
-                        objectData = new Dictionary<string, object>();
-                        ObjectHarvester.UpdateInformationFromWoWHead(objectID, objectData);
-                        if (!objectData.Any()) continue;
-                        ObjectDB[objectID] = objectData;
-                        ObjectHarvester.ExportDirtyObjectsToFilePath(dirtyObjectsFilePath);
-                    }
-                }
-                */
-
-                // Check to see if we need to export any dirty objects.
-                ObjectHarvester.ExportDirtyObjectsToFilePath(dirtyObjectsFilePath);
+                ObjectHarvester.ExportDirtyObjectsToFilePath($"./DATAS/00 - DB/Dynamic/DynamicObjectDB_{DateTime.UtcNow.Ticks}.lua");
             }
         }
 
