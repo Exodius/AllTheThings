@@ -3165,7 +3165,7 @@ namespace ATT
                     }
 
                     // Sort any consolidated keys and export them as a constant.
-                    var tupledConsolidatedKeys = new List<Tuple<string, long, string>>();
+                    var tupledConsolidatedKeys = new List<Tuple<string, List<long>>>();
                     if (consolidatedKeys.Any())
                     {
                         var names = consolidatedKeys.Keys.ToList();
@@ -3177,7 +3177,7 @@ namespace ATT
                             {
                                 sortedKeys.Sort();
                                 foreach (var sortedKey in sortedKeys) keys.Remove(sortedKey);
-                                tupledConsolidatedKeys.Add(new Tuple<string, long, string>(name.ToUpperInvariant().Replace(' ', '_') + "S", sortedKeys[0], string.Join(",", sortedKeys)));
+                                tupledConsolidatedKeys.Add(new Tuple<string, List<long>>(name.ToUpperInvariant().Replace(' ', '_') + "S", sortedKeys));
                             }
                         }
                     }
@@ -3216,11 +3216,14 @@ namespace ATT
                             {
                                 foreach (var tuple in tupledConsolidatedKeys)
                                 {
-                                    if (localePair.Value.TryGetValue(tuple.Item2, out string name))
+                                    if (tuple.Item2.Any())
                                     {
-                                        localeBuilder.Append("for i,objectID in ipairs(").Append(tuple.Item1).Append(") do ObjectNames[objectID] = ");
-                                        ExportStringValue(localeBuilder, name);
-                                        localeBuilder.AppendLine("; end");
+                                        if (localePair.Value.TryGetValue(tuple.Item2[0], out string name))
+                                        {
+                                            localeBuilder.Append("for i,objectID in ipairs(").Append(tuple.Item1).Append(") do ObjectNames[objectID] = ");
+                                            ExportStringValue(localeBuilder, name);
+                                            localeBuilder.AppendLine("; end");
+                                        }
                                     }
                                 }
                             }
@@ -3253,23 +3256,30 @@ namespace ATT
                         builder.AppendLine().AppendLine("-- Consolidated Object Data");
                         foreach (var tuple in tupledConsolidatedKeys)
                         {
-                            builder.Append("local ").Append(tuple.Item1).Append(" = { ").Append(tuple.Item3).AppendLine(" };");
-                            builder.Append("for i,objectID in ipairs(").Append(tuple.Item1).AppendLine(") do");
-                            if (enObjectData.TryGetValue(tuple.Item2, out string name))
+                            if (tuple.Item2.Any()) builder.Append("local ").Append(tuple.Item1).Append(" = { ").Append(string.Join(",", tuple.Item2)).AppendLine(" };");
+                        }
+                        foreach (var tuple in tupledConsolidatedKeys)
+                        {
+                            if (tuple.Item2.Any())
                             {
-                                builder.Append("\tObjectNames[objectID] = ");
-                                ExportStringValue(builder, name).AppendLine(";");
+                                var firstObjectID = tuple.Item2[0];
+                                builder.Append("for i,objectID in ipairs(").Append(tuple.Item1).AppendLine(") do");
+                                if (enObjectData.TryGetValue(firstObjectID, out string name))
+                                {
+                                    builder.Append("\tObjectNames[objectID] = ");
+                                    ExportStringValue(builder, name).AppendLine(";");
+                                }
+                                if (icons.TryGetValue(firstObjectID, out string icon))
+                                {
+                                    builder.Append("\tObjectIcons[objectID] = ");
+                                    ExportIconValue(builder, icon).AppendLine(";");
+                                }
+                                if (modelIDs.TryGetValue(firstObjectID, out long modelID))
+                                {
+                                    builder.Append("\tObjectModels[objectID] = ").Append(modelID).AppendLine(";");
+                                }
+                                builder.AppendLine("end");
                             }
-                            if (icons.TryGetValue(tuple.Item2, out string icon))
-                            {
-                                builder.Append("\tObjectIcons[objectID] = ");
-                                ExportIconValue(builder, icon).AppendLine(";");
-                            }
-                            if (modelIDs.TryGetValue(tuple.Item2, out long modelID))
-                            {
-                                builder.Append("\tObjectModels[objectID] = ").Append(modelID).AppendLine(";");
-                            }
-                            builder.AppendLine("end");
                         }
                     }
 

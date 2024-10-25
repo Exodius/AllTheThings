@@ -436,7 +436,7 @@ local CANDY_BUCKET_OBJECT_DATA = {
 	},
 };
 local ObjectDB = ObjectDB;
-local candybucket = function(questID, t)
+function candybucket(questID, t)
 	t = q(questID, t);
 	t._drop = { "g" };
 	t.isYearly = true;
