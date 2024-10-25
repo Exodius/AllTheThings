@@ -358,10 +358,6 @@ root(ROOTS.Unsorted, {
 				i(230940),	-- Wings of the Sapphire Monarch
 				i(231017),	-- Wings of the Onyx Monarch
 			}),
-			n(PVP, {
-				i(231344),	-- Obsidian Gladiator's Greatsword
-				i(231345),	-- Obsidian Gladiator's Greatsword
-			}),
 			n(DUNGEONS_AND_RAIDS, {	-- Raid
 				i(231511),	-- Relic Coffer Key Fragment
 				i(225664),	-- Golem Lord Argelmach's Gun
