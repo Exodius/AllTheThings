@@ -8756,7 +8756,6 @@ end
 if simplifiedLocale == "fr" then
 localize(L.HEADER_NAMES, {
 	[-1000013] = "Objets communs des vendeurs",
-	[-1000019] = "Exploration",
 	[-1000048] = "Dragons du Cauchemar",
 	[-1000055] = "Événement chronométré",
 	[-1000056] = "Premier coffre",
@@ -21632,8 +21631,6 @@ localize(L.HEADER_NAMES, {
 	[-1000038] = "寶箱",
 	[-1000044] = "地區掉落",
 });
-localize(ObjectNames, {
-});
 for i,objectID in ipairs(CANDY_BUCKETS) do ObjectNames[objectID] = "糖果桶"; end
 for key,value in pairs({
 	[1] = "從未實裝",
@@ -21641,7 +21638,6 @@ for key,value in pairs({
 	[3] = "暴雪點數",
 	[4] = "PvP 精良/角鬥士",
 	[5] = "不可學",
-	[6] = "需要召唤物品",
 })
 do phases[key].name = value; end
 for key,value in pairs({

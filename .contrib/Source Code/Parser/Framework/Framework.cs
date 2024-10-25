@@ -7,6 +7,8 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using static ATT.Export;
@@ -1832,6 +1834,53 @@ namespace ATT
 #endif
         }
 
+        private static void CleanLocalizedField(long key, string field, IDictionary<string, object> data, Dictionary<string, Dictionary<long, string>> localizationData)
+        {
+            if (data.TryGetValue(field, out var value))
+            {
+                if (!(value is IDictionary<string, object> localeData))
+                {
+                    localeData = new Dictionary<string, object>
+                    {
+                        ["en"] = value
+                    };
+                }
+                TryColorizeDictionary(localeData);
+                if (localeData.TryGetValue("en", out string englishValue))
+                {
+                    if (!localizationData.TryGetValue("en", out Dictionary<long, string> sublocale))
+                    {
+                        localizationData["en"] = sublocale = new Dictionary<long, string>();
+                    }
+                    sublocale[key] = englishValue;
+
+                    // Clean up inherited values. (mx inherits from es and tw inherits from cn
+                    if (localeData.TryGetValue("mx", out string mxValue) && localeData.TryGetValue("es", out string esValue) && mxValue == esValue)
+                    {
+                        localeData.Remove("mx");
+                    }
+                    if (localeData.TryGetValue("tw", out string twValue) && localeData.TryGetValue("cn", out string cnValue) && twValue == cnValue)
+                    {
+                        localeData.Remove("tw");
+                    }
+                    foreach (var locale in localeData)
+                    {
+                        if (locale.Key == "en") continue;
+
+                        string localizedValue = locale.Value.ToString();
+                        if (!localizedValue.Contains(englishValue))
+                        {
+                            if (!localizationData.TryGetValue(locale.Key, out sublocale))
+                            {
+                                localizationData[locale.Key] = sublocale = new Dictionary<long, string>();
+                            }
+                            sublocale[key] = localizedValue;
+                        }
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Export the database.
         /// This also exports for debugging as well.
@@ -2424,39 +2473,7 @@ namespace ATT
                         {
                             icons[key] = value.ToString().Replace("\\", "/");
                         }
-                        if (categoryData.TryGetValue("text", out value))
-                        {
-                            if (!(value is IDictionary<string, object> localeData))
-                            {
-                                localeData = new Dictionary<string, object>
-                                {
-                                    ["en"] = value
-                                };
-                            }
-                            if (localeData.TryGetValue("en", out string englishValue))
-                            {
-                                if (!localizationForText.TryGetValue("en", out Dictionary<long, string> sublocale))
-                                {
-                                    localizationForText["en"] = sublocale = new Dictionary<long, string>();
-                                }
-                                sublocale[key] = englishValue;
-
-                                foreach (var locale in localeData)
-                                {
-                                    if (locale.Key == "en") continue;
-
-                                    string localizedValue = locale.Value.ToString();
-                                    if (!localizedValue.Contains(englishValue))
-                                    {
-                                        if (!localizationForText.TryGetValue(locale.Key, out sublocale))
-                                        {
-                                            localizationForText[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = localizedValue;
-                                    }
-                                }
-                            }
-                        }
+                        CleanLocalizedField(key, "text", categoryData, localizationForText);
                     }
 
                     // Get all of the english translations and always write them to the file.
@@ -2582,63 +2599,9 @@ namespace ATT
                                 {
                                     constants[value.ToString()] = key;
                                 }
-                                if (header.TryGetValue("text", out value))
-                                {
-                                    if (!(value is IDictionary<string, object> localeData))
-                                    {
-                                        localeData = new Dictionary<string, object>
-                                        {
-                                            ["en"] = value
-                                        };
-                                    }
-                                    TryColorizeDictionary(localeData);
-                                    foreach (var locale in localeData)
-                                    {
-                                        if (!localizationForText.TryGetValue(locale.Key, out Dictionary<long, string> sublocale))
-                                        {
-                                            localizationForText[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = locale.Value.ToString();
-                                    }
-                                }
-                                if (header.TryGetValue("description", out value))
-                                {
-                                    if (!(value is IDictionary<string, object> localeData))
-                                    {
-                                        localeData = new Dictionary<string, object>
-                                        {
-                                            ["en"] = value
-                                        };
-                                    }
-                                    TryColorizeDictionary(localeData);
-                                    foreach (var locale in localeData)
-                                    {
-                                        if (!localizationForDescriptions.TryGetValue(locale.Key, out Dictionary<long, string> sublocale))
-                                        {
-                                            localizationForDescriptions[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = locale.Value.ToString();
-                                    }
-                                }
-                                if (header.TryGetValue("lore", out value))
-                                {
-                                    if (!(value is IDictionary<string, object> localeData))
-                                    {
-                                        localeData = new Dictionary<string, object>
-                                        {
-                                            ["en"] = value
-                                        };
-                                    }
-                                    TryColorizeDictionary(localeData);
-                                    foreach (var locale in localeData)
-                                    {
-                                        if (!localizationForLore.TryGetValue(locale.Key, out Dictionary<long, string> sublocale))
-                                        {
-                                            localizationForLore[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = locale.Value.ToString();
-                                    }
-                                }
+                                CleanLocalizedField(key, "text", header, localizationForText);
+                                CleanLocalizedField(key, "description", header, localizationForDescriptions);
+                                CleanLocalizedField(key, "lore", header, localizationForLore);
 
                                 if (header.TryGetValue("minilist_ignore", out value))
                                 {
@@ -2849,45 +2812,13 @@ namespace ATT
                             Console.WriteLine(key);
                             continue;
                         }
-                        if (dataEntry.TryGetValue("text", out object value))
-                        {
-                            if (!(value is IDictionary<string, object> localeData))
-                            {
-                                localeData = new Dictionary<string, object>
-                                {
-                                    ["en"] = value
-                                };
-                            }
-                            if (localeData.TryGetValue("en", out string englishValue))
-                            {
-                                if (!localizationForText.TryGetValue("en", out Dictionary<long, string> sublocale))
-                                {
-                                    localizationForText["en"] = sublocale = new Dictionary<long, string>();
-                                }
-                                sublocale[key] = englishValue;
-
-                                foreach (var locale in localeData)
-                                {
-                                    if (locale.Key == "en") continue;
-
-                                    string localizedValue = locale.Value.ToString();
-                                    if (!localizedValue.Contains(englishValue))
-                                    {
-                                        if (!localizationForText.TryGetValue(locale.Key, out sublocale))
-                                        {
-                                            localizationForText[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = localizedValue;
-                                    }
-                                }
-                            }
-                        }
+                        CleanLocalizedField(key, "text", dataEntry, localizationForText);
                         if (dataEntry.TryGetValue("icon", out object icon))
                         {
                             icons[key] = icon.ToString().Replace("\\", "/");
                         }
 
-                        if (dataEntry.TryGetValue("constant", out value))
+                        if (dataEntry.TryGetValue("constant", out var value))
                         {
                             constants[value.ToString()] = key;
                         }
@@ -2984,39 +2915,7 @@ namespace ATT
                             }
                             continue;
                         }
-                        if (flightPathData.TryGetValue("text", out object value))
-                        {
-                            if (!(value is IDictionary<string, object> localeData))
-                            {
-                                localeData = new Dictionary<string, object>
-                                {
-                                    ["en"] = value
-                                };
-                            }
-                            if (localeData.TryGetValue("en", out string englishValue))
-                            {
-                                if (!localizationForText.TryGetValue("en", out Dictionary<long, string> sublocale))
-                                {
-                                    localizationForText["en"] = sublocale = new Dictionary<long, string>();
-                                }
-                                sublocale[key] = englishValue;
-
-                                foreach (var locale in localeData)
-                                {
-                                    if (locale.Key == "en") continue;
-
-                                    string localizedValue = locale.Value.ToString();
-                                    if (!localizedValue.Contains(englishValue))
-                                    {
-                                        if (!localizationForText.TryGetValue(locale.Key, out sublocale))
-                                        {
-                                            localizationForText[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = localizedValue;
-                                    }
-                                }
-                            }
-                        }
+                        CleanLocalizedField(key, "text", flightPathData, localizationForText);
                     }
 
                     // Get all of the english translations and always write them to the file.
@@ -3129,39 +3028,7 @@ namespace ATT
                         {
                             modelIDs[key] = Convert.ToInt64(value);
                         }
-                        if (objectData.TryGetValue("text", out value))
-                        {
-                            if (!(value is IDictionary<string, object> localeData))
-                            {
-                                localeData = new Dictionary<string, object>
-                                {
-                                    ["en"] = value
-                                };
-                            }
-                            if (localeData.TryGetValue("en", out string englishValue))
-                            {
-                                if (!localizationForText.TryGetValue("en", out Dictionary<long, string> sublocale))
-                                {
-                                    localizationForText["en"] = sublocale = new Dictionary<long, string>();
-                                }
-                                sublocale[key] = englishValue;
-
-                                foreach (var locale in localeData)
-                                {
-                                    if (locale.Key == "en") continue;
-
-                                    string localizedValue = locale.Value.ToString();
-                                    if (!localizedValue.Contains(englishValue))
-                                    {
-                                        if (!localizationForText.TryGetValue(locale.Key, out sublocale))
-                                        {
-                                            localizationForText[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = localizedValue;
-                                    }
-                                }
-                            }
-                        }
+                        CleanLocalizedField(key, "text", objectData, localizationForText);
                     }
 
                     // Sort any consolidated keys and export them as a constant.
@@ -3203,15 +3070,23 @@ namespace ATT
                         if (localePair.Value.Any())
                         {
                             var localeBuilder = localizationByLocale[localePair.Key];
-                            localeBuilder.AppendLine("localize(ObjectNames, {");
+                            var nameTuple = new List<Tuple<long, string>>();
                             foreach (var key in keys)
                             {
                                 if (localePair.Value.TryGetValue(key, out string name))
                                 {
-                                    ExportStringKeyValue(localeBuilder, key, name).AppendLine();
+                                    nameTuple.Add(new Tuple<long, string>(key, name));
                                 }
                             }
-                            localeBuilder.AppendLine("});");
+                            if (nameTuple.Any())
+                            {
+                                localeBuilder.AppendLine("localize(ObjectNames, {");
+                                foreach (var tuple in nameTuple)
+                                {
+                                    ExportStringKeyValue(localeBuilder, tuple.Item1, tuple.Item2).AppendLine();
+                                }
+                                localeBuilder.AppendLine("});");
+                            }
                             if (tupledConsolidatedKeys.Any())
                             {
                                 foreach (var tuple in tupledConsolidatedKeys)
@@ -3316,63 +3191,9 @@ namespace ATT
                                 {
                                     constants[value.ToString()] = key;
                                 }
-                                if (phase.TryGetValue("text", out value))
-                                {
-                                    if (!(value is IDictionary<string, object> localeData))
-                                    {
-                                        localeData = new Dictionary<string, object>
-                                        {
-                                            ["en"] = value
-                                        };
-                                    }
-                                    TryColorizeDictionary(localeData);
-                                    foreach (var locale in localeData)
-                                    {
-                                        if (!localizationForText.TryGetValue(locale.Key, out Dictionary<long, string> sublocale))
-                                        {
-                                            localizationForText[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = locale.Value.ToString();
-                                    }
-                                }
-                                if (phase.TryGetValue("description", out value))
-                                {
-                                    if (!(value is IDictionary<string, object> localeData))
-                                    {
-                                        localeData = new Dictionary<string, object>
-                                        {
-                                            ["en"] = value
-                                        };
-                                    }
-                                    TryColorizeDictionary(localeData);
-                                    foreach (var locale in localeData)
-                                    {
-                                        if (!localizationForDescriptions.TryGetValue(locale.Key, out Dictionary<long, string> sublocale))
-                                        {
-                                            localizationForDescriptions[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = locale.Value.ToString();
-                                    }
-                                }
-                                if (phase.TryGetValue("lore", out value))
-                                {
-                                    if (!(value is IDictionary<string, object> localeData))
-                                    {
-                                        localeData = new Dictionary<string, object>
-                                        {
-                                            ["en"] = value
-                                        };
-                                    }
-                                    TryColorizeDictionary(localeData);
-                                    foreach (var locale in localeData)
-                                    {
-                                        if (!localizationForLore.TryGetValue(locale.Key, out Dictionary<long, string> sublocale))
-                                        {
-                                            localizationForLore[locale.Key] = sublocale = new Dictionary<long, string>();
-                                        }
-                                        sublocale[key] = locale.Value.ToString();
-                                    }
-                                }
+                                CleanLocalizedField(key, "text", phase, localizationForText);
+                                CleanLocalizedField(key, "description", phase, localizationForDescriptions);
+                                CleanLocalizedField(key, "lore", phase, localizationForLore);
                             }
                         }
                     }
@@ -3515,6 +3336,7 @@ namespace ATT
                         var keys = new List<long>();
                         var localizationForText = new Dictionary<string, Dictionary<long, string>>();
                         var localizationForDescriptions = new Dictionary<string, Dictionary<long, string>>();
+                        var localizationForLore = new Dictionary<string, Dictionary<long, string>>();
                         var referencedCategoryIDs = new Dictionary<long, bool>();
                         allAchievementKeys.Sort();
                         foreach (var key in allAchievementKeys)
@@ -3525,44 +3347,9 @@ namespace ATT
                                 if (AchievementData.TryGetValue(key, out var achievement))
                                 {
                                     keys.Add(key);
-                                    if (achievement.TryGetValue("text", out var value))
-                                    {
-                                        if (!(value is IDictionary<string, object> localeData))
-                                        {
-                                            localeData = new Dictionary<string, object>
-                                            {
-                                                ["en"] = value
-                                            };
-                                        }
-                                        TryColorizeDictionary(localeData);
-                                        foreach (var locale in localeData)
-                                        {
-                                            if (!localizationForText.TryGetValue(locale.Key, out Dictionary<long, string> sublocale))
-                                            {
-                                                localizationForText[locale.Key] = sublocale = new Dictionary<long, string>();
-                                            }
-                                            sublocale[key] = locale.Value.ToString();
-                                        }
-                                    }
-                                    if (achievement.TryGetValue("description", out value))
-                                    {
-                                        if (!(value is IDictionary<string, object> localeData))
-                                        {
-                                            localeData = new Dictionary<string, object>
-                                            {
-                                                ["en"] = value
-                                            };
-                                        }
-                                        TryColorizeDictionary(localeData);
-                                        foreach (var locale in localeData)
-                                        {
-                                            if (!localizationForDescriptions.TryGetValue(locale.Key, out Dictionary<long, string> sublocale))
-                                            {
-                                                localizationForDescriptions[locale.Key] = sublocale = new Dictionary<long, string>();
-                                            }
-                                            sublocale[key] = locale.Value.ToString();
-                                        }
-                                    }
+                                    CleanLocalizedField(key, "text", achievement, localizationForText);
+                                    CleanLocalizedField(key, "description", achievement, localizationForDescriptions);
+                                    CleanLocalizedField(key, "lore", achievement, localizationForLore);
                                 }
                             }
                         }
@@ -3573,6 +3360,8 @@ namespace ATT
                         localizationForText.Remove("en");
                         localizationForDescriptions.TryGetValue("en", out var localizationForDescriptionsByKey);
                         localizationForDescriptions.Remove("en");
+                        localizationForLore.TryGetValue("en", out var localizationForLoreByKey);
+                        localizationForLore.Remove("en");
                         foreach (var key in keys)
                         {
                             if (AchievementData.TryGetValue(key, out var achievement))
@@ -3586,6 +3375,11 @@ namespace ATT
                                 if (localizationForDescriptionsByKey.TryGetValue(key, out name))
                                 {
                                     builder.Append("\t\tdescription = ");
+                                    ExportStringValue(builder, name).AppendLine(",");
+                                }
+                                if (localizationForLoreByKey.TryGetValue(key, out name))
+                                {
+                                    builder.Append("\t\tlore = ");
                                     ExportStringValue(builder, name).AppendLine(",");
                                 }
                                 if (achievement.TryGetValue("icon", out var icon))
@@ -3638,6 +3432,22 @@ namespace ATT
                                     }
                                 }
                                 localeBuilder.AppendLine("})\ndo achievements[key].description = value; end");
+                            }
+                        }
+                        foreach (var localePair in localizationForLore)
+                        {
+                            if (localePair.Value.Any())
+                            {
+                                var localeBuilder = localizationByLocale[localePair.Key];
+                                localeBuilder.AppendLine("for key,value in pairs({");
+                                foreach (var key in keys)
+                                {
+                                    if (localePair.Value.TryGetValue(key, out string name) && !string.IsNullOrWhiteSpace(name))
+                                    {
+                                        ExportStringKeyValue(localeBuilder, key, name).AppendLine();
+                                    }
+                                }
+                                localeBuilder.AppendLine("})\ndo achievements[key].lore = value; end");
                             }
                         }
 
