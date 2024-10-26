@@ -6034,7 +6034,6 @@ end
 if simplifiedLocale == "fr" then
 localize(L.HEADER_NAMES, {
 	[-1000013] = "Objets communs des vendeurs",
-	[-1000019] = "Exploration",
 	[-1000040] = "Maître d'armes",
 	[-1000048] = "Dragons du Cauchemar",
 	[-1000055] = "Événement chronométré",
@@ -8231,14 +8230,6 @@ for key,value in pairs({
 	[33] = "|cFFAAFFAAQuesto non era disponibile fino al Phase 4 di Wrath Classic.|r",
 })
 do phases[key].description = value; end
-for key,value in pairs({
-	[5788] = "Agent of the Shen'dralar",
-})
-do achievements[key].name = value; end
-for key,value in pairs({
-	[5788] = "Earn exalted status with the Shen'dralar.",
-})
-do achievements[key].description = value; end
 end
 if simplifiedLocale == "pt" then
 localize(L.HEADER_NAMES, {
@@ -13368,16 +13359,6 @@ for key,value in pairs({
 	[5788] = "Alcanza la reputación Exaltado con los Shen'dralar",
 })
 do achievements[key].description = value; end
-if GetLocale():sub(3,4):lower() == "mx" then
-for key,value in pairs({
-	[5788] = "Agente de los Shen'dralar",
-})
-do achievements[key].name = value; end
-for key,value in pairs({
-	[5788] = "Alcanza la reputación Exaltado con los Shen'dralar",
-})
-do achievements[key].description = value; end
-end
 end
 if simplifiedLocale == "zh" then
 localize(L.HEADER_NAMES, {
@@ -14542,8 +14523,6 @@ if GetLocale():sub(3,4):lower() == "tw" then
 localize(L.HEADER_NAMES, {
 	[-1000038] = "寶箱",
 	[-1000044] = "地區掉落",
-});
-localize(ObjectNames, {
 });
 for i,objectID in ipairs(CANDY_BUCKETS) do ObjectNames[objectID] = "糖果桶"; end
 for key,value in pairs({
