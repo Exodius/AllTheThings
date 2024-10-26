@@ -171,6 +171,7 @@ root(ROOTS.Unsorted, {
 			}),
 			n(SPECIAL, {	-- Que?!?! Codex maybe //Braghe?
 				i(226101),	-- Chromie's Tour Goodie Bag
+				i(226067),	-- Timely Tourist's Glaive
 			}),
 			filter(COSMETIC, {
 				i(229047),	-- Night Elf Crest

@@ -2599,7 +2599,6 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 						i(226089),	-- Timely Tourist's Epaulets
 						i(226070),	-- Timely Tourist's Gauntlets
 						i(226074),	-- Timely Tourist's Girdle
-						i(226067),	-- Timely Tourist's Glaive
 						i(226086),	-- Timely Tourist's Gloves
 						i(226080),	-- Timely Tourist's Greaves
 						i(226078),	-- Timely Tourist's Grips
