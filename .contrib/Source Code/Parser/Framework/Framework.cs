@@ -2276,14 +2276,42 @@ namespace ATT
                                     SortSupportedLocales(supportedLocales);
 
                                     builder.AppendLine("\t\ttext = {");
-                                    var hash = new Dictionary<string, bool>();
-                                    foreach (var localeKey in supportedLocales)
+
+                                    // Mark sure we don't have any placeholder english values.
+                                    if (textLocales.TryGetValue("en", out string enValue))
                                     {
-                                        var localizedValue = textLocales[localeKey].ToString();
-                                        if (hash.ContainsKey(localizedValue) || (localizedValue[0] == '[' && hash.ContainsKey(localizedValue.Substring(1, localizedValue.Length - 2)))) continue;
-                                        builder.Append("\t\t\t").Append(localeKey).Append(" = ");
-                                        ExportStringValue(builder, localizedValue).AppendLine(",");
-                                        hash[localizedValue] = true;
+                                        supportedLocales.Remove("en");
+                                        builder.Append("\t\t\ten = ");
+                                        ExportStringValue(builder, enValue).AppendLine(",");
+
+                                        // Also don't write identical es/mx or cn/tw values.
+                                        if (textLocales.TryGetValue("es", out string esValue) && textLocales.TryGetValue("mx", out string mxValue) && esValue == mxValue)
+                                        {
+                                            supportedLocales.Remove("tw");
+                                        }
+                                        if (textLocales.TryGetValue("cn", out string cnValue) && textLocales.TryGetValue("tw", out string twValue) && cnValue == twValue)
+                                        {
+                                            supportedLocales.Remove("tw");
+                                        }
+
+                                        foreach (var localeKey in supportedLocales)
+                                        {
+                                            var localizedValue = textLocales[localeKey].ToString();
+                                            if (enValue == localizedValue || (localizedValue[0] == '[' && enValue == localizedValue.Substring(1, localizedValue.Length - 2))) continue;
+                                            builder.Append("\t\t\t").Append(localeKey).Append(" = ");
+                                            ExportStringValue(builder, localizedValue).AppendLine(",");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Trace.WriteLine(MiniJSON.Json.Serialize(objectData));
+                                        Trace.WriteLine("Uhhh, you missing an english locale here");
+                                        Console.ReadLine();
+                                        foreach (var localeKey in supportedLocales)
+                                        {
+                                            builder.Append("\t\t\t").Append(localeKey).Append(" = ");
+                                            ExportStringValue(builder, textLocales[localeKey].ToString()).AppendLine(",");
+                                        }
                                     }
                                     builder.AppendLine("\t\t},");
                                 }
