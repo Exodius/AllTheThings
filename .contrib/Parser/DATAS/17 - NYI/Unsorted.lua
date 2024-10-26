@@ -358,10 +358,8 @@ root(ROOTS.Unsorted, {
 			i(232521),	-- Glyph of Arcane Familiar
 			i(232524),	-- Dark Ranger General's Bodice
 			i(232525),	-- Dark Ranger General's Vest
-			i(232527),	-- Glyph of Traditional Ascendance
 			--
 			i(232598),	-- Bag of Timewarped Badges
-			i(232622),	-- Glyph of Energetic Ascendance
 			i(232631),	-- Wrapped Spear
 			--
 			i(228911),	-- Xal'atath's Rusty Coin

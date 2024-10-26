@@ -195,19 +195,39 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeli
 					["coord"] = { 66.6, 58.8, AZJ_KAHET },
 					["questID"] = 82863,
 				}),
+				o(455320, {	-- Vizier's Appreciation
+					["provider"] = { "n", 224900 },	-- Dor'garad
+					["coord"] = { 65.6, 90.9, AZJ_KAHET },
+					["questID"] = 81567,
+				}),
 				o(455323, {	-- Vizier's Appreciation
 					["provider"] = { "n", 224900 },	-- Dor'garad
 					["coord"] = { 79.9, 62.0, AZJ_KAHET },
 					["questID"] = 82865,
+				}),
+				o(455324, {	-- Vizier's Appreciation
+					["provider"] = { "n", 224900 },	-- Dor'garad
+					["coord"] = { 70.6, 43.4, AZJ_KAHET },
+					["questID"] = 82866,
 				}),
 				o(455325, {	-- Vizier's Appreciation
 					["provider"] = { "n", 224900 },	-- Dor'garad
 					["coord"] = { 51.3, 58.8, AZJ_KAHET },
 					["questID"] = 82867,
 				}),
+				o(455328, {	-- Vizier's Appreciation
+					["provider"] = { "n", 224900 },	-- Dor'garad
+					["coord"] = { 55.3, 23.9, AZJ_KAHET },
+					["questID"] = 82869,
+				}),
+				o(455330, {	-- Vizier's Appreciation
+					["provider"] = { "n", 224900 },	-- Dor'garad
+					["coord"] = { 27.1, 47.2, AZJ_KAHET },
+					["questID"] = 82871,
+				}),
 				o(455331, {	-- Vizier's Appreciation
 					["provider"] = { "n", 224900 },	-- Dor'garad
-					["description"] = "Below the ground, inside Pillar-nest Xesh.",
+					["description"] = "Below the City of Threads, inside Pillar-nest Xesh.",
 					["coords"] = {
 						{ 72.5, 57.4, NERUBAR_LOWER },	-- Pillar-nest Xesh Entrance
 						{ 65.1, 57.7, NERUBAR_LOWER },	-- Dor'garad
