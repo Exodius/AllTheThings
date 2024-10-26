@@ -266,6 +266,7 @@ ObjectDB[176213].text.es = "Sangre de Héroes";	-- Blood of Heroes
 -- #if BEFORE CATA
 ObjectDB[182947].icon = 133738;	-- The Codex of Blood
 -- #endif
+-- #endif
 
 -- Hero's Call Board
 for i,objectID in pairs({
@@ -311,4 +312,3 @@ for i,objectID in pairs({
 	ObjectDB[objectID].icon = 134328;
 	-- #endif
 end
--- #endif

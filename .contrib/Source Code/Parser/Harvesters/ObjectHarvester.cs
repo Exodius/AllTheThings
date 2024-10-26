@@ -97,12 +97,7 @@ namespace ATT
         /// <summary>
         /// All of the supported locales. (excluding english)
         /// </summary>
-        private static readonly string[] SupportedLocales = { "es", "de", "mx", "fr", "it", "pt", "ru", "ko", "cn", "tw" };
-
-        /// <summary>
-        /// All of the supported locales for WoWHead. (excluding english)
-        /// </summary>
-        private static readonly string[] SupportedLocalesForWoWHead = { "es", "de", "fr", "it", "pt", "ru", "ko", "cn" };
+        private static readonly string[] SupportedLocales = { "es", "de", "fr", "it", "pt", "ru", "ko", "cn", "tw" };
 
         /// <summary>
         /// All of the objects and their fields that have been dirtied.
@@ -388,7 +383,7 @@ namespace ATT
             string englishText = textLocalizations["en"].ToString();
 
             // Attempt to find missing non-English localizations
-            foreach (string locale in SupportedLocalesForWoWHead)
+            foreach (string locale in SupportedLocales)
             {
                 if (!textLocalizations.TryGetValue(locale, out string oldValue) || oldValue.Contains(englishText))
                 {
