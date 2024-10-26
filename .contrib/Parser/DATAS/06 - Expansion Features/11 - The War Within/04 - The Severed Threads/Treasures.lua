@@ -6,7 +6,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeli
 		n(TREASURES, sharedData({
 			["isDaily"] = true,
 			["sourceQuest"] = 80544,	-- The Weaver Weekly pickup
-			["cost"] = {{"i",228949,1}},	-- Rumor Map
+			["cost"] = {{"i",226514,1}},	-- Treasure Map: Weave-Rat Cache
 		},{
 			["g"] = bubbleDownFiltered({
 				["sharedDescription"] = "Interact with Thimble and follow him to reveal his cache.\nOnly available if your weekly pact is with The Weaver.",
@@ -112,7 +112,8 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeli
 		n(TREASURES, sharedData({
 			["isDaily"] = true,
 			["sourceQuest"] = 80545,	-- The General Weekly pickup
-			["cost"] = {{"i",228949,1}},	-- Rumor Map
+			["cost"] = {{"i",226512,1}},	-- Treasure Map: Forgotten Memorial
+			["crs"] = { 220781 },	-- Aspirant Kiipka
 		},{
 			["g"] = bubbleDownFiltered({
 				["sharedDescription"] = "Interact with the Forgotten Memorial to challenge Aspirant Kiipka and then defeat him.\nOnly available if your weekly pact is with The General.",
@@ -177,6 +178,41 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeli
 					["provider"] = { "o", 451603 },	-- Forgotten Memorial
 					["coord"] = { 7.4, 26.1, NERUBAR },
 					["questID"] = 82881,
+				}),
+			}),
+		})),
+		n(TREASURES, sharedData({
+			["isDaily"] = true,
+			["sourceQuest"] = 80546,	-- The Vizier Weekly pickup
+			["cost"] = {{"i",226513,1}},	-- Treasure Map: Kaheti Excavation
+			["crs"] = { 226483 },	-- Dig Spot
+		},{
+			["g"] = bubbleDownFiltered({
+				["sharedDescription"] = "Talk to Dor'garad to reveal the Dig Spots. Interract with them to fill the progress bar. After you are done, he'll throw the treasure to you.\nOnly available if your weekly pact is with The General.",
+			},FILTERFUNC_objectID,{
+				o(455279, {	-- Vizier's Appreciation
+					["provider"] = { "n", 224900 },	-- Dor'garad
+					["coord"] = { 66.6, 58.8, AZJ_KAHET },
+					["questID"] = 82863,
+				}),
+				o(455323, {	-- Vizier's Appreciation
+					["provider"] = { "n", 224900 },	-- Dor'garad
+					["coord"] = { 79.9, 62.0, AZJ_KAHET },
+					["questID"] = 82865,
+				}),
+				o(455325, {	-- Vizier's Appreciation
+					["provider"] = { "n", 224900 },	-- Dor'garad
+					["coord"] = { 51.3, 58.8, AZJ_KAHET },
+					["questID"] = 82867,
+				}),
+				o(455331, {	-- Vizier's Appreciation
+					["provider"] = { "n", 224900 },	-- Dor'garad
+					["description"] = "Below the ground, inside Pillar-nest Xesh.",
+					["coords"] = {
+						{ 72.5, 57.4, NERUBAR_LOWER },	-- Pillar-nest Xesh Entrance
+						{ 65.1, 57.7, NERUBAR_LOWER },	-- Dor'garad
+					},
+					["questID"] = 82872,
 				}),
 			}),
 		})),
