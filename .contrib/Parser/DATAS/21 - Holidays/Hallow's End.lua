@@ -2528,7 +2528,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 			},
 		}),
 		q(76072, {	-- Shades of Scarlet
-			["provider"] = { "n", 211008 },	-- Sir Thomas
+			["provider"] = { "n", 206158 },	-- Sir Thomas
 			["sourceQuest"] = 76075,	-- A Ghostly Message
 			["timeline"] = { ADDED_10_1_7 },
 			["coord"] = { 81.2, 44.6, TIRISFAL_GLADES },
@@ -2537,7 +2537,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 			},
 		}),
 		q(76073, {	-- No Laughing Matter
-			["provider"] = { "n", 211008 },	-- Sir Thomas
+			["provider"] = { "n", 205473 },	-- Sir Thomas
 			["sourceQuest"] = 76072,	-- Shades of Scarlet
 			["timeline"] = { ADDED_10_1_7 },
 			["coord"] = { 82.4, 32.7, TIRISFAL_GLADES },
@@ -2644,6 +2644,9 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 						{ 75.6, 52.4, EASTERN_PLAGUELANDS },
 						-- #else
 						{ 81.7, 58.1, EASTERN_PLAGUELANDS },
+						-- #endif
+						-- #if AFTER LEGION
+						{ 41.3, 90.4, LIGHTS_HOPE_CHAPEL },
 						-- #endif
 					},
 					["timeline"] = { ADDED_2_0_1 },

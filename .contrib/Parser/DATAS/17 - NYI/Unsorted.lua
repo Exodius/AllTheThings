@@ -172,35 +172,6 @@ root(ROOTS.Unsorted, {
 			n(SPECIAL, {	-- Que?!?! Codex maybe //Braghe?
 				i(226101),	-- Chromie's Tour Goodie Bag
 			}),
-			n(ARMOR, {	-- Cursed Data!?? Wrath/MoP new itemIDs of PvP and Tier Sets...
-				i(227216),	-- Hateful Gladiator's Wyrmhide Robes
-				i(227217),	-- Hateful Gladiator's Dragonhide Robes
-				i(227219),	-- Hateful Gladiator's Satin Robe
-				i(227554),	-- Firebird's Legguards
-				i(227555),	-- Firebird's Grips
-				i(227562),	-- Eternal Blossom Leggings
-				i(227563),	-- Eternal Blossom Gloves
-				i(227566),	-- Legguards of the Lost Catacomb
-				i(227567),	-- Handguards of the Lost Catacomb
-				i(227568),	-- White Tiger Legguards
-				i(227569),	-- White Tiger Handguards
-				i(227570),	-- Legguards of Resounding Rings
-				i(227571),	-- Handguards of Resounding Rings
-				i(227578),	-- White Tiger Greaves
-				i(227579),	-- White Tiger Gloves
-				i(227580),	-- Firebird's Legwraps
-				i(227581),	-- Firebird's Handwraps
-				i(227582),	-- Eternal Blossom Legwraps
-				i(227583),	-- Eternal Blossom Handwraps
-				i(227584),	-- Guardian Serpent Legwraps
-				i(227585),	-- Guardian Serpent Handwraps
-				i(227592),	-- Eternal Blossom Handguards
-				i(227593),	-- Eternal Blossom Breeches
-				i(227594),	-- Red Crane Legguards
-				i(227595),	-- Red Crane Gauntlets
-				i(227596),	-- Red Crane Handwraps
-				i(227597),	-- Red Crane Legwraps
-			}),
 			filter(COSMETIC, {
 				i(229047),	-- Night Elf Crest
 				i(229048),	-- Human Crest

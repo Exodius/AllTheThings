@@ -386,7 +386,7 @@ q(74257),	-- Ensemble: Cosmic Gladiator's Warrior Armor
 -- PvP Arsenals
 q(85364),	-- Arsenal: Crimson Aspirant's Weapons
 q(85365),	-- Arsenal: Crimson Gladiator's Weapons
-q(85365),	-- Arsenal: Elite Crimson Gladiator's Weapons
+q(85366),	-- Arsenal: Elite Crimson Gladiator's Weapons
 
 -- PvP Ensembles
 q(85272),	-- Ensemble: Crimson Aspirant's Cloth Armor
@@ -394,19 +394,19 @@ q(85271),	-- Ensemble: Crimson Aspirant's Leather Armor
 q(85273),	-- Ensemble: Crimson Aspirant's Mail Armor
 q(85274),	-- Ensemble: Crimson Aspirant's Plate Armor
 q(85295),	-- Ensemble: Crimson Gladiator's Death Knight Armor
-q(),	-- Ensemble: Crimson Gladiator's Demon Hunter Armor
-q(),	-- Ensemble: Crimson Gladiator's Druid Armor
-q(),	-- Ensemble: Crimson Gladiator's Evoker Armor
-q(),	-- Ensemble: Crimson Gladiator's Hunter Armor
-q(),	-- Ensemble: Crimson Gladiator's Mage Armor
-q(),	-- Ensemble: Crimson Gladiator's Monk Armor
-q(),	-- Ensemble: Crimson Gladiator's Paladin Armor
-q(),	-- Ensemble: Crimson Gladiator's Priest Armor
-q(),	-- Ensemble: Crimson Gladiator's Rogue Armor
-q(),	-- Ensemble: Crimson Gladiator's Shaman Armor
-q(),	-- Ensemble: Crimson Gladiator's Warlock Armor
-q(),	-- Ensemble: Crimson Gladiator's Warrior Armor
-q(),	-- Ensemble: Elite Crimson Gladiator's Death Knight Armor
+q(85283),	-- Ensemble: Crimson Gladiator's Demon Hunter Armor
+q(85281),	-- Ensemble: Crimson Gladiator's Druid Armor
+q(85289),	-- Ensemble: Crimson Gladiator's Evoker Armor
+q(85291),	-- Ensemble: Crimson Gladiator's Hunter Armor
+q(85275),	-- Ensemble: Crimson Gladiator's Mage Armor
+q(85285),	-- Ensemble: Crimson Gladiator's Monk Armor
+q(85297),	-- Ensemble: Crimson Gladiator's Paladin Armor
+q(85277),	-- Ensemble: Crimson Gladiator's Priest Armor
+q(85287),	-- Ensemble: Crimson Gladiator's Rogue Armor
+q(85293),	-- Ensemble: Crimson Gladiator's Shaman Armor
+q(85279),	-- Ensemble: Crimson Gladiator's Warlock Armor
+q(85299),	-- Ensemble: Crimson Gladiator's Warrior Armor
+q(85296),	-- Ensemble: Elite Crimson Gladiator's Death Knight Armor
 q(),	-- Ensemble: Elite Crimson Gladiator's Demon Hunter Armor
 q(),	-- Ensemble: Elite Crimson Gladiator's Druid Armor
 q(),	-- Ensemble: Elite Crimson Gladiator's Evoker Armor
@@ -424,7 +424,7 @@ q(),	-- Ensemble: Elite Crimson Gladiator's Warrior Armor
 -- PvP Arsenals
 q(85364),	-- Arsenal: Obsidian Aspirant's Weapons
 q(85367),	-- Arsenal: Obsidian Gladiator's Weapons
-q(),	-- Arsenal: Elite Obsidian Gladiator's Weapons
+q(85638),	-- Arsenal: Elite Obsidian Gladiator's Weapons
 
 -- PvP Ensembles
 q(85330),	-- Ensemble: Obsidian Aspirant's Cloth Armor
@@ -432,19 +432,19 @@ q(85331),	-- Ensemble: Obsidian Aspirant's Leather Armor
 q(85332),	-- Ensemble: Obsidian Aspirant's Mail Armor
 q(85333),	-- Ensemble: Obsidian Aspirant's Plate Armor
 q(85307),	-- Ensemble: Obsidian Gladiator's Death Knight Armor
-q(),	-- Ensemble: Obsidian Gladiator's Demon Hunter Armor
-q(),	-- Ensemble: Obsidian Gladiator's Druid Armor
-q(),	-- Ensemble: Obsidian Gladiator's Evoker Armor
-q(),	-- Ensemble: Obsidian Gladiator's Hunter Armor
-q(),	-- Ensemble: Obsidian Gladiator's Mage Armor
-q(),	-- Ensemble: Obsidian Gladiator's Monk Armor
-q(),	-- Ensemble: Obsidian Gladiator's Paladin Armor
-q(),	-- Ensemble: Obsidian Gladiator's Priest Armor
-q(),	-- Ensemble: Obsidian Gladiator's Rogue Armor
-q(),	-- Ensemble: Obsidian Gladiator's Shaman Armor
-q(),	-- Ensemble: Obsidian Gladiator's Warlock Armor
-q(),	-- Ensemble: Obsidian Gladiator's Warrior Armor
-q(),	-- Ensemble: Elite Crimson Gladiator's Death Knight Armor
+q(85312),	-- Ensemble: Obsidian Gladiator's Demon Hunter Armor
+q(85314),	-- Ensemble: Obsidian Gladiator's Druid Armor
+q(85301),	-- Ensemble: Obsidian Gladiator's Evoker Armor
+q(85320),	-- Ensemble: Obsidian Gladiator's Hunter Armor
+q(85328),	-- Ensemble: Obsidian Gladiator's Mage Armor
+q(85316),	-- Ensemble: Obsidian Gladiator's Monk Armor
+q(85324),	-- Ensemble: Obsidian Gladiator's Paladin Armor
+q(85308),	-- Ensemble: Obsidian Gladiator's Priest Armor
+q(85318),	-- Ensemble: Obsidian Gladiator's Rogue Armor
+q(85322),	-- Ensemble: Obsidian Gladiator's Shaman Armor
+q(85310),	-- Ensemble: Obsidian Gladiator's Warlock Armor
+q(85326),	-- Ensemble: Obsidian Gladiator's Warrior Armor
+q(85307),	-- Ensemble: Elite Crimson Gladiator's Death Knight Armor
 q(),	-- Ensemble: Elite Crimson Gladiator's Demon Hunter Armor
 q(),	-- Ensemble: Elite Crimson Gladiator's Druid Armor
 q(),	-- Ensemble: Elite Crimson Gladiator's Evoker Armor
@@ -462,7 +462,7 @@ q(),	-- Ensemble: Elite Crimson Gladiator's Warrior Armor
 -- PvP Arsenals
 q(85369),	-- Arsenal: Verdant Aspirant's Weapons
 q(85370),	-- Arsenal: Verdant Gladiator's Weapons
-q(),	-- Arsenal: Elite Verdant Gladiator's Weapons
+q(85371),	-- Arsenal: Elite Verdant Gladiator's Weapons
 
 -- PvP Ensembles
 q(85360),	-- Ensemble: Verdant Aspirant's Cloth Armor
@@ -470,19 +470,19 @@ q(85361),	-- Ensemble: Verdant Aspirant's Leather Armor
 q(85362),	-- Ensemble: Verdant Aspirant's Mail Armor
 q(85363),	-- Ensemble: Verdant Aspirant's Plate Armor
 q(85354),	-- Ensemble: Verdant Gladiator's Death Knight Armor
-q(),	-- Ensemble: Verdant Gladiator's Demon Hunter Armor
-q(),	-- Ensemble: Verdant Gladiator's Druid Armor
-q(),	-- Ensemble: Verdant Gladiator's Evoker Armor
-q(),	-- Ensemble: Verdant Gladiator's Hunter Armor
-q(),	-- Ensemble: Verdant Gladiator's Mage Armor
-q(),	-- Ensemble: Verdant Gladiator's Monk Armor
-q(),	-- Ensemble: Verdant Gladiator's Paladin Armor
-q(),	-- Ensemble: Verdant Gladiator's Priest Armor
-q(),	-- Ensemble: Verdant Gladiator's Rogue Armor
-q(),	-- Ensemble: Verdant Gladiator's Shaman Armor
-q(),	-- Ensemble: Verdant Gladiator's Warlock Armor
-q(),	-- Ensemble: Verdant Gladiator's Warrior Armor
-q(),	-- Ensemble: Elite Verdant Gladiator's Death Knight Armor
+q(85342),	-- Ensemble: Verdant Gladiator's Demon Hunter Armor
+q(85340),	-- Ensemble: Verdant Gladiator's Druid Armor
+q(85348),	-- Ensemble: Verdant Gladiator's Evoker Armor
+q(85350),	-- Ensemble: Verdant Gladiator's Hunter Armor
+q(85334),	-- Ensemble: Verdant Gladiator's Mage Armor
+q(85344),	-- Ensemble: Verdant Gladiator's Monk Armor
+q(85356),	-- Ensemble: Verdant Gladiator's Paladin Armor
+q(85336),	-- Ensemble: Verdant Gladiator's Priest Armor
+q(85346),	-- Ensemble: Verdant Gladiator's Rogue Armor
+q(85352),	-- Ensemble: Verdant Gladiator's Shaman Armor
+q(85338),	-- Ensemble: Verdant Gladiator's Warlock Armor
+q(85358),	-- Ensemble: Verdant Gladiator's Warrior Armor
+q(85355),	-- Ensemble: Elite Verdant Gladiator's Death Knight Armor
 q(), 	-- Ensemble: Elite Verdant Gladiator's Demon Hunter Armor
 q(), 	-- Ensemble: Elite Verdant Gladiator's Druid Armor
 q(), 	-- Ensemble: Elite Verdant Gladiator's Evoker Armor
