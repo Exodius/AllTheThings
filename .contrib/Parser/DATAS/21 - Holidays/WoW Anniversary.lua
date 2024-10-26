@@ -251,7 +251,10 @@ local EncounterToCRS = {
 	},
 	[ANGERFORGE] = { 226316 },	-- General Angerforge
 	[FLAMELASH] = { 226302 },		-- Ambassador Flamelash
-	[DAGRAN] = { 9019 },	-- Emperor Dagran Thaurissan
+	[DAGRAN] = {
+		226305,	-- Emperor Dagran Thaurissan
+		226314,	-- Moira Bronzebeard
+	},
 };
 
 ------ EncounterToLoot ------
