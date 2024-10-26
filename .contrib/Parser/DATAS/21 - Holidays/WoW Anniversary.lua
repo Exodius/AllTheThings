@@ -249,7 +249,7 @@ local EncounterToCRS = {
 		226312,	-- Seeth'rel
 		226308,	-- Vile'rel
 	},
-	[ANGERFORGE] = { 9033 },	-- General Angerforge
+	[ANGERFORGE] = { 226316 },	-- General Angerforge
 	[FLAMELASH] = { 9156 },		-- Ambassador Flamelash
 	[DAGRAN] = { 9019 },	-- Emperor Dagran Thaurissan
 };
