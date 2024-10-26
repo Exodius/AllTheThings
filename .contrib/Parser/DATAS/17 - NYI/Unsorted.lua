@@ -170,49 +170,7 @@ root(ROOTS.Unsorted, {
 				i(225185),	-- [DNT UNUSED] Reforged 1 Ring
 			}),
 			n(SPECIAL, {	-- Que?!?! Codex maybe //Braghe?
-				i(226047),	-- Timely Tourist's Signet
-				i(226049),	-- Timely Tourist's Pendant
-				i(226051),	-- Timely Tourist's Cloak
-				i(226052),	-- Timely Tourist's Shank
-				i(226053),	-- Timely Tourist's Ritual Knife
-				i(226054),	-- Timely Tourist's Pummeler
-				i(226055),	-- Timely Tourist's Hammer
-				i(226056),	-- Timely Tourist's Blade
-				i(226058),	-- Timely Tourist's Sharpshooter
-				i(226059),	-- Timely Tourist's Torch
-				i(226060),	-- Timely Tourist's Waraxe
-				i(226061),	-- Timely Tourist's Spade
-				i(226062),	-- Timely Tourist's Polearm
-				i(226063),	-- Timely Tourist's Drill-Tipped Stave
-				i(226065),	-- Timely Tourist's Lantern
-				i(226066),	-- Timely Tourist's Shield
-				i(226067),	-- Timely Tourist's Glaive
-				i(226068),	-- Timely Tourist's Breastplate
-				i(226070),	-- Timely Tourist's Gauntlets
-				i(226071),	-- Timely Tourist's Helm
-				i(226073),	-- Timely Tourist's Pauldrons
-				i(226074),	-- Timely Tourist's Girdle
-				i(226075),	-- Timely Tourist's Vambraces
-				i(226077),	-- Timely Tourist's Striders
-				i(226078),	-- Timely Tourist's Grips
-				i(226079),	-- Timely Tourist's Coif
-				i(226080),	-- Timely Tourist's Greaves
-				i(226081),	-- Timely Tourist's Shoulderguards
-				i(226083),	-- Timely Tourist's Bracers
-				i(226084),	-- Timely Tourist's Vest
-				i(226087),	-- Timely Tourist's Headgear
-				i(226090),	-- Timely Tourist's Sash
-				i(226092),	-- Timely Tourist's Robes
-				i(226094),	-- Timely Tourist's Handwraps
-				i(226095),	-- Timely Tourist's Cowl
-				i(226096),	-- Timely Tourist's Leggings
-				i(226097),	-- Timely Tourist's Shoulderpads
-				i(226099),	-- Timely Tourist's Cuffs
 				i(226101),	-- Chromie's Tour Goodie Bag
-				i(226167),	-- Timely Tourist's Bolthrower
-				i(226169),	-- Timely Tourist's Chisel
-				i(226170),	-- Timely Tourist's Hatchet
-				i(226171),	-- Timely Tourist's Cleaver
 			}),
 			n(ARMOR, {	-- Cursed Data!?? Wrath/MoP new itemIDs of PvP and Tier Sets...
 				i(227216),	-- Hateful Gladiator's Wyrmhide Robes
