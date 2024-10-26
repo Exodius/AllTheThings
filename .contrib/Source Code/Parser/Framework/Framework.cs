@@ -2276,10 +2276,14 @@ namespace ATT
                                     SortSupportedLocales(supportedLocales);
 
                                     builder.AppendLine("\t\ttext = {");
+                                    var hash = new Dictionary<string, bool>();
                                     foreach (var localeKey in supportedLocales)
                                     {
+                                        var localizedValue = textLocales[localeKey].ToString();
+                                        if (hash.ContainsKey(localizedValue) || (localizedValue[0] == '[' && hash.ContainsKey(localizedValue.Substring(1, localizedValue.Length - 2)))) continue;
                                         builder.Append("\t\t\t").Append(localeKey).Append(" = ");
-                                        ExportStringValue(builder, textLocales[localeKey].ToString()).AppendLine(",");
+                                        ExportStringValue(builder, localizedValue).AppendLine(",");
+                                        hash[localizedValue] = true;
                                     }
                                     builder.AppendLine("\t\t},");
                                 }
