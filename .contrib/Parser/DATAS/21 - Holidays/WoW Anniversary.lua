@@ -239,15 +239,15 @@ local EncounterToCRS = {
 	[ROCCOR] = { 9025 },	-- Lord Roccor
 	[BAELGAR] = { 9016 },	-- Bael'Gar
 	[INCENDIUS] = { 9017 },	-- Lord Incendius
-	[ARGELMACH] = { 8983 },	-- Golem Lord Argelmach
+	[ARGELMACH] = { 226306 },	-- Golem Lord Argelmach
 	[THE_SEVEN] = {
-		9035,	-- Anger'rel
-		9039,	-- Doom'rel
-		9040,	-- Dope'rel
-		9037,	-- Gloom'rel
-		9034,	-- Hate'rel
-		9038,	-- Seeth'rel
-		9036,	-- Vile'rel
+		226307,	-- Anger'rel
+		226310,	-- Doom'rel
+		226309,	-- Dope'rel
+		226313,	-- Gloom'rel
+		226311,	-- Hate'rel
+		226312,	-- Seeth'rel
+		226308,	-- Vile'rel
 	},
 	[ANGERFORGE] = { 9033 },	-- General Angerforge
 	[FLAMELASH] = { 9156 },		-- Ambassador Flamelash
