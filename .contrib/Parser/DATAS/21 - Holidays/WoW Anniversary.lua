@@ -2664,7 +2664,6 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				["provider"] = { "n", 223877 },	-- Yllana <Event Coordinator>
 				["coord"] = { 62.9, 50.7, TANARIS },
 			}),
-			--q(84629),	-- HQT for Completing Meet and Greet??
 			q(84489, {	-- Shopping Squee!
 				["sourceQuests"] = { 84254 },	-- Meet and Greet
 				["provider"] = { "n", 223877 },	-- Yllana <Event Coordinator>
@@ -3367,26 +3366,10 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline
 		q(85661),	-- Purchase one Tier 2 Set
 		q(85828),	-- Purchase a second Tier 2 Set
 		q(85723),	-- first WB kill of day/event or maybe Doomwalker
-		q(84282),	-- second WB kill of day/event or maybe Sha
-		q(84256),	-- third WB kill of day/event or maybe Archavon
 		q(85168),	-- fourth WB kill of day/event or mayba Kazzak
 		q(84878),	-- triggered with turnin of 'Chromie's Codex' [82783] (Bronze Cel Cache lockout?)
 		q(84665),	-- triggered with turnin of 'Timely Gate Crashers' [60215] (Bronze Cel Cache lockout?)
 		q(86202, name(HEADERS.Item, 233014)),	-- opening first Bronze Celebration Cache of week
-		-- Warband weekly Bronze Celebration Tokens
-		q(84629),	-- triggered with turnin of 'Meet and Greet' [84254] (Bronze Cel Token lockout?)
-		q(84630),	-- triggered with turnin of 'Shopping Spree!' [84489] (Bronze Cel Token lockout?)
-		q(84604),	-- triggered with turnin of 'Chromie's Codex' [82783] (Bronze Cel Token lockout?)
-		q(84606),	-- triggered with turnin of 'Timely Gate Crashers' [60215] (Bronze Cel Token lockout?)
-		q(84596),	-- Spreading The Lights
-		q(84609),	-- Forge the Pact (All Pacts)
-		q(84610),	-- Theater Troupe
-		q(86466),	-- Awakening The Machine
-		q(84599),	-- Sparks of War
-		q(84614),	-- WB (Azj-Kahet)
-		q(84598),	-- Rollin' Down in the Deeps
-		q(85833),	-- Precussive Archaeology
-		q(84608),	-- Token lock from 'An Original Path Through Time' [85947]
 		-- Blackrock Depths
 		q(86278),	-- High Interrogator Gerstahn (LFR)
 		q(86289),	-- High Interrogator Gerstahn (N)
@@ -3402,5 +3385,21 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline
 		q(86282),	-- Pyromancer Loregrain (LFR)
 		q(86285),	-- Pyromancer Loregrain (N)
 	}),
+	-- Warband weekly Bronze Celebration Tokens
+	n(WOW_ANNIVERSARY_TWENTY, sharedData(name(HEADERS.Currency, 3100), {
+		hqt(84629),	-- 'Meet and Greet' [84254]
+		hqt(84630),	-- 'Shopping Spree!' [84489]
+		hqt(84604),	-- 'Chromie's Codex' [82783]
+		hqt(84606),	-- 'Timely Gate Crashers' [60215]
+		hqt(84596),	-- Spreading The Lights
+		hqt(84609),	-- Forge the Pact (All Pacts)
+		hqt(84610),	-- Theater Troupe
+		hqt(86466),	-- Awakening The Machine
+		hqt(84599),	-- Sparks of War
+		hqt(84614),	-- WB (Azj-Kahet)
+		hqt(84598),	-- Rollin' Down in the Deeps
+		hqt(85833),	-- Precussive Archaeology
+		hqt(84608),	-- 'An Original Path Through Time' [85947]
+	})),
 })));
 -- #endif
