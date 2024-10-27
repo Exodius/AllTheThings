@@ -2550,6 +2550,9 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				-- Twilight Highlands 226156
 				-- Uldum 226155
 				-- Mount Hyjal 226154
+				-- Nagrand 226159
+				-- Gorgrond 226158
+				-- Shadowmoon Valley 226157
 			}),
 			ach(40997),		-- The Gatecrashers (automated)
 			ach(40995),		-- The Originals (automated)
