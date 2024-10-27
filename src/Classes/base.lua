@@ -263,7 +263,6 @@ or function(fields, className)
 		print("A Class Name must be declared when using CreateClassMeta");
 	end
 	local class = { __type = function() return className; end };
-	app.__perf.CaptureTable(class, "Class:"..className)
 	app.__perf.AutoCaptureTable(class, "Class:"..className)
 	-- capture keys which are referenced but not implemented in a sub-table for better perf tracking
 	class.__missing = {}
