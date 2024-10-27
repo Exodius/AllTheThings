@@ -2716,8 +2716,11 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 		}),
 		n(TREASURES, {
 			o(455795, {	-- Pet Box
-				i(224157),	-- Pet Mirror
-			})
+				["coord"] = { 62, 50.1, TANARIS },
+				["groups"] = {
+					i(224157),	-- Pet Mirror
+				},
+			}),
 		}),
 		n(VENDORS, {
 			n(223884, {	--  Bobadormu
