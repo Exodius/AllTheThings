@@ -3381,7 +3381,7 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline
 		q(86466),	-- Awakening The Machine
 		q(84599),	-- Sparks of War
 		q(84614),	-- WB (Azj-Kahet)
-		q(84598),	-- Wax weekly quest
+		q(84598),	-- Rollin' Down in the Deeps
 		q(85833),	-- Precussive Archaeology
 		q(84608),	-- Token lock from 'An Original Path Through Time' [85947]
 		-- Blackrock Depths
@@ -3397,6 +3397,7 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline
 		q(86286),	-- Phalanx (N)
 		q(86293),	-- Phalanx (H)
 		q(86282),	-- Pyromancer Loregrain (LFR)
+		q(86285),	-- Pyromancer Loregrain (N)
 	}),
 })));
 -- #endif
