@@ -2008,3 +2008,7 @@
 452645@@@Amani Hunting Bear
 463133@@@Coldflame Tempest
 468353@@@Enchanted Spellweave Carpet
+11.0.5.57147
+449132@@@Blackrock Warsaber
+449142@@@Kaldorei War Wolf
+454682@@@Startouched Furline
