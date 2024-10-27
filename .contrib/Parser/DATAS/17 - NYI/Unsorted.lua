@@ -374,6 +374,7 @@ root(ROOTS.Unsorted, {
 			i(232477),	-- Hand of Vengeance Tabard
 			i(232478),	-- Area 52 Tabard
 			i(233014),	-- Bronze Celebration Cache of Treasures
+			i(233053),	-- Crown of the Violet Rose
 		})),
 		expansion(EXPANSION.TWW, patch(0,2), bubbleDownSelf({ ["timeline"] = { ADDED_11_0_2 } }, {
 			explorationHeader({
