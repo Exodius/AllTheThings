@@ -366,14 +366,7 @@ root(ROOTS.Unsorted, {
 
 			i(232905),	-- Malown's Slam
 
-			--
-			i(223459),	-- Blackrock Warsaber
-			i(223471),	-- Kaldorei War Wolf
-			i(225250),	-- Startouched Furline
-			i(232476),	-- Explorer's League Tabard
-			i(232477),	-- Hand of Vengeance Tabard
 			i(232478),	-- Area 52 Tabard
-			i(233014),	-- Bronze Celebration Cache of Treasures
 			i(233053),	-- Crown of the Violet Rose
 		})),
 		expansion(EXPANSION.TWW, patch(0,2), bubbleDownSelf({ ["timeline"] = { ADDED_11_0_2 } }, {
