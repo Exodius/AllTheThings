@@ -2554,6 +2554,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				-- Gorgrond 226158
 				-- Shadowmoon Valley 226157
 			}),
+			ach(40967),		-- Ratts' Revenge
 			ach(40997),		-- The Gatecrashers (automated)
 			ach(40995),		-- The Originals (automated)
 			ach(41038),		-- Token Collector
