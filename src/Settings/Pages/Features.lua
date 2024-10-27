@@ -174,9 +174,9 @@ if app.IsRetail then
 		self:SetAlpha(0.4)
 	end,
 	function(self)
-		settings:SetTooltipSetting("Filter:MiniList:Timerunning", self:GetChecked())
 		-- No Timerunning Active, don't modify settings
-		if not app.Modules.Events.IsTimerunningActive then return end
+		if not app.Modules.Events.IsTimerunningActive then self:SetChecked(false) return end
+		settings:SetTooltipSetting("Filter:MiniList:Timerunning", self:GetChecked())
 		AddTimerunningToCurrentInstance()
 		app.LocationTrigger(true)
 		-- changing this now needs to update Costs again since they now depend on this Filter

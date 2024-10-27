@@ -363,6 +363,11 @@ if PlayerGetTimerunningSeasonID and IsTimerunningActive then
 else
 	-- Timerunning API is not available.
 	GetTimerunningSeason = app.EmptyFunction;
+	-- Make sure the Feature Setting is disabled
+	app.AddEventHandler("OnStartup", function()
+		-- No Timerunning Active, don't be set
+		app.Settings:SetTooltipSetting("Filter:MiniList:Timerunning", false)
+	end)
 end
 
 -- Event API Implementation
