@@ -43,7 +43,6 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 			ach(40872, {	-- I Saved the Party and All I Got Was This Lousy Hat (automated)
 				i(231906),	-- High-Alert Thinking Cap
 			}),
-			ach(40979),		-- No Crate Left Behind
 			ach(40967),		-- Ratts' Revenge
 		}),
 		n(QUESTS, {
@@ -152,6 +151,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 		}),
 		n(CELEBRATION_CRATES, {
 			ach(40873),		-- Crate Insurance Agent
+			ach(40979),		-- No Crate Left Behind
 			header(HEADERS.Quest, 83794, {
 				o(455780, {	-- Damp Ransom Note
 					["description"] = "Upper left corner of the bulletin board.",
