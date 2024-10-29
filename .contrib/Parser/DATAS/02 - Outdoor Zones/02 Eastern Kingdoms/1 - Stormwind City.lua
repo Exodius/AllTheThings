@@ -5437,11 +5437,11 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					},
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(23346, {	-- Battleworn Claymore
-							["timeline"] = { ADDED_10_1_7 },
-						}),
 						i(2361, {	-- Battleworn Bludgeon
 							["timeline"] = { ADDED_11_0_5 },
+						}),
+						i(23346, {	-- Battleworn Claymore
+							["timeline"] = { ADDED_10_1_7 },
 						}),
 						i(52557, {	-- Battleworn Hammer
 							["timeline"] = { ADDED_10_1_7 }
