@@ -3393,7 +3393,7 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline
 		hqt(84610),	-- Theater Troupe
 		hqt(86466),	-- Awakening The Machine
 		hqt(84599),	-- Sparks of War
-		hqt(84614),	-- WB (Azj-Kahet)
+		hqt(84614),	-- World Boss (All)
 		hqt(84598),	-- Rollin' Down in the Deeps
 		hqt(85833),	-- Precussive Archaeology
 		hqt(84608),	-- 'An Original Path Through Time' [85947]
