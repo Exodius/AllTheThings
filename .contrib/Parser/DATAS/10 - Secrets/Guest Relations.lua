@@ -11,6 +11,16 @@ GUEST_RELATIONS = createHeader({
 	},
 });
 
+CELEBRATION_CRATES = createHeader({
+	readable = "Celebration Crates",
+	constant = "CELEBRATION_CRATES",
+	icon = [[~_.asset("Holiday_SecretsAz")]],
+--	eventID = EVENTS.TODO,
+	text = {
+		en = "Celebration Crates",
+	},
+});
+
 root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_11_0_5 } }, {
 	["description"] = "***Using Debug Mode is recommended.***\n",
 	["groups"] = {
@@ -118,11 +128,40 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 				},
 			}),
 		}),
+		n(CELEBRATION_CRATES, {
+			header(HEADERS.Item, 232263, {
+				o(455780, {	-- Damp Ransom Note
+					["description"] = "Upper left corner of the bulletin board.",
+					["coord"] = { 63.0, 50.2, TANARIS },
+					["g"] = {
+						i(228694, {	-- Damp Ransom Note
+							["description"] = "Go to Zuldazar in Zandalar. At 54.3, 54.5 you will find Nikto. Buy Clam Digger and head upwards to 54.2, 54.2. Interract with Gerald and give him the drink.",
+						}),
+						
+					},
+				}),
+				o(455768, {	-- Soggy Celebration Crate
+					-- ["provider"] = { "n", XXX },	-- Gerald?
+					["coord"] = { 54.2, 54.2, ZULDAZAR },
+					["g"] = {
+						i(226200),	-- Soggy Celebration Crate
+						n(143029, {	-- Nikto <Master Talekeep>
+							["coord"] = { 54.3, 54.5, ZULDAZAR },
+							["groups"] = { i(225996), },	-- Clam Digger
+						}),
+					},
+					["questID"] = 83790,
+				}),
+				q(83794, {	-- Soggy Celebration Crate
+					["provider"] = { "i", 226200 },	-- Soggy Celebration Crate
+				}),
+			}),
+		}),
 	},
 })));
 
 root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeline"] = { ADDED_11_0_5 } }, {
 	n(GUEST_RELATIONS, {
-
+		q(84617),	-- Accepting Harder Puzzles from Alyx. This, also, unlocks notes on the bulletin board next to Alyx
 	}),
 })));
