@@ -129,7 +129,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 			}),
 		}),
 		n(CELEBRATION_CRATES, {
-			header(HEADERS.Item, 232263, {
+			header(HEADERS.Quest, 83794, {
 				o(455780, {	-- Damp Ransom Note
 					["description"] = "Upper left corner of the bulletin board.",
 					["coord"] = { 63.0, 50.2, TANARIS },
