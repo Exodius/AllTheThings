@@ -3372,6 +3372,7 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline
 		q(86289),	-- High Interrogator Gerstahn (N)
 		q(86290),	-- High Interrogator Gerstahn (H)
 		q(86279),	-- Houndmaster Grebmar (LFR)
+		q(86288),	-- Houndmaster Grebmar (N)
 		q(86291),	-- Houndmaster Grebmar (H)
 		q(86280),	-- Fineous Darkvire (LFR)
 		q(86287),	-- Fineous Darkvire (N)
