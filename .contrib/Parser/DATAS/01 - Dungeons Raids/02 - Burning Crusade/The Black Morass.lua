@@ -27,15 +27,17 @@ root(ROOTS.Instances, expansion(EXPANSION.TBC, applyclassicphase(TBC_PHASE_ONE, 
 					-- #endif
 				}),
 				q(9837, {	-- Return to Khadgar
-					["providers"] = {
-						{ "n", 15608 },	-- Medivh
-						{ "i", 24490 },	-- The Master's Key
-					},
+					["qg"] = 15608,	-- Medivh
 					["sourceQuest"] = 9836,	-- The Master's Touch
 					["coord"] = { 48.8, 71.8, CAVERNS_OF_TIME_BLACK_MORASS },
 					["timeline"] = { REMOVED_7_1_0 },
 					["maps"] = { SHATTRATH_CITY },
 					["lvl"] = lvlsquish(69, 69, 30),
+					["groups"] = {
+						i(24490, {	-- The Master's Key
+							["timeline"] = { ADDED_2_0_1, DELETED_4_2_0 },
+						}),
+					},
 				}),
 				q(10296, {	-- The Black Morass
 					["qg"] = 20130,	-- Andormu
