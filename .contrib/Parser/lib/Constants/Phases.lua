@@ -90,7 +90,7 @@ NEVER_IMPLEMENTED = createPhase({
 	phaseID = 1,
 	state = 1,
 	text = {
-		en = "Never Implemented",
+		en = "Never Implemented [NYI]",
 		--[[
 		es = "",
 		de = "",
@@ -98,10 +98,10 @@ NEVER_IMPLEMENTED = createPhase({
 		it = "",
 		pt = "",
 		]]--
-		ru = "Никогда Не Доступны",
+		ru = "Никогда Не Доступны [NYI]",
 		--ko = "",
-		cn = "从未实施",
-		tw = "從未實裝",
+		cn = "从未实施 [NYI]",
+		tw = "從未實裝 [NYI]",
 	},
 	description = {
 		en = "This was never available to players.",
