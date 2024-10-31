@@ -1982,6 +1982,7 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDownSelf({ ["time
 		q(84670),	-- after turn in weekly delve quest (was 82746 - Delves: Breaking Tough to Loot Stuff - for this one)
 		q(84671),	-- after accepting weekly quest (was 82746 - Delves: Breaking Tough to Loot Stuff) / also after 82679 (Archives: Seeking History)
 		q(85651),	-- Triggers with 'Delver's Call: The Sinkhole' (questID 83767)
+		q(85719),	-- Unknown. Seems to pop very rarely on completion of a delve
 		-- Bountiful Delve runs
 		q(82944),	-- Earthcrawl Mines
 		q(82939),	-- Fungal Folly
