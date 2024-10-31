@@ -887,6 +887,9 @@ namespace ATT
             if (cloned && data.ContainsKey("criteriaID"))
                 return false;
 
+            // capture the data for sourced groups (i.e. contains the field)
+            CaptureForSOURCED(data);
+
             return true;
         }
 
@@ -1836,6 +1839,9 @@ namespace ATT
                 // CriteriaTree can be linked to a Parent, or CriteriaID
                 Incorporate_CriteriaTree(achID, data, criteriaTree.ID, criteriaTree);
             }
+
+            // Achievements can end up with QuestID so make sure to capture them
+            Objects.MergeQuestData(data);
         }
 
         private static void Incorporate_Criteria(IDictionary<string, object> data)
@@ -2893,6 +2899,8 @@ namespace ATT
                     continue;
                 }
 
+                // TODO: hmmm this really should reference SOURCED instead... lots of sourceQuests are in NYI or unsorted...
+                //if (!TryGetSOURCED("questID", sourceQuestID, out List<IDictionary<string, object>> sourceQuestObjs))
                 if (!Objects.AllQuests.TryGetValue(sourceQuestID, out IDictionary<string, object> sourceQuest))
                 {
                     // Source Quest not in database
