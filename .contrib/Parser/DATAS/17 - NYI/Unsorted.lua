@@ -145,20 +145,13 @@ root(ROOTS.Unsorted, {
 				i(224194),	-- Fashion Frenzy Ribbon
 				i(225252),	-- Bronze Celebration Token
 				-- Secret
-				i(228766),	-- Sandy Ransom Note
 				i(229411),	-- Normal Feather
 
 				i(225678),	-- Spare Key to Shaffar's Stasis Chamber
 				i(228782),	-- PH - Sandbox Wolf
 				i(228783),	-- PH - Sandbox Horse
 				i(228910),	-- Cache of Nerubian Treasures
-				i(228986),	-- Aesthetician's Coupon Book
-				i(228987),	-- Scroll of Fel Binding
-				i(228989),	-- Exotic Critter Taming License
-				i(228990),	-- Bottle of Steam
-				i(228991),	-- Stone of Prophecy
 				i(229165),	-- Quest Journal
-				i(229413),	-- "Dogg-Saron" Costume
 				i(229414),	-- Moira Thaurissan's Hammer
 				i(229958),	-- Decorated Feather
 				i(230283),	-- Weird Egg
@@ -368,7 +361,6 @@ root(ROOTS.Unsorted, {
 			i(232511),	-- Electric Eel
 			i(232521),	-- Glyph of Arcane Familiar
 			--
-			i(232598),	-- Bag of Timewarped Badges
 			i(232631),	-- Wrapped Spear
 			--
 			i(228911),	-- Xal'atath's Rusty Coin

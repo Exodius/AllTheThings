@@ -3600,13 +3600,13 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 					["timeline"] = { ADDED_4_1_0 },
 				}),
 				candybucket(12340, {	-- Candy Bucket — Westfall, Sentinel Hill, Alliance
-					-- #if BEFORE 4.0.3
+					-- #if BEFORE CATA
 					["description"] = "The candy bucket will relocate to Sentinel Tower if the area is phased post Defias attack.",
 					-- #endif
 					["provider"] = { "o", 190047 },	-- Candy Bucket, Westfall
 					["coords"] = {
 						{ 52.9, 53.6, WESTFALL },
-						-- #if AFTER 4.0.3
+						-- #if AFTER CATA
 						{ 56.8, 47.3, WESTFALL },
 						-- #endif
 					},

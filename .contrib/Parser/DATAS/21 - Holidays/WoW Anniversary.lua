@@ -2548,6 +2548,9 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				-- Nagrand 226159
 				-- Gorgrond 226158
 				-- Shadowmoon Valley 226157
+				-- The Storm Peaks 226162
+				-- Icecrown 226161
+				-- Grizzly Hills 226160
 			}),
 			ach(40997),		-- The Gatecrashers (automated)
 			ach(40995),		-- The Originals (automated)
@@ -2934,6 +2937,9 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 					}),
 					i(208572, {	-- Azure Worldchiller (MOUNT!)
 						["cost"] = {{"c", TIMEWARPED_BADGE, 5000}}
+					}),
+					i(232598, {	-- Bag of Timewarped Badges
+						["cost"] = {{"c", BRONZE_TOKEN, 1}}
 					}),
 					i(228785, {	-- Coldflame Bulwark
 						["cost"] = {{"c", BRONZE_TOKEN, 10}}
