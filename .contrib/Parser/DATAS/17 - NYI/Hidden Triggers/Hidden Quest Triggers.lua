@@ -1157,7 +1157,6 @@ root(ROOTS.HiddenQuestTriggers, {
 
 		--	Nazjatar
 		--	PVP
-		q(56792),	-- Nazjatar Horde supply chest
 		q(57111),	-- Nazjatar Horde supply chest (both triggered simultaneously)
 		--	Naga Commanders
 		q(56882),	-- Commander Minezra
@@ -1712,7 +1711,6 @@ root(ROOTS.HiddenQuestTriggers, {
 		q(62505),	-- ""
 		q(62487),	-- Ember Court End - Baroness/H-C K/Choofa/Stonehead Elated
 		q(62503),	-- Ember Court End - Baroness/H-C K/Choofa/Stonehead Elated
-		q(62529),	-- Ember Court End - Four Elated Guests
 		q(62488),	-- Ember Court End - (Lady Moonberry / Rendle&Cudgelface as first-time guests, Elated and Very Happy respectively, had Casual maxed)
 		q(62494),	-- ""
 		q(62518),	-- ""
@@ -2177,7 +2175,6 @@ root(ROOTS.HiddenQuestTriggers, {
 		q(57668),	-- Triggering when using a portal to Orgrimmar as Horde/to Ironforge as Alliance after Dec 25th during the Feast of Winter Veil 2019/2021
 		--- (seems to trigger only the first time you go there that day). Possibly used to determine loot eligibility?
 		q(31990),	-- seems to be some account wide version of Audrey Burnhep quest, triggers on login
-		q(39695),	-- triggers after applying a Vantus Rune
 
 		-- Events/Holidays
 		q(11320),	-- [NYI] Now this is Ram Racing... Almost. (Brewfest)

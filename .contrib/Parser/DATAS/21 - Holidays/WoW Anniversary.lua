@@ -3330,8 +3330,6 @@ what is the highest rank that can be bestowed on a night elf watcher? Warden
 
 root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDown({ ["timeline"] = { ADDED_11_0_5 } }, {
 	n(WOW_ANNIVERSARY_TWENTY, {
-		q(85661),	-- Purchase one Tier 2 Set
-		q(85828),	-- Purchase a second Tier 2 Set
 		q(84312),	-- Bonus chance (speculated) for Grand Black War Mammoth from Doomwalker/Archavon on first kill per day
 		q(85723),	-- first WB kill of day/event or maybe Doomwalker
 		q(85168),	-- fourth WB kill of day/event or mayba Kazzak

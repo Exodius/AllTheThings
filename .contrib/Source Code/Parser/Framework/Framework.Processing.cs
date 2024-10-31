@@ -2201,6 +2201,7 @@ namespace ATT
                                 // if the questID is not Sourced, then set it on the achievement
                                 if (!SOURCED["questID"].ContainsKey(questID))
                                 {
+                                    LogDebug($"INFO: Assigned Criteria {achID}:{criteria.ID} QuestID {questID} directly to stand-alone Achievement", data);
                                     Objects.Merge(data, "questID", questID);
                                 }
                                 else if (!data.TryGetValue("questID", out long dataQuestID) || dataQuestID != questID)
