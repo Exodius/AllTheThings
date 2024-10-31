@@ -1256,8 +1256,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				["qg"] = 223882,	-- Izaik Kadarov
 				-- #endif
 				["isDaily"] = true,
-				["races"] = ALLIANCE_ONLY,
 				-- #if BEFORE 11.0.5
+				["races"] = ALLIANCE_ONLY,
 				["coord"] = { 51.5, 38.7, CAVERNS_OF_TIME },
 				-- #else
 				["coord"] = { 62.3, 51.8, TANARIS },
@@ -1278,8 +1278,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				["qg"] = 223882,	-- Izaik Kadarov
 				-- #endif
 				["isDaily"] = true,
-				["races"] = HORDE_ONLY,
 				-- #if BEFORE 11.0.5
+				["races"] = HORDE_ONLY,
 				["coord"] = { 51.5, 38.7, CAVERNS_OF_TIME },
 				-- #else
 				["coord"] = { 62.3, 51.8, TANARIS },

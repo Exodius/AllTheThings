@@ -2865,7 +2865,14 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 				}),
 				candybucket(32044, {	-- Candy Bucket — Vale of Eternal Blossoms, Mistfall Village, Neutral
 					["provider"] = { "o", 215903 },	-- Candy Bucket, Vale of Eternal Blossoms
+					-- #if BEFORE 8.3.0
 					["coord"] = { 35.1, 77.7, VALE_OF_ETERNAL_BLOSSOMS },
+					-- #else
+					["coords"] = {
+						{ 35.1, 77.7, VALE_OF_ETERNAL_BLOSSOMS },
+						{ 35.1, 77.7, NZOTH_ASSAULT_VALE_OF_ETERNAL_BLOSSOMS },
+					},
+					-- #endif
 					["timeline"] = { ADDED_5_0_4 },
 				}),
 				candybucket(32048, {	-- Candy Bucket — Valley of the Four Winds, Pang's Stead, Neutral
@@ -3595,8 +3602,16 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 					["timeline"] = { ADDED_4_1_0 },
 				}),
 				candybucket(12340, {	-- Candy Bucket — Westfall, Sentinel Hill, Alliance
+					["description"] = "The candy bucket will relocate to Sentinel Tower if the area is phased post Defias attack.",
 					["provider"] = { "o", 190047 },	-- Candy Bucket, Westfall
+					-- #if BEFORE 4.0.3
 					["coord"] = { 52.9, 53.6, WESTFALL },
+					-- #else
+					["coords"] = {
+						{ 52.9, 53.6, WESTFALL },
+						{ 56.8, 47.3, WESTFALL },
+					},
+					-- #endif
 					["timeline"] = { ADDED_2_0_1 },
 				}),
 				candybucket(28991, {	-- Candy Bucket — Wetlands, Greenwarden's Grove, Alliance

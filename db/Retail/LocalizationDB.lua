@@ -3113,6 +3113,9 @@ local ObjectNames = {
 	[182032] = "Galaen's Journal",
 	[182115] = "Wanted Poster",
 	[182165] = "Wanted Poster",
+	[182196] = "Arcane Container",
+	[182197] = "Arcane Container",
+	[182198] = "Arcane Container",
 	[182392] = "Garadar Bulletin Board",
 	[182393] = "Telaar Bulletin Board",
 	[182549] = "Fel Orc Plans",
@@ -8362,6 +8365,9 @@ local ObjectModels = {
 	[182032] = 198028,
 	[182115] = 199428,
 	[182165] = 199421,
+	[182196] = 199744,
+	[182197] = 199744,
+	[182198] = 199744,
 	[182392] = 199475,
 	[182393] = 192468,
 	[182549] = 198457,
@@ -12052,7 +12058,7 @@ _.PhaseConstants = {
 };
 local phases = {
 	[1] = {
-		name = "Never Implemented",
+		name = "Never Implemented [NYI]",
 		description = "|cFFFF0000This was never available to players.|r",
 		state = 1,
 	},
@@ -15563,7 +15569,7 @@ L.QUEST_NAMES = {
 	[84539] = "The Weaver considers you an Abettor.",
 	[84540] = "The Weaver considers you a Conspirator.",
 	[84541] = ("The Weaver considers you a Mastermind. Congratulations, Silksinger %s."):format(UnitName("player")),
-	[84562] = "Severed Threads Rank 1",
+	[84562] = "Severed Threads Active",
 	[84620] = "Stay awhile and listen: Magni Bronzebeard",
 	[84631] = "Awakening The Machine: Wave 5 Completed.",
 	[84632] = "Awakening The Machine: Wave 10 Completed.",
@@ -15841,6 +15847,9 @@ localize(L.HEADER_DESCRIPTIONS, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "Artefakte",
 	[103] = "Waffenverzauberungen",
+});
+localize(L.FlightPathNames, {
+	[149] = "Trümmerposten, Höllenfeuerhalbinsel",
 });
 localize(ObjectNames, {
 	[31] = "Alte Löwenstatue",
@@ -16214,6 +16223,9 @@ localize(ObjectNames, {
 	[182032] = "Galaens Tagebuch",
 	[182115] = "Steckbrief",
 	[182165] = "Steckbrief",
+	[182196] = "Arkaner Behälter",
+	[182197] = "Arkaner Behälter",
+	[182198] = "Arkaner Behälter",
 	[182392] = "Aushang von Garadar",
 	[182393] = "Aushang von Telaar",
 	[182549] = "Höllenorcpläne",
@@ -19929,6 +19941,9 @@ localize(L.HEADER_LORE, {
 localize(L.FILTER_ID_TYPES, {
 	[11] = "Artéfact",
 });
+localize(L.FlightPathNames, {
+	[149] = "Halte du Fracas, Péninsule des Flammes infernales",
+});
 localize(ObjectNames, {
 	[31] = "Statue du vieux lion",
 	[33] = "Coffre verrouillé",
@@ -20301,6 +20316,9 @@ localize(ObjectNames, {
 	[182032] = "Journal de Galaen",
 	[182115] = "Avis de recherche",
 	[182165] = "Avis de recherche",
+	[182196] = "Récipient arcanique",
+	[182197] = "Récipient arcanique",
+	[182198] = "Récipient arcanique",
 	[182392] = "Panneau d'affichage de Garadar",
 	[182393] = "Panneau d'affichage de Telaar",
 	[182549] = "Plans des Gangr'orcs",
@@ -23894,6 +23912,9 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000856] = "C'è una battaglia 4x4 in corso. Aiuta l'Orda sconfiggendo i Worgen Stalker.",
 	[-1000858] = "Tre cacciatori hanno circondato Mara Mantoveloce. Coinvolgili in combattimento e un forziere malconcio verrà generato vicino a Mara Swiftmane. Una volta terminata la battaglia, Mara ti ringrazierà e ti lascerà con il baule malconcio.",
 });
+localize(L.FlightPathNames, {
+	[149] = "Presidio Frantumato, Penisola del Fuoco Infernale",
+});
 localize(ObjectNames, {
 	[31] = "Vecchia Statua di Leone",
 	[34] = "Vecchio Fiasco",
@@ -24138,6 +24159,9 @@ localize(ObjectNames, {
 	[182032] = "Diario di Galaen",
 	[182115] = "Manifesto dei Ricercati",
 	[182165] = "Manifesto dei Ricercati",
+	[182196] = "Contenitore Arcano",
+	[182197] = "Contenitore Arcano",
+	[182198] = "Contenitore Arcano",
 	[182392] = "Bacheca di Garadar",
 	[182393] = "Bacheca di Telaar",
 	[182549] = "Piani dei Vilorchi",
@@ -27507,6 +27531,9 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000856] = "Há uma batalha 4x4 em andamento. Ajude a Horda derrotando os Worgen Stalkers.",
 	[-1000858] = "Três caçadores cercaram Mara Swiftmane. Envolva-os em combate e um baú maltratado aparecerá perto de Mara Swiftmane. Assim que a batalha terminar, Mara agradecerá e deixará você com o Baú Maltratado.",
 });
+localize(L.FlightPathNames, {
+	[149] = "Pontal do Raio, Península Fogo do Inferno",
+});
 localize(ObjectNames, {
 	[31] = "Estátua de Leão Antiga",
 	[33] = "Baú Trancado",
@@ -27855,6 +27882,9 @@ localize(ObjectNames, {
 	[182032] = "Diário de Galaen",
 	[182115] = "Cartaz de Procura-se",
 	[182165] = "Cartaz de Procura-se",
+	[182196] = "Recipiente Arcano",
+	[182197] = "Recipiente Arcano",
+	[182198] = "Recipiente Arcano",
 	[182392] = "Quadro de Avisos de Garadar",
 	[182393] = "Quadro de Avisos de Telaar",
 	[182549] = "Planos dos Orcs Vis",
@@ -31489,6 +31519,9 @@ localize(L.FILTER_ID_TYPES, {
 	[11] = "Артефакты",
 	[103] = "Иллюзии",
 });
+localize(L.FlightPathNames, {
+	[149] = "Лагерь Удара ,Полуостров Адского Пламени",
+});
 localize(ObjectNames, {
 	[31] = "Статуя старого льва",
 	[33] = "Запертый сундук",
@@ -31861,6 +31894,9 @@ localize(ObjectNames, {
 	[182032] = "Записи Галена",
 	[182115] = "Плакат \"Разыскивается\"",
 	[182165] = "Плакат \"Разыскивается\"",
+	[182196] = "Волшебный контейнер",
+	[182197] = "Волшебный контейнер",
+	[182198] = "Волшебный контейнер",
 	[182392] = "Гарадарская доска объявлений",
 	[182393] = "Телаарская доска объявлений",
 	[182549] = "Планы орков Скверны",
@@ -35398,7 +35434,7 @@ for i,objectID in ipairs(ALLIANCE_BONFIRES) do ObjectNames[objectID] = "Боль
 for i,objectID in ipairs(CANDY_BUCKETS) do ObjectNames[objectID] = "Кулек конфет"; end
 for i,objectID in ipairs(HORDE_BONFIRES) do ObjectNames[objectID] = "Большой костер Орды"; end
 for key,value in pairs({
-	[1] = "Никогда Не Доступны",
+	[1] = "Никогда Не Доступны [NYI]",
 	[2] = "Убраны Из Игры",
 	[3] = "Кошелек Blizzard",
 	[4] = "ПвП Элита / Гладиатор",
@@ -35540,6 +35576,9 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000855] = "4대4 전투가 진행 중입니다. Forsaken Deathsquad를 물리쳐 얼라이언스를 지원하세요.",
 	[-1000856] = "4대4 전투가 진행 중입니다. 늑대인간 추적자를 물리쳐 호드를 도와주세요.",
 	[-1000858] = "세 명의 사냥꾼이 마라 스위프트메인을 둘러싸고 있습니다. 전투에 참여하면 마라 스위프트메인 근처에 낡은 상자가 생성됩니다. 전투가 끝나면 마라는 감사 인사를 전하고 낡은 상자를 남겨줄 것입니다.",
+});
+localize(L.FlightPathNames, {
+	[149] = "징검다리 거점 지옥불 반도",
 });
 localize(ObjectNames, {
 	[31] = "오래된 사자상",
@@ -35893,6 +35932,9 @@ localize(ObjectNames, {
 	[182032] = "갈라엔의 일지",
 	[182115] = "현상 수배 전단",
 	[182165] = "현상 수배 전단",
+	[182196] = "마법 단지",
+	[182197] = "마법 단지",
+	[182198] = "마법 단지",
 	[182392] = "가라다르 게시판",
 	[182393] = "텔라아르 게시판",
 	[182549] = "타락한 오크의 계획서",
@@ -39058,6 +39100,9 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000856] = "Hay una batalla 4x4 en curso. Ayuda a la Horda derrotando a los Worgen Stalkers.",
 	[-1000858] = "Tres cazadores han rodeado a Mara Swiftmane. Entra en combate con ellos y aparecerá un cofre maltratado cerca de Mara Swiftmane. Una vez que termine la batalla, Mara te lo agradecerá y te dejará con el Cofre Maltratado.",
 });
+localize(L.FlightPathNames, {
+	[149] = "Puesto Devastación, Península del Fuego Infernal",
+});
 localize(ObjectNames, {
 	[31] = "Estatua de león antigua",
 	[33] = "Cofre cerrado",
@@ -39428,6 +39473,9 @@ localize(ObjectNames, {
 	[182032] = "Diario de Galaen",
 	[182115] = "Cartel de Se busca",
 	[182165] = "Cartel de Se busca",
+	[182196] = "Contenedor arcano",
+	[182197] = "Contenedor arcano",
+	[182198] = "Contenedor arcano",
 	[182392] = "Tablón de anuncios de Garadar",
 	[182393] = "Tablón de anuncios de Telaar",
 	[182549] = "Planos de orcos viles",
@@ -43071,6 +43119,9 @@ localize(L.FILTER_ID_TYPES, {
 	[11] = "神器",
 	[103] = "幻象",
 });
+localize(L.FlightPathNames, {
+	[149] = "破碎岗哨, 地狱火半岛",
+});
 localize(ObjectNames, {
 	[31] = "陈旧的石狮子",
 	[34] = "旧罐子",
@@ -43417,6 +43468,9 @@ localize(ObjectNames, {
 	[182032] = "加莱恩的日记",
 	[182115] = "通缉布告",
 	[182165] = "通缉布告",
+	[182196] = "奥术容器",
+	[182197] = "奥术容器",
+	[182198] = "奥术容器",
 	[182392] = "加拉达尔布告牌",
 	[182393] = "塔拉布告牌",
 	[182549] = "邪兽人的计划",
@@ -46615,7 +46669,7 @@ for i,objectID in ipairs(ALLIANCE_BONFIRES) do ObjectNames[objectID] = "联盟�
 for i,objectID in ipairs(CANDY_BUCKETS) do ObjectNames[objectID] = "糖罐"; end
 for i,objectID in ipairs(HORDE_BONFIRES) do ObjectNames[objectID] = "部落篝火"; end
 for key,value in pairs({
-	[1] = "从未实施",
+	[1] = "从未实施 [NYI]",
 	[2] = "从游戏中移除",
 	[4] = "PvP 精良/角斗士",
 	[5] = "不可学",
@@ -46633,7 +46687,7 @@ for key,value in pairs({
 	[6] = "|cFFFFAAAA除非您认识可以使用用于召唤首领的物品的人，否则这将不再可用。|r",
 	[9] = "|cFFAAFFAA此物品可在黑市拍卖行购买。原始来源可能已被删除。|r",
 	[10] = "|cFFAAFFAA最初通过不再印刷的 TCG 卡获得，但仍可通过黑市、游戏内或现实中的拍卖行获得。|r",
-	[38] = "|cFFFFAAAA这仅适用于在《熊猫人之谜》或通过黑市拍卖行完成传奇披风任务链的玩家。|r",
+	[38] = "|cFFFFAAAA这仅适用于在《熊猫人之谜》完成传奇披风任务链、《熊猫人之谜：幻境新生》获取成就的玩家或通过黑市拍卖行获取。|r",
 })
 do phases[key].description = value; end
 for key,value in pairs({
@@ -46655,13 +46709,16 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-1000045] = "這些物品可以從稀有菁英、可重複的寶箱、祈願蟋蟀、世界任務、指揮桌任務中取得。",
 	[-1001041] = "包含完成探究時獎勵的東西。",
 });
+localize(L.FlightPathNames, {
+	[149] = "碎裂哨站，地獄火半島",
+});
 localize(ObjectNames, {
 	[327407] = "珍貴的巨魔藏寶箱",
 	[329919] = "遭竊的補給品",
 });
 for i,objectID in ipairs(CANDY_BUCKETS) do ObjectNames[objectID] = "糖果桶"; end
 for key,value in pairs({
-	[1] = "從未實裝",
+	[1] = "從未實裝 [NYI]",
 	[2] = "已從遊戲中移除",
 	[3] = "暴雪點數",
 	[4] = "PvP 精良/角鬥士",
