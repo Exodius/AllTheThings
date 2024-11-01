@@ -1902,7 +1902,7 @@ root(ROOTS.TradingPost, bubbleDown({ ["timeline"] = { ADDED_10_0_5 } }, {
 				}),
 			}),
 		})),
-		n(OCTOBER, bubbleDownSelf({ ["timeline"] = { "added 11.0.2.56647", "removed 11.0.5.57292" } }, { 
+		n(OCTOBER, bubbleDownSelf({ ["timeline"] = { "added 11.0.2.56647", "removed 11.0.5.57388" } }, {
 			n(FILLED_TRAVELERS_LOG, {
 				i(187674),	-- Depthstalker (MOUNT!)
 			}),
@@ -2014,7 +2014,7 @@ root(ROOTS.TradingPost, bubbleDown({ ["timeline"] = { ADDED_10_0_5 } }, {
 				}),
 			}),
 		})),
-		n(NOVEMBER, bubbleDownSelf({ ["timeline"] = { "added 11.0.5.57292", "removed 11.0.5.99999" } }, { 
+		n(NOVEMBER, bubbleDownSelf({ ["timeline"] = { "added 11.0.5.57388", "removed 11.0.5.99999" } }, {
 			n(FILLED_TRAVELERS_LOG, {
 				iensemble(229059),	-- Arsenal: Crests of the Kingdom
 			}),

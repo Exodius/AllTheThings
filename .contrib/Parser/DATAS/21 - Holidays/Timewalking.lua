@@ -435,6 +435,7 @@ root(ROOTS.Holidays, n(TIMEWALKING_HEADER, applyevent(EVENTS.TIMEWALKING_CLASSIC
 				["crs"] = { 11143 },	-- Postmaster Malown
 				["g"] = {
 					i(13393),	-- Malown's Slam
+					--i(232905),	-- Malown's Slam TODO: missing sourceid?
 					i(13390),	-- The Postmaster's Band
 					i(13392),	-- The Postmaster's Seal
 					i(13391),	-- The Postmaster's Treads

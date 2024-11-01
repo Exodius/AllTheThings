@@ -159,7 +159,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 				["coord"] = { 63.0, 50.2, TANARIS },
 				["g"] = {
 					i(227551),	-- Note from Rexxar (QI!)
-					n(457025, { ["coord"] = { 68.0, 40.8, TANARIS } }),	-- Pre-Calibrated Goblin Transport Vessel
+					o(457025, { ["coord"] = { 68.0, 40.8, TANARIS } }),	-- Pre-Calibrated Goblin Transport Vessel
 				},
 			}),
 			q(84296, {	-- The Trail's Gone Cold
@@ -299,7 +299,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 						i(228322),	-- Dirt-Caked Celebration Crate (QS!)
 					},
 				}),
-				q(85574, {	-- Dirt-Caked Celebration Crate
+				q(84470, {	-- Dirt-Caked Celebration Crate
 					["provider"] = { "i", 228322 },	-- Dirt-Caked Celebration Crate
 				}),
 			}),

@@ -1119,7 +1119,12 @@ root(ROOTS.PetBattles, petbattle(bubbleDown({ ["timeline"] = { ADDED_5_0_4 } }, 
 		expansion(EXPANSION.WRATH, {
 			q(31932, {	-- Nearly Headless Jacob
 				["provider"] = { "n", 66636 },	-- Nearly Headless Jacob
-				["coord"] = { 50.2, 59.0, CRYSTALSONG_FOREST },
+				["coords"] = {
+					{50.2, 59.0, CRYSTALSONG_FOREST },
+					-- #if AFTER 11.0.5
+					{ 61.9, 49.6, TANARIS },
+					-- #endif
+				},
 			}),
 			q(31933, {	-- Okrut Dragonwaste
 				["provider"] = { "n", 66638 },	-- Okrut Dragonwaste
