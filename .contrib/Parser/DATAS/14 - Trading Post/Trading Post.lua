@@ -6,7 +6,7 @@ FILLED_TRAVELERS_LOG = createHeader({
 	readable = "Filled Travelers Log",
 	icon = 4696085,
 	text = {
-		en = [[~QUEST_REWARDS]],
+		en = "Filled Travelers Log",
 	},
 	description = {
 		en = "This reward is given for filling the Travel Points Progress Bar during the month.",
@@ -1902,7 +1902,7 @@ root(ROOTS.TradingPost, bubbleDown({ ["timeline"] = { ADDED_10_0_5 } }, {
 				}),
 			}),
 		})),
-		n(OCTOBER, bubbleDownSelf({ ["timeline"] = { "added 11.0.2.56647", "removed 11.0.5.99999" } }, { -- TODO, timeline out with Nov 1 build
+		n(OCTOBER, bubbleDownSelf({ ["timeline"] = { "added 11.0.2.56647", "removed 11.0.5.57292" } }, { 
 			n(FILLED_TRAVELERS_LOG, {
 				i(187674),	-- Depthstalker (MOUNT!)
 			}),
@@ -2014,7 +2014,7 @@ root(ROOTS.TradingPost, bubbleDown({ ["timeline"] = { ADDED_10_0_5 } }, {
 				}),
 			}),
 		})),
-		n(NOVEMBER, bubbleDownSelf({ ["timeline"] = { "added 11.0.2.56647", "removed 11.0.5.99999" } }, { -- TODO, timeline in with Nov 1 build
+		n(NOVEMBER, bubbleDownSelf({ ["timeline"] = { "added 11.0.5.57292", "removed 11.0.5.99999" } }, { 
 			n(FILLED_TRAVELERS_LOG, {
 				iensemble(229059),	-- Arsenal: Crests of the Kingdom
 			}),
