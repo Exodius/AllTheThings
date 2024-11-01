@@ -369,6 +369,17 @@ root(ROOTS.Unsorted, {
 
 			i(232478),	-- Area 52 Tabard
 			i(233053),	-- Crown of the Violet Rose
+
+
+			i(229366),	-- Brrrgl
+			i(229418),	-- Reins of the Trader's Gilded Brutosaur
+			i(230184),	-- Chaos-Forged Gryphon
+			i(230185),	-- Chaos-Forged Hippogryph
+			i(230200),	-- Chaos-Forged Dreadwing
+			i(230201),	-- Chaos-Forged Wind Rider
+			i(231290),	-- Reven's Comfy Carrier
+			i(231294),	-- Reven
+			i(234413),	-- Satchel of Exotic Mysteries
 		})),
 		expansion(EXPANSION.TWW, patch(0,2), bubbleDownSelf({ ["timeline"] = { ADDED_11_0_2 } }, {
 			explorationHeader({

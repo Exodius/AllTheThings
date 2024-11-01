@@ -2012,3 +2012,9 @@
 449132@@@Blackrock Warsaber
 449142@@@Kaldorei War Wolf
 454682@@@Startouched Furline
+11.0.5.57292
+465235@@@Trader's Gilded Brutosaur
+466811@@@Chaos-Forged Gryphon
+466812@@@Chaos-Forged Hippogryph
+466838@@@Chaos-Forged Dreadwing
+466845@@@Chaos-Forged Wind Rider
