@@ -380,6 +380,31 @@ root(ROOTS.Unsorted, {
 			i(231290),	-- Reven's Comfy Carrier
 			i(231294),	-- Reven
 			i(234413),	-- Satchel of Exotic Mysteries
+
+			--
+			i(44124),	-- Peculiar Key
+			i(118067),	-- Old Chain Link
+			i(226200),	-- Soggy Celebration Crate
+			i(227363),	-- Hear Historic Tales at the Storyteller Stage!
+			i(227364),	-- Red Hair
+			i(227443),	-- Strange Torch
+			i(227775),	-- Golden Chalice
+			i(227777),	-- Fragment of an Ancient Statue
+			i(227785),	-- Jeweled Eye
+			i(227790),	-- Cool Guts
+			i(228618),	-- Benatauk's Crystal Ocular Lenses
+			i(228619),	-- Benatauk's Thought Calculating Apparatus
+			i(228620),	-- Benatauk's Downy Helmet Liner
+			i(228934),	-- Carefully Penned Note
+			i(228935),	-- Unfinished Note
+			i(228936),	-- Hastily Scrawled Note
+			i(228937),	-- Water-Resistant Note
+			i(228938),	-- Peculiar Gem
+			i(228941),	-- Inert Peculiar Key
+			i(229351),	-- Spiritual Incense
+			i(232263),	-- Hazy Celebration Crate
+			i(234425),	-- Forgotten Folio
+			i(234448),	-- Bright Ideas Thinking Cap
 		})),
 		expansion(EXPANSION.TWW, patch(0,2), bubbleDownSelf({ ["timeline"] = { ADDED_11_0_2 } }, {
 			explorationHeader({
