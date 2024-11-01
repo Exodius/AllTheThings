@@ -156,6 +156,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 			q(84278, {	-- Tracking Quest
 				["description"] = "Use the Goblin Transport at 68.0, 40.8 to travel to Borean Tundra, then find Rexxar at 77.3, 46.1.",
 				["provider"] = { "n", 226766 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
+				["sourceQuests"] = { 84237 },	-- The 'Great' Detective
 				["coord"] = { 63.0, 50.2, TANARIS },
 				["g"] = {
 					i(227551),	-- Note from Rexxar (QI!)
@@ -173,33 +174,54 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 				},
 				["g"] = {
 					i(227664),	-- Spirit's Whistle (QI!)
-					--[[ Objects need ids
-					o(999, {	-- Torn Note
+					o(457156, {	-- Torn Note
 						["coord"] = { 85.9, 34.0, BOREAN_TUNDRA },
 						["g"] = {
 							i(227665),	-- Torn Diary, Page 4 (QI!)
 						}
 					}),
-					o(999, {	-- Torn Note
-						["description"] = "Use Torch of Pyrreth to reveal the page."
+					o(457161, {	-- Torn Note
+						["description"] = "Use Torch of Pyrreth to reveal the page.",
 						["provider"] = { "i", 208092 },	-- Torch of Pyrreth
 						["coord"] = { 85.9, 33.9, BOREAN_TUNDRA },
 						["g"] = {
 							i(227672),	-- Torn Diary, Page 7 (QI!)
 						}
 					}),
-					o(999, {	-- Torn Note
+					o(457160, {	-- Torn Note
 						["coord"] = { 88.1, 34.6, BOREAN_TUNDRA },
 						["g"] = {
 							i(227671),	-- Torn Diary, Page 6 (QI!)
 						}
 					}),
+					--[[ Need objectid
 					o(999, {	-- Mounted Spyglass
 						["coord"] = { 49.7, 36.0, SHOLAZAR_BASIN },
 					}),
 					]]--
 				},
 			}),
+			q(84334, {	-- Warn the Detective
+				["provider"] = { "n", 226766 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
+				["sourceQuests"] = { 84296 },	-- The Trail's Gone Cold
+				["coord"] = { 63.0, 50.2, TANARIS },
+			}),
+			q(84336, {	-- Spot The Difference
+				["description"] = "Speak to Hemet, Leeroy, and Addie to suss out the detectives' stories, then accuse one. Chase them to 59.66, 62.18 and kill them.",
+				["qgs"] = {
+					226796,	-- Athelton Jones
+					228661,	-- Athelton Jones (!)
+				},
+				["sourceQuests"] = { 84334 },	-- Warn the Detective
+				["coord"] = { 61.0, 50.6, TANARIS },
+				["crs"] = {
+					228250,	-- Hemet Nesingwary Sr.
+					158192,	-- Leeroy Jenkins
+					227731,	-- Addie Fizzlebog
+					228553,	-- Y'illiya Xennin
+				},
+			}),
+			-- End of Chapter 1 --
 		}),
 		-- Week 2: November 4th --
 		n(VENDORS, {

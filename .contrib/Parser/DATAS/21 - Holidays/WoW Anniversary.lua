@@ -1238,7 +1238,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 					--[[ No use yet, potential pets/toys?
 					i(140670),	-- Souvenir Elekk
 					i(140671),	-- Souvenir Raptor
-					i(117052),	-- Murloc Chew Toy
+					i(118052),	-- Murloc Chew Toy
 					--]]
 					i(130151, {	-- The "Devilsaur" Lunchbox (TOY!)
 						["cost"] = { { "c", 1155, 1000 }, },	-- 1,000x Ancient Mana
@@ -2684,8 +2684,6 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 					}),
 				},
 			}),
-
-			q(84336),	-- Chapter 1
 			q(84756),	-- Chapter 2 (faction?)
 			q(85043),	-- Chapter 2 (faction?)
 			q(85195),	-- Chapter 3
