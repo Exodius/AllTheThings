@@ -440,6 +440,7 @@ function candybucket(questID, t)
 	t = q(questID, t);
 	t._drop = { "g" };
 	t.isYearly = true;
+	t.g = { i(33226) };	-- Tricky Treat
 	if t.provider and t.provider[1] == "o" then
 		ObjectDB[t.provider[2]] = CANDY_BUCKET_OBJECT_DATA;
 	elseif t.providers then
