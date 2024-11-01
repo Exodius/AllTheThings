@@ -1302,1270 +1302,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 			pet(1730),	-- Spectral Spinner (PET!)
 		},
 	})),
-	n(QUESTS, {
-		q(12135, {	-- "Let the Fires Come!" (Alliance)
-			["qg"] = 24519,	-- Costumed Orphan Matron
-			["coords"] = {
-				{ 60.8, 53.6, AZUREMYST_ISLE },
-				-- #if AFTER CATA
-				{ 53.4, 51.5, DUN_MOROGH },
-				-- #else
-				{ 46.2, 53.1, DUN_MOROGH },
-				-- #endif
-				{ 42.6, 64.6, ELWYNN_FOREST },
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm original level requirement
-			["groups"] = {
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-				i(34068),	-- Weighted Jack-o'-Lantern
-			},
-		}),
-		q(12139, {	-- "Let the Fires Come!" (Horde)
-			["qg"] = 23973,	-- Masked Orphan Matron
-			["coords"] = {
-				{ 52.6, 41.5, DUROTAR },
-				{ 47.2, 46.4, EVERSONG_WOODS },
-				{ 60.8, 53.6, TIRISFAL_GLADES },
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = HORDE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm original level requirement
-			["groups"] = {
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-				i(34068),	-- Weighted Jack-o'-Lantern
-			},
-		}),
-		q(29430, {	-- A Friend in Need (Alliance)
-			["qg"] = 51934,	-- Gretchen Fenlow
-			["coord"] = { 32.3, 50.9, ELWYNN_FOREST },
-			["maps"] = { STORMWIND_CITY },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["isBreadcrumb"] = true,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(29431, {	-- A Friend in Need (Horde)
-			["qg"] = 53763,	-- Candace Fenlow
-			["coord"] = { 62.4, 66.7, TIRISFAL_GLADES },
-			["maps"] = { ORGRIMMAR },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = HORDE_ONLY,
-			["isBreadcrumb"] = true,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(29074, {	-- A Season for Celebration (Alliance)
-			["qgs"] = {
-				18927,	-- Human Commoner
-				19148,	-- Dwarf Commoner
-				19171,	-- Draenei Commoner
-				19172,	-- Gnome Commoner
-				19173,	-- Night Elf Commoner
-				20102,	-- Goblin Commoner
-			},
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = {
-				NORTHERN_BARRENS,
-				TANARIS,
-				WINTERSPRING,
-				IRONFORGE,
-				STORMWIND_CITY,
-				DARNASSUS,
-				THE_EXODAR,
-				NETHERSTORM,
-				SHATTRATH_CITY,
-				THE_STORM_PEAKS,
-				THE_CAPE_OF_STRANGLETHORN,
-				NORTHREND_DALARAN,
-			},
-			["races"] = ALLIANCE_ONLY,
-			["isBreadcrumb"] = true,
-		}),
-		q(29400, {	-- A Season for Celebration (Horde)
-			["qgs"] = {
-				19169,	-- Blood Elf Commoner
-				19175,	-- Orc Commoner
-				19176,	-- Tauren Commoner
-				19177,	-- Troll Commoner
-				19178,	-- Forsaken Commoner
-				20102,	-- Goblin Commoner
-			},
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = {
-				NORTHERN_BARRENS,
-				TANARIS,
-				WINTERSPRING,
-				ORGRIMMAR,
-				THUNDER_BLUFF,
-				UNDERCITY,
-				EVERSONG_WOODS,
-				NETHERSTORM,
-				SHATTRATH_CITY,
-				THE_STORM_PEAKS,
-				THE_CAPE_OF_STRANGLETHORN,
-				NORTHREND_DALARAN,
-			},
-			["races"] = HORDE_ONLY,
-			["isBreadcrumb"] = true,
-		}),
-		q(53122, {	-- A Season for Celebration (Horde - New Tirisfal Glades)
-			["qgs"] = {
-				19169,	-- Blood Elf Commoner
-				19175,	-- Orc Commoner
-				19176,	-- Tauren Commoner
-				19177,	-- Troll Commoner
-				19178,	-- Forsaken Commoner
-				20102,	-- Goblin Commoner
-			},
-			["timeline"] = { ADDED_8_0_1 },
-			["maps"] = {
-				NORTHERN_BARRENS,
-				TANARIS,
-				WINTERSPRING,
-				ORGRIMMAR,
-				THUNDER_BLUFF,
-				UNDERCITY,
-				EVERSONG_WOODS,
-				NETHERSTORM,
-				SHATTRATH_CITY,
-				THE_STORM_PEAKS,
-				THE_CAPE_OF_STRANGLETHORN,
-				NORTHREND_DALARAN,
-			},
-			["races"] = HORDE_ONLY,
-			["isBreadcrumb"] = true,
-		}),
-		q(29377, {	-- A Time to Break Down
-			["qg"] = 15197,	-- Darkcaller Yanka
-			["sourceQuests"] = {
-				29400,	-- A Season for Celebration (Horde)
-				-- #if AFTER 8.0.1
-				53122,	-- A Season for Celebration (Horde - New Tirisfal Glades)
-				-- #endif
-			},
-			["coord"] = { 62.0, 67.8, TIRISFAL_GLADES },
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { ELWYNN_FOREST },
-			["races"] = HORDE_ONLY,
-			["isDaily"] = true,
-			["groups"] = {
-				objective(1, {	-- Douse the Alliance's Wickerman
-					["provider"] = { "i", 68647 },	-- Dousing Agent
-					["coord"] = { 32.1, 50.6, ELWYNN_FOREST },
-				}),
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(29376, {	-- A Time to Build Up
-			["qg"] = 15197,	-- Darkcaller Yanka
-			["sourceQuests"] = {
-				29400,	-- A Season for Celebration (Horde)
-				-- #if AFTER 8.0.1
-				53122,	-- A Season for Celebration (Horde - New Tirisfal Glades)
-				-- #endif
-			},
-			["coord"] = { 62.0, 67.8, TIRISFAL_GLADES },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = HORDE_ONLY,
-			["isDaily"] = true,
-			["groups"] = {
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(29075, {	-- A Time to Gain
-			["qg"] = 51665,	-- Celestine of the Harvest
-			["sourceQuest"] = 29074,	-- A Season for Celebration (Alliance)
-			["coord"] = { 32, 50.4, ELWYNN_FOREST },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["isDaily"] = true,
-			["groups"] = {
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(29371, {	-- A Time to Lose
-			["qg"] = 52064,	-- Keira
-			["sourceQuest"] = 29074,	-- A Season for Celebration (Alliance)
-			["coord"] = { 32, 50.4, ELWYNN_FOREST },
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { TIRISFAL_GLADES },
-			["races"] = ALLIANCE_ONLY,
-			["isDaily"] = true,
-			["groups"] = {
-				objective(1, {	-- Douse the Horde's Wickerman
-					["provider"] = { "i", 68648 },	-- Dousing Agent
-					["coord"] = { 62, 67.8, TIRISFAL_GLADES },
-				}),
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(43259, {	-- Beware of the Crooked Tree
-			["qg"] = 109854,	-- Duroc Ironjaw
-			["coord"] = { 47.4, 40.6, LEGION_DALARAN },
-			["timeline"] = { ADDED_7_0_3 },
-			["maps"] = { VALSHARAH },
-			["isYearly"] = true,
-			["lvl"] = lvlsquish(98, 98, 40),	-- TODO: Check Level Requirement
-		}),
-		q(11392, {	-- Call the Headless Horseman
-			["provider"] = { "o", 186267 },	-- Pumpkin Shrine
-			["sourceQuests"] = {
-				11135,	-- The Headless Horseman
-				11220,	-- The Headless Horseman
-			},
-			["maps"] = {
-				SCARLET_MONASTERY,
-				436,	-- Scarlet Monastery, Crusader's Chapel
-			},
-			["timeline"] = { ADDED_2_0_1, REMOVED_3_3_0 },
-			["isDaily"] = true,
-			-- #if AFTER WRATH
-			["lvl"] = 75,
-			-- #elseif AFTER TBC
-			["lvl"] = 65,
-			-- #endif
-		}),
-		q(29144, {	-- Clean Up in Stormwind
-			["qg"] = 51934,	-- Gretchen Fenlow
-			["coord"] = { 32.2, 50.8, ELWYNN_FOREST },
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { STORMWIND_CITY },
-			["races"] = ALLIANCE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm original level requirement
-			["groups"] = {
-				objective(1, {	-- Stink Bombs Removed
-					["provider"] = { "i", 69191 },	-- Arcane Cleanser
-				}),
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(29375, {	-- Clean Up in Undercity
-			["qg"] = 53763,	-- Candace Fenlow
-			["sourceQuests"] = {
-				29400,	-- A Season for Celebration (Horde)
-				-- #if AFTER 8.0.1
-				53122,	-- A Season for Celebration (Horde - New Tirisfal Glades)
-				-- #endif
-			},
-			["coord"] = { 62.4, 66.7, TIRISFAL_GLADES },
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { UNDERCITY },
-			["races"] = HORDE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm original level requirement
-			["groups"] = {
-				objective(1, {	-- Stink Bombs Removed
-					["provider"] = { "i", 70727 },	-- Arcane Cleanser
-				}),
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(11356, {	-- Costumed Orphan Matron
-			["qgs"] = {
-				18927,	-- Human Commoner
-				19148,	-- Dwarf Commoner
-				19171,	-- Draenei Commoner
-				19172,	-- Gnome Commoner
-				19173,	-- Night Elf Commoner
-				20102,	-- Goblin Commoner
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["maps"] = {
-				TANARIS,
-				WINTERSPRING,
-				IRONFORGE,
-				STORMWIND_CITY,
-				DARNASSUS,
-				THE_EXODAR,
-				NETHERSTORM,
-				SHATTRATH_CITY,
-				-- #if AFTER CATA
-				NORTHERN_BARRENS,
-				THE_CAPE_OF_STRANGLETHORN,
-				-- #else
-				STRANGLETHORN_VALE,
-				THE_BARRENS,
-				-- #endif
-				-- #if AFTER WRATH
-				THE_STORM_PEAKS,
-				NORTHREND_DALARAN,
-				-- #endif
-			},
-			["races"] = ALLIANCE_ONLY,
-			["isBreadcrumb"] = true
-		}),
-		q(1658, {	-- Crashing the Wickerman Festival
-			["qg"] = 15199,	-- Sergeant Hartman
-			["coord"] = { 50, 57.2, HILLSBRAD_FOOTHILLS },
-			["maps"] = { SILVERPINE_FOREST, TIRISFAL_GLADES },
-			["timeline"] = { REMOVED_4_0_3 },
-			["races"] = ALLIANCE_ONLY,
-			["isYearly"] = true,
-			["lvl"] = 25,
-			["groups"] = {
-				objective(1, {	-- Scout out the Forsaken's Wickerman Festival.
-					["provider"] = { "o", 181672 },	-- Wickerman Effigy
-					["coord"] = { 56, 69, TIRISFAL_GLADES },
-				}),
-				i(20557),	-- Hallow's End Pumpkin Treat
-			},
-		}),
-		q(39721, {	-- Culling the Crew
-			["qg"] = 96705,	-- Orukan
-			["timeline"] = { ADDED_6_0_2 },
-			["maps"] = {
-				FROSTWALL,
-				LUNARFALL,
-				DRAENOR_SHADOWMOON_VALLEY,
-			},
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(100, 100, 40),
-			["groups"] = {
-				objective(1, {	-- 0/12 Boneship Crewman slain
-					["crs"] = {
-						96536,	-- Salty Dreg
-						96538,	-- Brackish Cultivator
-						96637,	-- Boneship Reveler
-					},
-				}),
-				i(128658),	-- Spooky Supplies
-			},
-		}),
-		q(29398, {	-- Fencing the Goods (Alliance)
-			["qg"] = 53950,	-- Hired Courier
-			["sourceQuest"] = 29392,	-- Missing Heirlooms (Alliance)
-			["coords"] = {
-				-- #if AFTER LEGION
-				{ 24, 44.6, STORMWIND_CITY },
-				-- #else
-				{ 24.1, 44.8, STORMWIND_CITY },
-				-- #endif
-			},
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(29416, {	-- Fencing the Goods (Horde)
-			["qg"] = 54142,	-- Hired Courier
-			["sourceQuest"] = 29415,	-- Missing Heirlooms (Horde)
-			["coord"] = { 57.4, 9, DUROTAR },
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { ORGRIMMAR },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(11440, {	-- Fire Brigade Practice (Azuremyst Isle)
-			["qg"] = 24519,	-- Costumed Orphan Matron
-			["sourceQuest"] = 11356,	-- Costumed Orphan Matron
-			["coord"] = { 49.2, 51.4, AZUREMYST_ISLE },
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/5 Fight Fires
-					["provider"] = { "i", 32971 },	-- Water Bucket
-				}),
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-			},
-		}),
-		q(11360, {	-- Fire Brigade Practice (Elwynn Forest)
-			["qg"] = 24519,	-- Costumed Orphan Matron
-			["sourceQuest"] = 11356,	-- Costumed Orphan Matron
-			["coord"] = { 42.6, 64.4, ELWYNN_FOREST },
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/5 Fight Fires
-					["provider"] = { "i", 32971 },	-- Water Bucket
-				}),
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-			},
-		}),
-		q(11439, {	-- Fire Brigade Practice (Dun Morogh)
-			["qg"] = 24519,	-- Costumed Orphan Matron
-			["sourceQuest"] = 11356,	-- Costumed Orphan Matron
-			["coords"] = {
-				-- #if AFTER CATA
-				{ 53.2, 51.4, DUN_MOROGH },
-				-- #else
-				{ 46.2, 53.1, DUN_MOROGH },
-				-- #endif
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/5 Fight Fires
-					["provider"] = { "i", 32971 },	-- Water Bucket
-				}),
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-			},
-		}),
-		q(11361, {	-- Fire Training (Durotar)
-			["qg"] = 23973,	-- Masked Orphan Matron
-			["sourceQuest"] = 11357,	-- Masked Orphan Matron
-			["coord"] = { 52.5, 41.2, DUROTAR },
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/5 Fight Fires
-					["provider"] = { "i", 32971 },	-- Water Bucket
-				}),
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-			},
-		}),
-		q(11450, {	-- Fire Training (Eversong Woods)
-			["qg"] = 23973,	-- Masked Orphan Matron
-			["sourceQuest"] = 11357,	-- Masked Orphan Matron
-			["coord"] = { 47.2, 46.6, EVERSONG_WOODS },
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/5 Fight Fires
-					["provider"] = { "i", 32971 },	-- Water Bucket
-				}),
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-			},
-		}),
-		q(11449, {	-- Fire Training (Tirisfal Glades)
-			["qg"] = 23973,	-- Masked Orphan Matron
-			["sourceQuest"] = 11357,	-- Masked Orphan Matron
-			["coords"] = {
-				-- #if AFTER CATA
-				{ 60.8, 53.6, TIRISFAL_GLADES },
-				-- #else
-				{ 60.9, 53.0, TIRISFAL_GLADES },
-				-- #endif
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/5 Fight Fires
-					["provider"] = { "i", 32971 },	-- Water Bucket
-				}),
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-			},
-		}),
-		q(39720, {	-- Foul Fertilizer
-			["qg"] = 96705,	-- Orukan
-			["timeline"] = { ADDED_6_0_2 },
-			["maps"] = {
-				FROSTWALL,
-				LUNARFALL,
-				DRAENOR_SHADOWMOON_VALLEY,
-			},
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(100, 100, 40),
-			["groups"] = {
-				objective(1, {	-- 0/8 Dread Fertilizer
-					["provider"] = { "n", 96765 },	-- Dread Fertilizer
-					["coord"] = { 40.4, 82.0, DRAENOR_SHADOWMOON_VALLEY },
-				}),
-				i(128658),	-- Spooky Supplies
-			},
-		}),
-		q(11242, {	-- Free at Last! (Alliance)
-			["qg"] = 23904,	-- Sir Thomas
-			["maps"] = { SCARLET_MONASTERY },
-			["timeline"] = { ADDED_2_0_1, REMOVED_4_0_1 },
-			["cost"] = {
-				{ "i", 33277, 1 },	-- Tome of Thomas Thomson
-			},
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(60, 60, 25),
-		}),
-		q(11403, {	-- Free at Last! (Horde)
-			["qg"] = 23904,	-- Sir Thomas
-			["maps"] = { SCARLET_MONASTERY },
-			["timeline"] = { ADDED_2_0_1, REMOVED_4_0_1 },
-			["cost"] = {
-				{ "i", 33277, 1 },	-- Tome of Thomas Thomson
-			},
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(60, 60, 25),
-		}),
-		q(8311, {	-- Hallow's End Treats for Jesper!
-			["qg"] = 15310,	-- Jesper
-			["coords"] = {
-				-- #if AFTER CATA
-				{ 32, 50.4, ELWYNN_FOREST },
-				-- #elseif AFTER WRATH
-				{ 56.6, 51.8, STORMWIND_CITY },
-				-- #else
-				{ 47.6, 35.4, STORMWIND_CITY },
-				-- #endif
-			},
-			["races"] = ALLIANCE_ONLY,
-			["isYearly"] = true,
-			["lvl"] = lvlsquish(10, 10, 1),
-			["groups"] = {
-				q(8356, {	-- Flexing for Nougat (Alliance)
-					["qg"] = 6740,	-- Innkeeper Allison <Innkeeper>
-					["coords"] = {
-						-- #if AFTER WRATH
-						{ 60.4, 75.3, STORMWIND_CITY },
-						-- #else
-						{ 52.6, 65.6, STORMWIND_CITY },
-						-- #endif
-					},
-					["races"] = ALLIANCE_ONLY,
-					["repeatable"] = true,
-					["groups"] = {
-						objective(1, {	-- 0/1 Stormwind Nougat
-							["questID"] = 8311,	-- Hallow's End Treats for Jesper!
-							["provider"] = { "i", 20492 },	-- Stormwind Nougat
-						}),
-					},
-				}),
-				q(8355, {	-- Incoming Gumdrop (Alliance)
-					["qg"] = 6826,	-- Talvash del Kissel
-					["coord"] = { 36, 4, IRONFORGE },
-					["races"] = ALLIANCE_ONLY,
-					["repeatable"] = true,
-					["groups"] = {
-						objective(2, {	-- 0/1 Gnomeregan Gumdrop
-							["questID"] = 8311,	-- Hallow's End Treats for Jesper!
-							["provider"] = { "i", 20494 },	-- Gnomeregan Gumdrop
-						}),
-					},
-				}),
-				q(8353, {	-- Chicken Clucking for a Mint (Alliance)
-					["qg"] = 5111,	-- Innkeeper Firebrew <Innkeeper>
-					["coord"] = { 18.6, 51.4, IRONFORGE },
-					["races"] = ALLIANCE_ONLY,
-					["repeatable"] = true,
-					["groups"] = {
-						objective(3, {	-- 0/1 Ironforge Mint
-							["questID"] = 8311,	-- Hallow's End Treats for Jesper!
-							["provider"] = { "i", 20490 },	-- Ironforge Mint
-						}),
-					},
-				}),
-				q(8357, {	-- Dancing for Marzipan (Alliance)
-					["qg"] = 6735,	-- Innkeeper Saelienne <Innkeeper>
-					["coords"] = {
-						-- #if AFTER CATA
-						{ 62.4, 32.8, DARNASSUS },
-						-- #else
-						{ 67.2, 15.8, DARNASSUS },
-						-- #endif
-					},
-					["races"] = ALLIANCE_ONLY,
-					["repeatable"] = true,
-					["groups"] = {
-						objective(4, {	-- 0/1 Darnassus Marzipan
-							["questID"] = 8311,	-- Hallow's End Treats for Jesper!
-							["provider"] = { "i", 20496 },	-- Darnassus Marzipan
-						}),
-					},
-				}),
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-			},
-		}),
-		q(8312, {	-- Hallow's End Treats for Spoops!
-			["qg"] = 15309,	-- Spoops
-			["coords"] = {
-				-- #if AFTER CATA
-				{ 67.4, 7, UNDERCITY },
-				-- #elseif AFTER CATA
-				{ 62.1, 66.4, TIRISFAL_GLADES },
-				-- #else
-				{ 71.2, 22.8, ORGRIMMAR },
-				-- #endif
-			},
-			["races"] = HORDE_ONLY,
-			["isYearly"] = true,
-			["lvl"] = lvlsquish(10, 10, 1),
-			["groups"] = {
-				q(8359, {	-- Flexing for Nougat (Horde)
-					["qg"] = 6929,	-- Innkeeper Gryshka <Innkeeper>
-					["coords"] = {
-						-- #if AFTER LEGION
-						{ 53.6, 78.8, ORGRIMMAR },
-						-- #elseif AFTER CATA
-						{ 54.2, 68.4, ORGRIMMAR },
-						-- #else
-						{ 54.2, 68.4, ORGRIMMAR },
-						-- #endif
-					},
-					["races"] = HORDE_ONLY,
-					["repeatable"] = true,
-					["groups"] = {
-						objective(1, {	-- 0/1 Orgrimmar Nougat
-							["questID"] = 8312,	-- Hallow's End Treats for Spoops!
-							["provider"] = { "i", 20493 },	-- Orgrimmar Nougat
-						}),
-					},
-				}),
-				q(8358, {	-- Incoming Gumdrop (Horde)
-					["qg"] = 11814,	-- Kali Remik
-					["coords"] = {
-						-- #if AFTER LEGION
-						{ 32.6, 65, ORGRIMMAR },
-						-- #elseif AFTER CATA
-						{ 33.5, 64.9, ORGRIMMAR },
-						-- #else
-						{ 56.2, 74.2, DUROTAR },
-						-- #endif
-					},
-					["races"] = HORDE_ONLY,
-					["repeatable"] = true,
-					["groups"] = {
-						objective(2, {	-- 0/1 Darkspear Gumdrop
-							["questID"] = 8312,	-- Hallow's End Treats for Spoops!
-							["provider"] = { "i", 20495 },	-- Darkspear Gumdrop
-						}),
-					},
-				}),
-				q(8354, {	-- Chicken Clucking for a Mint (Horde)
-					["qg"] = 6741,	-- Innkeeper Norman <Innkeeper>
-					["coord"] = { 67.8, 38.6, UNDERCITY },
-					["races"] = HORDE_ONLY,
-					["repeatable"] = true,
-					["groups"] = {
-						objective(3, {	-- 0/1 Undercity Mint
-							["questID"] = 8312,	-- Hallow's End Treats for Spoops!
-							["provider"] = { "i", 20491 },	-- Undercity Mint
-						}),
-					},
-				}),
-				q(8360, {	-- Dancing for Marzipan (Horde)
-					["qg"] = 6746,	-- Innkeeper Pala <Innkeeper>
-					["coord"] = { 45.8, 64.4, THUNDER_BLUFF },
-					["races"] = HORDE_ONLY,
-					["repeatable"] = true,
-					["groups"] = {
-						objective(4, {	-- 0/1 Thunder Bluff Marzipan
-							["questID"] = 8312,	-- Hallow's End Treats for Spoops!
-							["provider"] = { "i", 20497 },	-- Thunder Bluff Marzipan
-						}),
-					},
-				}),
-				-- #if AFTER CATA
-				i(33226),	-- Tricky Treat
-				-- #else
-				i(20557),	-- Hallow's End Pumpkin Treat
-				-- #endif
-			},
-		}),
-		q(11357, {	-- Masked Orphan Matron
-			["qgs"] = {
-				19169,	-- Blood Elf Commoner
-				19175,	-- Orc Commoner
-				19176,	-- Tauren Commoner
-				19177,	-- Troll Commoner
-				19178,	-- Forsaken Commoner
-				20102,	-- Goblin Commoner
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["maps"] = {
-				TANARIS,
-				WINTERSPRING,
-				ORGRIMMAR,
-				THUNDER_BLUFF,
-				UNDERCITY,
-				EVERSONG_WOODS,
-				NETHERSTORM,
-				SHATTRATH_CITY,
-				-- #if AFTER CATA
-				NORTHERN_BARRENS,
-				THE_CAPE_OF_STRANGLETHORN,
-				-- #else
-				THE_BARRENS,
-				STRANGLETHORN_VALE,
-				-- #endif
-				-- #if AFTER WRATH
-				NORTHREND_DALARAN,
-				THE_STORM_PEAKS,
-				-- #endif
-			},
-			["races"] = HORDE_ONLY,
-			["isBreadcrumb"] = true
-		}),
-		q(29392, {	-- Missing Heirlooms (Alliance)
-			["qg"] = 53949,	-- Anson Hastings
-			["sourceQuest"] = 29430,	-- A Friend in Need (Alliance)
-			["coords"] = {
-				-- #if AFTER LEGION
-				{ 60.2, 75.2, STORMWIND_CITY },
-				-- #else
-				{ 61.1, 70.6, STORMWIND_CITY },
-				-- #endif
-			},
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(29415, {	-- Missing Heirlooms (Horde)
-			["qg"] = 54141,	-- Edgar Goodwin
-			["sourceQuest"] = 29431,	-- A Friend in Need (Horde)
-			["coord"] = { 54.4, 77.6, ORGRIMMAR },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(39719, {	-- Mutiny on the Boneship
-			["qg"] = 96705,	-- Orukan
-			["timeline"] = { ADDED_6_0_2 },
-			["maps"] = {
-				FROSTWALL,
-				LUNARFALL,
-				DRAENOR_SHADOWMOON_VALLEY,
-			},
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(100, 100, 40),
-			["groups"] = {
-				objective(1, {	-- Captain Bonerender slain
-					["provider"] = { "n", 96535 },	-- Captain Bonerender
-					["coord"] = { 38.8, 86.2, DRAENOR_SHADOWMOON_VALLEY },
-				}),
-				i(128658),	-- Spooky Supplies
-			},
-		}),
-		q(8322, {	-- Rotten Eggs
-			["qg"] = 15197,	-- Darkcaller Yanka
-			["coords"] = {
-				{ 55.6, 69.9, TIRISFAL_GLADES },
-				{ 51.4, 59.0, HILLSBRAD_FOOTHILLS },
-			},
-			["timeline"] = { REMOVED_4_0_3 },
-			["races"] = HORDE_ONLY,
-			["isYearly"] = true,
-			["cost"] = {
-				{ "i", 20605, 1 },	-- Rotten Eggs
-			},
-			["lvl"] = 30,
-		}),
-		q(8409, {	-- Ruined Kegs
-			["provider"] = { "o", 180570 },	-- Keg
-			["sourceQuest"] = 8322,	-- Rotten Eggs
-			["coord"] = { 51.4, 59.0, HILLSBRAD_FOOTHILLS },
-			["timeline"] = { REMOVED_4_0_3 },
-			["races"] = HORDE_ONLY,
-			["isYearly"] = true,
-			["lvl"] = 30,
-			["groups"] = {
-				i(20557),	-- Hallow's End Pumpkin Treat
-			},
-		}),
-		q(29399, {	-- Shopping Around (Alliance)
-			["qg"] = 8719,	-- Auctioneer Fitch
-			["sourceQuest"] = 29398,	-- Fencing the Goods (Alliance)
-			["coords"] = {
-				-- #if AFTER LEGION
-				{ 61.2, 70.8, STORMWIND_CITY },
-				-- #else
-				{ 61.1, 70.6, STORMWIND_CITY },
-				-- #endif
-			},
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(29425, {	-- Shopping Around (Horde)
-			["qg"] = 44866,	-- Auctioneer Drezmit
-			["sourceQuest"] = 29416,	-- Fencing the Goods (Horde)
-			["coord"] = { 54, 73.4, ORGRIMMAR },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(1657, {	-- Stinking Up Southshore
-			["qg"] = 15197,	-- Darkcaller Yanka
-			["coord"] = { 55.6, 69.9, TIRISFAL_GLADES },
-			["maps"] = { HILLSBRAD_FOOTHILLS },
-			["timeline"] = { REMOVED_4_0_3 },
-			["races"] = HORDE_ONLY,
-			["isYearly"] = true,
-			["lvl"] = 25,
-			["groups"] = {
-				objective(1, {	-- Toss Stink Bomb into Southshore
-					["provider"] = { "i", 20387 },	-- Forsaken Stink Bomb Cluster
-					["coord"] = { 49.8, 57.9, HILLSBRAD_FOOTHILLS },
-				}),
-				i(20557),	-- Hallow's End Pumpkin Treat
-			},
-		}),
-		q(39716, {	-- Smashing Squashlings
-			["qg"] = 96705,	-- Orukan
-			["timeline"] = { ADDED_6_0_2 },
-			["maps"] = {
-				FROSTWALL,
-				LUNARFALL,
-				DRAENOR_SHADOWMOON_VALLEY,
-			},
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(100, 100, 40),
-			["groups"] = {
-				objective(1, {	-- 0/6 Growing Squashling
-					["provider"] = { "n", 96545 },	-- Growing Squashling
-					["coord"] = { 40.4, 82.0, DRAENOR_SHADOWMOON_VALLEY },
-				}),
-				i(128658),	-- Spooky Supplies
-			},
-		}),
-		q(12133, {	-- Smash the Pumpkin (Alliance)
-			["provider"] = { "o", 186887 },	-- Large Jack-o'-Lantern
-			["coords"] = {
-				{ 60.8, 53.6, AZUREMYST_ISLE },
-				{ 53.4, 51.5, DUN_MOROGH },
-				{ 42.6, 64.6, ELWYNN_FOREST },
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["cost"] = {
-				{ "i", 36876, 1 },	-- Scorched Holy Symbol
-			},
-			["races"] = ALLIANCE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				i(34077),	-- Crudely Wrapped Gift
-			},
-		}),
-		q(12155, {	-- Smash the Pumpkin (Horde)
-			["provider"] = { "o", 186887 },	-- Large Jack-o'-Lantern
-			["coords"] = {
-				{ 52.6, 41.5, DUROTAR },
-				{ 47.2, 46.4, EVERSONG_WOODS },
-				{ 60.8, 53.6, TIRISFAL_GLADES },
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["cost"] = {
-				{ "i", 36876, 1 },	-- Scorched Holy Symbol
-			},
-			["races"] = HORDE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				i(34077),	-- Crudely Wrapped Gift
-			},
-		}),
-		q(29054, {	-- Stink Bombs Away! (Alliance)
-			["qg"] = 51934,	-- Gretchen Fenlow
-			["sourceQuest"] = 29074,	-- A Season for Celebration (Alliance)
-			["coord"] = { 32.2, 50.8, ELWYNN_FOREST },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/25 Bombs Dropped
-					["provider"] = { "n", 52548 },	-- Gertrude Fenlow
-					["coord"] = { 32.2, 50.6, ELWYNN_FOREST },
-				}),
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(29374, {	-- Stink Bombs Away! (Horde)
-			["qg"] = 53763,	-- Candace Fenlow
-			-- #if AFTER 8.0.1
-			["sourceQuests"] = {
-				29400,	-- A Season for Celebration (Horde)
-				53122,	-- A Season for Celebration (Horde - New Tirisfal Glades)
-			},
-			-- #else
-			["sourceQuest"] = 29400,	-- A Season for Celebration (Horde)
-			-- #endif
-			["coord"] = { 62.4, 66.7, TIRISFAL_GLADES },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = HORDE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/25 Bombs Dropped
-					["provider"] = { "n", 53764 },	-- Crina Fenlow
-					["coord"] = { 62.2, 67.0, TIRISFAL_GLADES },
-				}),
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(11131, {	-- Stop the Fires! (Alliance)
-			["qg"] = 24519,	-- Costumed Orphan Matron
-			["sourceQuests"] = {
-				11440,	-- Fire Brigade Practice [Azuremyst Isle]
-				11439,	-- Fire Brigade Practice [Dun Morogh]
-				11360,	-- Fire Brigade Practice [Elwynn Forest]
-			},
-			["coords"] = {
-				{ 60.8, 53.6, AZUREMYST_ISLE },
-				{ 53.4, 51.5, DUN_MOROGH },
-				{ 42.6, 64.6, ELWYNN_FOREST },
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/1 Put Out the Fires
-					["provider"] = { "i", 32971 },	-- Water Bucket
-				}),
-				i(20557),	-- Hallow's End Pumpkin Treat
-				i(34068),	-- Weighted Jack-o'-Lantern
-			},
-		}),
-		q(11219, {	-- Stop the Fires! (Horde)
-			["qg"] = 23973,	-- Masked Orphan Matron
-			["sourceQuests"] = {
-				11361,	-- Fire Training [Durotar]
-				11450,	-- Fire Training [Eversong Woods]
-				11449,	-- Fire Training [Tirisfal Glades]
-			},
-			["coords"] = {
-				{ 52.6, 41.5, DUROTAR },
-				{ 47.2, 46.4, EVERSONG_WOODS },
-				{ 60.8, 53.6, TIRISFAL_GLADES },
-			},
-			["timeline"] = { ADDED_2_0_1 },
-			["races"] = HORDE_ONLY,
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
-			["groups"] = {
-				objective(1, {	-- 0/1 Put Out the Fires
-					["provider"] = { "i", 32971 },	-- Water Bucket
-				}),
-				i(20557),	-- Hallow's End Pumpkin Treat
-				i(34068),	-- Weighted Jack-o'-Lantern
-			},
-		}),
-		q(29402, {	-- Taking Precautions (Alliance)
-			["qg"] = 54021,	-- Hudson Barnes
-			["sourceQuest"] = 29399,	-- Shopping Around (Alliance)
-			["coord"] = { 64, 46.4, STORMWIND_CITY },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-			["groups"] = {
-				-- #if AFTER 5.0.4
-				objective(1, {	-- 0/2 Strange Dust
-					["provider"] = { "i", 10940 },	-- Strange Dust
-				}),
-				objective(2, {	-- 0/5 Crystal Vial
-					["provider"] = { "i", 3371 },	-- Crystal Vial
-				}),
-				-- #else
-				objective(1, {	-- 0/5 Crystal Vial
-					["provider"] = { "i", 3371 },	-- Crystal Vial
-				}),
-				objective(2, {	-- 0/5 Arcane Powder
-					["provider"] = { "i", 17020 },	-- Arcane Powder
-				}),
-				-- #endif
-				objective(3, {	-- 0/5 Blood Nettle
-					["providers"] = {
-						{ "i",  71035 },	-- Blood Nettle
-						{ "o", 209059 },	-- Blood Nettle
-					},
-					["coord"] = { 51.5, 10.0, STORMWIND_CITY },
-				}),
-			},
-		}),
-		q(29426, {	-- Taking Precautions (Horde)
-			["qg"] = 54146,	-- Delian Sunshade
-			["sourceQuest"] = 29425,	-- Shopping Around (Horde)
-			["coord"] = { 58, 48.2, ORGRIMMAR },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-			["groups"] = {
-				-- #if AFTER 5.0.4
-				objective(1, {	-- 0/2 Strange Dust
-					["provider"] = { "i", 10940 },	-- Strange Dust
-				}),
-				objective(2, {	-- 0/5 Crystal Vial
-					["provider"] = { "i", 3371 },	-- Crystal Vial
-				}),
-				-- #else
-				objective(1, {	-- 0/5 Crystal Vial
-					["provider"] = { "i", 3371 },	-- Crystal Vial
-				}),
-				objective(2, {	-- 0/5 Arcane Powder
-					["provider"] = { "i", 17020 },	-- Arcane Powder
-				}),
-				-- #endif
-				objective(3, {	-- 0/5 Blood Nettle
-					["providers"] = {
-						{ "i",  71035 },	-- Blood Nettle
-						{ "o", 209059 },	-- Blood Nettle
-					},
-					["coord"] = { 45.9, 49.5, ORGRIMMAR },
-				}),
-			},
-		}),
-		q(29403, {	-- The Collector's Agent (Alliance)
-			["qg"] = 54021,	-- Hudson Barnes
-			["sourceQuest"] = 29402,	-- Taking Precautions (Alliance)
-			["coord"] = { 64, 46.4, STORMWIND_CITY },
-			["timeline"] = { ADDED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-			["groups"] = {
-				objective(1, {	-- Meeting Disrupted
-					["provider"] = { "n", 54114 },	-- Unleashed Void
-					["coord"] = { 55.2, 43.6, STORMWIND_CITY },
-				}),
-			},
-		}),
-		q(29427, {	-- The Collector's Agent (Horde)
-			["qg"] = 54146,	-- Delian Sunshade
-			["sourceQuest"] = 29426,	-- Taking Precautions (Horde)
-			["coord"] = { 58, 48.2, ORGRIMMAR },
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { TIRISFAL_GLADES },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-			["groups"] = {
-				objective(1, {	-- Meeting Disrupted
-					["provider"] = { "n", 54114 },	-- Unleashed Void
-					["coord"] = { 65.8, 74.2, TIRISFAL_GLADES },
-				}),
-			},
-		}),
-		q(29413, {	-- The Creepy Crate (Alliance)
-			["provider"] = { "o", 209076 },	-- Anson's Crate
-			["sourceQuest"] = 29411,	-- What Now? (Alliance)
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { STORMWIND_CITY },
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-			["groups"] = {
-				i(71076, {	-- Creepy Crate (PET!)
-					["timeline"] = { ADDED_4_2_0}
-				}),
-			},
-		}),
-		q(29429, {	-- The Creepy Crate (Horde)
-			["provider"] = { "o", 209095 },	-- Edgar's Crate
-			["sourceQuest"] = 29428,	-- What Now? (Horde)
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { ORGRIMMAR },
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-			["groups"] = {
-				i(71076, {	-- Creepy Crate (PET!)
-					["timeline"] = { ADDED_4_2_0}
-				}),
-			},
-		}),
-		q(11135, {	-- The Headless Horseman (Alliance)
-			["qg"] = 24519,	-- Costumed Orphan Matron
-			["coords"] = {
-				{ 49.2, 51.3, AZUREMYST_ISLE },
-				-- #if AFTER CATA
-				{ 53.3, 51.5, DUN_MOROGH },
-				-- #elseif AFTER TBC
-				{ 46.2, 53.1, DUN_MOROGH },
-				-- #endif
-				{ 42.6, 64.4, ELWYNN_FOREST },
-			},
-			["timeline"] = { ADDED_2_0_1, REMOVED_4_0_1 },
-			["races"] = ALLIANCE_ONLY,
-			-- #if AFTER WRATH
-			["lvl"] = 75,
-			-- #elseif AFTER TBC
-			["lvl"] = 65,
-			-- #endif
-		}),
-		q(11220, {	-- The Headless Horseman (Horde)
-			["qg"] = 23973,	-- Masked Orphan Matron
-			["coords"] = {
-				{ 52.6, 41.2, DUROTAR },
-				{ 47.3, 46.5, EVERSONG_WOODS },
-				{ 60.9, 53.0, TIRISFAL_GLADES },
-			},
-			["timeline"] = { ADDED_2_0_1, REMOVED_4_0_1 },
-			["races"] = HORDE_ONLY,
-			-- #if AFTER WRATH
-			["lvl"] = 75,
-			-- #elseif AFTER TBC
-			["lvl"] = 65,
-			-- #endif
-		}),
-		q(8373, {	-- The Power of Pine
-			["qg"] = 15199,	-- Sergeant Hartman
-			["coord"] = { 50, 57.2, HILLSBRAD_FOOTHILLS },
-			["timeline"] = { REMOVED_4_0_3 },
-			["races"] = ALLIANCE_ONLY,
-			["isYearly"] = true,
-			["lvl"] = 25,
-			["groups"] = {
-				objective(1, {	-- Clean up a stink bomb that's been dropped on Southshore!
-					["provider"] = { "i", 20604 },	-- Stink Bomb Cleaner
-				}),
-				i(20557),	-- Hallow's End Pumpkin Treat
-			},
-		}),
-		q(43162, {	-- Under the Crooked Tree
-			["qg"] = 109734,	-- Hag of the Crooked Tree
-			-- ["sourceQuest"] = 43259,	-- Beware of the Crooked Tree	[not required 2023-10-25]
-			["coord"] = { 34.9, 56.0, VALSHARAH },
-			["timeline"] = { ADDED_7_0_3 },
-			["isDaily"] = true,
-			["lvl"] = lvlsquish(98, 98, 40),	-- TODO: Check Level Requirement
-			["groups"] = {
-				objective(1, {	-- Drink from the cauldron and release Aria Sorrowheart's spirit
-					["provider"] = { "n", 109825 },	-- Aria Sorrowheart
-					["coord"] = { 34.8, 55.6, VALSHARAH },
-				}),
-				i(139137, {	-- Hag's Belongings
-					["sym"] = {
-						{ "selectparent", 3 },	-- Select the holiday root.
-						{ "pop" },	-- Get the Rewards.
-						{ "where", "headerID", REWARDS },	-- Select the "Rewards" header.
-						{ "pop" },	-- Get the Rewards.
-						{ "contains", "itemID", 33226, unpack(WANDS_IDS) },	-- Tricky Treat & All the Wands
-						{ "exclude", "itemID", 20413 },	-- Exclude Hallowed Wand - Random
-					},
-					["groups"] = {
-						i(139133),	-- Hat of the First Sister
-						i(139134),	-- Hat of the Second Sister
-						i(139135),	-- Hat of the Third Sister
-						i(139136),	-- Hat of the Youngest Sister
-					}
-				}),
-			},
-		}),
-		q(29411, {	-- What Now? (Alliance)
-			["provider"] = { "o", 209072 },	-- Stolen Crate
-			["sourceQuest"] = 29403,	-- The Collector's Agent (Alliance)
-			["description"] = "Does not matter who you give it to, you still get the pet!",
-			["coord"] = { 55.3, 43.5, STORMWIND_CITY },
-			["timeline"] = { ADDED_4_0_1 },
-			["cost"] = {
-				{ "i", 71057, 1 },	-- Recovered Crate
-			},
-			["races"] = ALLIANCE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(29428, {	-- What Now? (Horde)
-			["provider"] = { "o", 209094 },	-- Stolen Crate
-			["sourceQuest"] = 29427,	-- The Collector's Agent (Horde)
-			["description"] = "Does not matter who you give it to, you still get the pet!",
-			["coord"] = { 65.8, 74.8, TIRISFAL_GLADES },
-			["timeline"] = { ADDED_4_0_1 },
-			["maps"] = { ORGRIMMAR },
-			["cost"] = {
-				{ "i", 71057, 1 },	-- Recovered Crate
-			},
-			["races"] = HORDE_ONLY,
-			["lvl"] = lvlsquish(10, 10, 1),
-		}),
-		q(64546,	-- Visions of Sire Denathrius
-		bubbleDownSelf({
-			["timeline"] = { ADDED_9_1_0 },
-			["customCollect"] = "SL_COV_VEN",
-		},{
-			["description"] = "Speak with Theotar within The Ember Court scenario to spawn the 'Vision of Sire Denathrius'. During the final Tribute stage, accept the quest to receive the permanent unlock for your Ember Court.",
-			["crs"] = {
-				165196,	-- Theotar (Inside Ember Court)
-				164966,	-- Temel <The Party Herald> (with a hat)
-			},
-			["coords"] = {
-				{ 28.0, 43.0, REVENDRETH },	-- with hat, outside Sinfall
-			},
-			["provider"] = { "n", 180458 },	-- Vision of Sire Denathrius
-			["repeatable"] = true,	-- probably yearly, Blizzard API says it's daily, in practice it unflaggs right after completion
-			["maps"] = { 1644 },	-- The Ember Court
-			["groups"] = {
-				i(181442, {	-- Vision of Sire Denathrius
-					["questID"] = 61458,
-				}),
-			},
-		})),
-		q(76075, {	-- A Ghostly Message
-			["providers"] = {
-				{ "n", 53869 },	-- Orphan Matron Seacole (A)
-				{ "n", 53865 },	-- Orphan Matron Nanee (H)
-			},
-			["timeline"] = { ADDED_10_1_7 },
-			["coords"] = {
-				{ 31.9, 50, ELWYNN_FOREST },	-- Alliance
-				{ 62.4, 66.6, TIRISFAL_GLADES },	-- Horde
-			},
-			["groups"] = {
-				i(206596),	-- Tome of Thomas Thomson (QI!)
-			},
-		}),
-		q(76072, {	-- Shades of Scarlet
-			["provider"] = { "n", 206158 },	-- Sir Thomas
-			["sourceQuest"] = 76075,	-- A Ghostly Message
-			["timeline"] = { ADDED_10_1_7 },
-			["coord"] = { 81.2, 44.6, TIRISFAL_GLADES },
-			["groups"] = {
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(76073, {	-- No Laughing Matter
-			["provider"] = { "n", 205473 },	-- Sir Thomas
-			["sourceQuest"] = 76072,	-- Shades of Scarlet
-			["timeline"] = { ADDED_10_1_7 },
-			["coord"] = { 82.4, 32.7, TIRISFAL_GLADES },
-			["groups"] = {
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(76074, {	-- The Headless Horseman, Returned
-			["provider"] = { "n", 205448 },	-- Suzannah
-			["sourceQuest"] = 76073,	-- No Laughing Matter
-			["timeline"] = { ADDED_10_1_7 },
-			["coord"] = { 83.5, 30.8, TIRISFAL_GLADES },
-			["groups"] = {
-				i(33226),	-- Tricky Treat
-			},
-		}),
-		q(77779, {	-- The Tale of Sir Thomas
-			["provider"] = { "n", 209609 },	-- Sir Thomas
-			["sourceQuest"] = 76074,	-- The Headless Horseman, Returned
-			["timeline"] = { ADDED_10_1_7 },
-			["coord"] = { 43, 53, SCARLET_MONASTERY },
-			["groups"] = {
-				i(208769),	-- Tome of Thomas Thomson
-			},
-		}),
-		-- Candy Bucket Quests
+	header(HEADERS.Quest, 12406, {	-- Candy Bucket Quests
 		n(FACTION_HEADER_NEUTRAL, {
 			["timeline"] = { ADDED_2_0_1 },
 			["groups"] = {
@@ -4071,6 +2808,1270 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 				}),
 			},
 		})),
+	}),
+	n(QUESTS, {
+		q(12135, {	-- "Let the Fires Come!" (Alliance)
+			["qg"] = 24519,	-- Costumed Orphan Matron
+			["coords"] = {
+				{ 60.8, 53.6, AZUREMYST_ISLE },
+				-- #if AFTER CATA
+				{ 53.4, 51.5, DUN_MOROGH },
+				-- #else
+				{ 46.2, 53.1, DUN_MOROGH },
+				-- #endif
+				{ 42.6, 64.6, ELWYNN_FOREST },
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm original level requirement
+			["groups"] = {
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+				i(34068),	-- Weighted Jack-o'-Lantern
+			},
+		}),
+		q(12139, {	-- "Let the Fires Come!" (Horde)
+			["qg"] = 23973,	-- Masked Orphan Matron
+			["coords"] = {
+				{ 52.6, 41.5, DUROTAR },
+				{ 47.2, 46.4, EVERSONG_WOODS },
+				{ 60.8, 53.6, TIRISFAL_GLADES },
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = HORDE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm original level requirement
+			["groups"] = {
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+				i(34068),	-- Weighted Jack-o'-Lantern
+			},
+		}),
+		q(29430, {	-- A Friend in Need (Alliance)
+			["qg"] = 51934,	-- Gretchen Fenlow
+			["coord"] = { 32.3, 50.9, ELWYNN_FOREST },
+			["maps"] = { STORMWIND_CITY },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["isBreadcrumb"] = true,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(29431, {	-- A Friend in Need (Horde)
+			["qg"] = 53763,	-- Candace Fenlow
+			["coord"] = { 62.4, 66.7, TIRISFAL_GLADES },
+			["maps"] = { ORGRIMMAR },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = HORDE_ONLY,
+			["isBreadcrumb"] = true,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(29074, {	-- A Season for Celebration (Alliance)
+			["qgs"] = {
+				18927,	-- Human Commoner
+				19148,	-- Dwarf Commoner
+				19171,	-- Draenei Commoner
+				19172,	-- Gnome Commoner
+				19173,	-- Night Elf Commoner
+				20102,	-- Goblin Commoner
+			},
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = {
+				NORTHERN_BARRENS,
+				TANARIS,
+				WINTERSPRING,
+				IRONFORGE,
+				STORMWIND_CITY,
+				DARNASSUS,
+				THE_EXODAR,
+				NETHERSTORM,
+				SHATTRATH_CITY,
+				THE_STORM_PEAKS,
+				THE_CAPE_OF_STRANGLETHORN,
+				NORTHREND_DALARAN,
+			},
+			["races"] = ALLIANCE_ONLY,
+			["isBreadcrumb"] = true,
+		}),
+		q(29400, {	-- A Season for Celebration (Horde)
+			["qgs"] = {
+				19169,	-- Blood Elf Commoner
+				19175,	-- Orc Commoner
+				19176,	-- Tauren Commoner
+				19177,	-- Troll Commoner
+				19178,	-- Forsaken Commoner
+				20102,	-- Goblin Commoner
+			},
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = {
+				NORTHERN_BARRENS,
+				TANARIS,
+				WINTERSPRING,
+				ORGRIMMAR,
+				THUNDER_BLUFF,
+				UNDERCITY,
+				EVERSONG_WOODS,
+				NETHERSTORM,
+				SHATTRATH_CITY,
+				THE_STORM_PEAKS,
+				THE_CAPE_OF_STRANGLETHORN,
+				NORTHREND_DALARAN,
+			},
+			["races"] = HORDE_ONLY,
+			["isBreadcrumb"] = true,
+		}),
+		q(53122, {	-- A Season for Celebration (Horde - New Tirisfal Glades)
+			["qgs"] = {
+				19169,	-- Blood Elf Commoner
+				19175,	-- Orc Commoner
+				19176,	-- Tauren Commoner
+				19177,	-- Troll Commoner
+				19178,	-- Forsaken Commoner
+				20102,	-- Goblin Commoner
+			},
+			["timeline"] = { ADDED_8_0_1 },
+			["maps"] = {
+				NORTHERN_BARRENS,
+				TANARIS,
+				WINTERSPRING,
+				ORGRIMMAR,
+				THUNDER_BLUFF,
+				UNDERCITY,
+				EVERSONG_WOODS,
+				NETHERSTORM,
+				SHATTRATH_CITY,
+				THE_STORM_PEAKS,
+				THE_CAPE_OF_STRANGLETHORN,
+				NORTHREND_DALARAN,
+			},
+			["races"] = HORDE_ONLY,
+			["isBreadcrumb"] = true,
+		}),
+		q(29377, {	-- A Time to Break Down
+			["qg"] = 15197,	-- Darkcaller Yanka
+			["sourceQuests"] = {
+				29400,	-- A Season for Celebration (Horde)
+				-- #if AFTER 8.0.1
+				53122,	-- A Season for Celebration (Horde - New Tirisfal Glades)
+				-- #endif
+			},
+			["coord"] = { 62.0, 67.8, TIRISFAL_GLADES },
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { ELWYNN_FOREST },
+			["races"] = HORDE_ONLY,
+			["isDaily"] = true,
+			["groups"] = {
+				objective(1, {	-- Douse the Alliance's Wickerman
+					["provider"] = { "i", 68647 },	-- Dousing Agent
+					["coord"] = { 32.1, 50.6, ELWYNN_FOREST },
+				}),
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(29376, {	-- A Time to Build Up
+			["qg"] = 15197,	-- Darkcaller Yanka
+			["sourceQuests"] = {
+				29400,	-- A Season for Celebration (Horde)
+				-- #if AFTER 8.0.1
+				53122,	-- A Season for Celebration (Horde - New Tirisfal Glades)
+				-- #endif
+			},
+			["coord"] = { 62.0, 67.8, TIRISFAL_GLADES },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = HORDE_ONLY,
+			["isDaily"] = true,
+			["groups"] = {
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(29075, {	-- A Time to Gain
+			["qg"] = 51665,	-- Celestine of the Harvest
+			["sourceQuest"] = 29074,	-- A Season for Celebration (Alliance)
+			["coord"] = { 32, 50.4, ELWYNN_FOREST },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["isDaily"] = true,
+			["groups"] = {
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(29371, {	-- A Time to Lose
+			["qg"] = 52064,	-- Keira
+			["sourceQuest"] = 29074,	-- A Season for Celebration (Alliance)
+			["coord"] = { 32, 50.4, ELWYNN_FOREST },
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { TIRISFAL_GLADES },
+			["races"] = ALLIANCE_ONLY,
+			["isDaily"] = true,
+			["groups"] = {
+				objective(1, {	-- Douse the Horde's Wickerman
+					["provider"] = { "i", 68648 },	-- Dousing Agent
+					["coord"] = { 62, 67.8, TIRISFAL_GLADES },
+				}),
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(43259, {	-- Beware of the Crooked Tree
+			["qg"] = 109854,	-- Duroc Ironjaw
+			["coord"] = { 47.4, 40.6, LEGION_DALARAN },
+			["timeline"] = { ADDED_7_0_3 },
+			["maps"] = { VALSHARAH },
+			["isYearly"] = true,
+			["lvl"] = lvlsquish(98, 98, 40),	-- TODO: Check Level Requirement
+		}),
+		q(11392, {	-- Call the Headless Horseman
+			["provider"] = { "o", 186267 },	-- Pumpkin Shrine
+			["sourceQuests"] = {
+				11135,	-- The Headless Horseman
+				11220,	-- The Headless Horseman
+			},
+			["maps"] = {
+				SCARLET_MONASTERY,
+				436,	-- Scarlet Monastery, Crusader's Chapel
+			},
+			["timeline"] = { ADDED_2_0_1, REMOVED_3_3_0 },
+			["isDaily"] = true,
+			-- #if AFTER WRATH
+			["lvl"] = 75,
+			-- #elseif AFTER TBC
+			["lvl"] = 65,
+			-- #endif
+		}),
+		q(29144, {	-- Clean Up in Stormwind
+			["qg"] = 51934,	-- Gretchen Fenlow
+			["coord"] = { 32.2, 50.8, ELWYNN_FOREST },
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { STORMWIND_CITY },
+			["races"] = ALLIANCE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm original level requirement
+			["groups"] = {
+				objective(1, {	-- Stink Bombs Removed
+					["provider"] = { "i", 69191 },	-- Arcane Cleanser
+				}),
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(29375, {	-- Clean Up in Undercity
+			["qg"] = 53763,	-- Candace Fenlow
+			["sourceQuests"] = {
+				29400,	-- A Season for Celebration (Horde)
+				-- #if AFTER 8.0.1
+				53122,	-- A Season for Celebration (Horde - New Tirisfal Glades)
+				-- #endif
+			},
+			["coord"] = { 62.4, 66.7, TIRISFAL_GLADES },
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { UNDERCITY },
+			["races"] = HORDE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm original level requirement
+			["groups"] = {
+				objective(1, {	-- Stink Bombs Removed
+					["provider"] = { "i", 70727 },	-- Arcane Cleanser
+				}),
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(11356, {	-- Costumed Orphan Matron
+			["qgs"] = {
+				18927,	-- Human Commoner
+				19148,	-- Dwarf Commoner
+				19171,	-- Draenei Commoner
+				19172,	-- Gnome Commoner
+				19173,	-- Night Elf Commoner
+				20102,	-- Goblin Commoner
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["maps"] = {
+				TANARIS,
+				WINTERSPRING,
+				IRONFORGE,
+				STORMWIND_CITY,
+				DARNASSUS,
+				THE_EXODAR,
+				NETHERSTORM,
+				SHATTRATH_CITY,
+				-- #if AFTER CATA
+				NORTHERN_BARRENS,
+				THE_CAPE_OF_STRANGLETHORN,
+				-- #else
+				STRANGLETHORN_VALE,
+				THE_BARRENS,
+				-- #endif
+				-- #if AFTER WRATH
+				THE_STORM_PEAKS,
+				NORTHREND_DALARAN,
+				-- #endif
+			},
+			["races"] = ALLIANCE_ONLY,
+			["isBreadcrumb"] = true
+		}),
+		q(1658, {	-- Crashing the Wickerman Festival
+			["qg"] = 15199,	-- Sergeant Hartman
+			["coord"] = { 50, 57.2, HILLSBRAD_FOOTHILLS },
+			["maps"] = { SILVERPINE_FOREST, TIRISFAL_GLADES },
+			["timeline"] = { REMOVED_4_0_3 },
+			["races"] = ALLIANCE_ONLY,
+			["isYearly"] = true,
+			["lvl"] = 25,
+			["groups"] = {
+				objective(1, {	-- Scout out the Forsaken's Wickerman Festival.
+					["provider"] = { "o", 181672 },	-- Wickerman Effigy
+					["coord"] = { 56, 69, TIRISFAL_GLADES },
+				}),
+				i(20557),	-- Hallow's End Pumpkin Treat
+			},
+		}),
+		q(39721, {	-- Culling the Crew
+			["qg"] = 96705,	-- Orukan
+			["timeline"] = { ADDED_6_0_2 },
+			["maps"] = {
+				FROSTWALL,
+				LUNARFALL,
+				DRAENOR_SHADOWMOON_VALLEY,
+			},
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(100, 100, 40),
+			["groups"] = {
+				objective(1, {	-- 0/12 Boneship Crewman slain
+					["crs"] = {
+						96536,	-- Salty Dreg
+						96538,	-- Brackish Cultivator
+						96637,	-- Boneship Reveler
+					},
+				}),
+				i(128658),	-- Spooky Supplies
+			},
+		}),
+		q(29398, {	-- Fencing the Goods (Alliance)
+			["qg"] = 53950,	-- Hired Courier
+			["sourceQuest"] = 29392,	-- Missing Heirlooms (Alliance)
+			["coords"] = {
+				-- #if AFTER LEGION
+				{ 24, 44.6, STORMWIND_CITY },
+				-- #else
+				{ 24.1, 44.8, STORMWIND_CITY },
+				-- #endif
+			},
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(29416, {	-- Fencing the Goods (Horde)
+			["qg"] = 54142,	-- Hired Courier
+			["sourceQuest"] = 29415,	-- Missing Heirlooms (Horde)
+			["coord"] = { 57.4, 9, DUROTAR },
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { ORGRIMMAR },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(11440, {	-- Fire Brigade Practice (Azuremyst Isle)
+			["qg"] = 24519,	-- Costumed Orphan Matron
+			["sourceQuest"] = 11356,	-- Costumed Orphan Matron
+			["coord"] = { 49.2, 51.4, AZUREMYST_ISLE },
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/5 Fight Fires
+					["provider"] = { "i", 32971 },	-- Water Bucket
+				}),
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+			},
+		}),
+		q(11360, {	-- Fire Brigade Practice (Elwynn Forest)
+			["qg"] = 24519,	-- Costumed Orphan Matron
+			["sourceQuest"] = 11356,	-- Costumed Orphan Matron
+			["coord"] = { 42.6, 64.4, ELWYNN_FOREST },
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/5 Fight Fires
+					["provider"] = { "i", 32971 },	-- Water Bucket
+				}),
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+			},
+		}),
+		q(11439, {	-- Fire Brigade Practice (Dun Morogh)
+			["qg"] = 24519,	-- Costumed Orphan Matron
+			["sourceQuest"] = 11356,	-- Costumed Orphan Matron
+			["coords"] = {
+				-- #if AFTER CATA
+				{ 53.2, 51.4, DUN_MOROGH },
+				-- #else
+				{ 46.2, 53.1, DUN_MOROGH },
+				-- #endif
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/5 Fight Fires
+					["provider"] = { "i", 32971 },	-- Water Bucket
+				}),
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+			},
+		}),
+		q(11361, {	-- Fire Training (Durotar)
+			["qg"] = 23973,	-- Masked Orphan Matron
+			["sourceQuest"] = 11357,	-- Masked Orphan Matron
+			["coord"] = { 52.5, 41.2, DUROTAR },
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/5 Fight Fires
+					["provider"] = { "i", 32971 },	-- Water Bucket
+				}),
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+			},
+		}),
+		q(11450, {	-- Fire Training (Eversong Woods)
+			["qg"] = 23973,	-- Masked Orphan Matron
+			["sourceQuest"] = 11357,	-- Masked Orphan Matron
+			["coord"] = { 47.2, 46.6, EVERSONG_WOODS },
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/5 Fight Fires
+					["provider"] = { "i", 32971 },	-- Water Bucket
+				}),
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+			},
+		}),
+		q(11449, {	-- Fire Training (Tirisfal Glades)
+			["qg"] = 23973,	-- Masked Orphan Matron
+			["sourceQuest"] = 11357,	-- Masked Orphan Matron
+			["coords"] = {
+				-- #if AFTER CATA
+				{ 60.8, 53.6, TIRISFAL_GLADES },
+				-- #else
+				{ 60.9, 53.0, TIRISFAL_GLADES },
+				-- #endif
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/5 Fight Fires
+					["provider"] = { "i", 32971 },	-- Water Bucket
+				}),
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+			},
+		}),
+		q(39720, {	-- Foul Fertilizer
+			["qg"] = 96705,	-- Orukan
+			["timeline"] = { ADDED_6_0_2 },
+			["maps"] = {
+				FROSTWALL,
+				LUNARFALL,
+				DRAENOR_SHADOWMOON_VALLEY,
+			},
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(100, 100, 40),
+			["groups"] = {
+				objective(1, {	-- 0/8 Dread Fertilizer
+					["provider"] = { "n", 96765 },	-- Dread Fertilizer
+					["coord"] = { 40.4, 82.0, DRAENOR_SHADOWMOON_VALLEY },
+				}),
+				i(128658),	-- Spooky Supplies
+			},
+		}),
+		q(11242, {	-- Free at Last! (Alliance)
+			["qg"] = 23904,	-- Sir Thomas
+			["maps"] = { SCARLET_MONASTERY },
+			["timeline"] = { ADDED_2_0_1, REMOVED_4_0_1 },
+			["cost"] = {
+				{ "i", 33277, 1 },	-- Tome of Thomas Thomson
+			},
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(60, 60, 25),
+		}),
+		q(11403, {	-- Free at Last! (Horde)
+			["qg"] = 23904,	-- Sir Thomas
+			["maps"] = { SCARLET_MONASTERY },
+			["timeline"] = { ADDED_2_0_1, REMOVED_4_0_1 },
+			["cost"] = {
+				{ "i", 33277, 1 },	-- Tome of Thomas Thomson
+			},
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(60, 60, 25),
+		}),
+		q(8311, {	-- Hallow's End Treats for Jesper!
+			["qg"] = 15310,	-- Jesper
+			["coords"] = {
+				-- #if AFTER CATA
+				{ 32, 50.4, ELWYNN_FOREST },
+				-- #elseif AFTER WRATH
+				{ 56.6, 51.8, STORMWIND_CITY },
+				-- #else
+				{ 47.6, 35.4, STORMWIND_CITY },
+				-- #endif
+			},
+			["races"] = ALLIANCE_ONLY,
+			["isYearly"] = true,
+			["lvl"] = lvlsquish(10, 10, 1),
+			["groups"] = {
+				q(8356, {	-- Flexing for Nougat (Alliance)
+					["qg"] = 6740,	-- Innkeeper Allison <Innkeeper>
+					["coords"] = {
+						-- #if AFTER WRATH
+						{ 60.4, 75.3, STORMWIND_CITY },
+						-- #else
+						{ 52.6, 65.6, STORMWIND_CITY },
+						-- #endif
+					},
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["groups"] = {
+						objective(1, {	-- 0/1 Stormwind Nougat
+							["questID"] = 8311,	-- Hallow's End Treats for Jesper!
+							["provider"] = { "i", 20492 },	-- Stormwind Nougat
+						}),
+					},
+				}),
+				q(8355, {	-- Incoming Gumdrop (Alliance)
+					["qg"] = 6826,	-- Talvash del Kissel
+					["coord"] = { 36, 4, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["groups"] = {
+						objective(2, {	-- 0/1 Gnomeregan Gumdrop
+							["questID"] = 8311,	-- Hallow's End Treats for Jesper!
+							["provider"] = { "i", 20494 },	-- Gnomeregan Gumdrop
+						}),
+					},
+				}),
+				q(8353, {	-- Chicken Clucking for a Mint (Alliance)
+					["qg"] = 5111,	-- Innkeeper Firebrew <Innkeeper>
+					["coord"] = { 18.6, 51.4, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["groups"] = {
+						objective(3, {	-- 0/1 Ironforge Mint
+							["questID"] = 8311,	-- Hallow's End Treats for Jesper!
+							["provider"] = { "i", 20490 },	-- Ironforge Mint
+						}),
+					},
+				}),
+				q(8357, {	-- Dancing for Marzipan (Alliance)
+					["qg"] = 6735,	-- Innkeeper Saelienne <Innkeeper>
+					["coords"] = {
+						-- #if AFTER CATA
+						{ 62.4, 32.8, DARNASSUS },
+						-- #else
+						{ 67.2, 15.8, DARNASSUS },
+						-- #endif
+					},
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["groups"] = {
+						objective(4, {	-- 0/1 Darnassus Marzipan
+							["questID"] = 8311,	-- Hallow's End Treats for Jesper!
+							["provider"] = { "i", 20496 },	-- Darnassus Marzipan
+						}),
+					},
+				}),
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+			},
+		}),
+		q(8312, {	-- Hallow's End Treats for Spoops!
+			["qg"] = 15309,	-- Spoops
+			["coords"] = {
+				-- #if AFTER CATA
+				{ 67.4, 7, UNDERCITY },
+				-- #elseif AFTER CATA
+				{ 62.1, 66.4, TIRISFAL_GLADES },
+				-- #else
+				{ 71.2, 22.8, ORGRIMMAR },
+				-- #endif
+			},
+			["races"] = HORDE_ONLY,
+			["isYearly"] = true,
+			["lvl"] = lvlsquish(10, 10, 1),
+			["groups"] = {
+				q(8359, {	-- Flexing for Nougat (Horde)
+					["qg"] = 6929,	-- Innkeeper Gryshka <Innkeeper>
+					["coords"] = {
+						-- #if AFTER LEGION
+						{ 53.6, 78.8, ORGRIMMAR },
+						-- #elseif AFTER CATA
+						{ 54.2, 68.4, ORGRIMMAR },
+						-- #else
+						{ 54.2, 68.4, ORGRIMMAR },
+						-- #endif
+					},
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["groups"] = {
+						objective(1, {	-- 0/1 Orgrimmar Nougat
+							["questID"] = 8312,	-- Hallow's End Treats for Spoops!
+							["provider"] = { "i", 20493 },	-- Orgrimmar Nougat
+						}),
+					},
+				}),
+				q(8358, {	-- Incoming Gumdrop (Horde)
+					["qg"] = 11814,	-- Kali Remik
+					["coords"] = {
+						-- #if AFTER LEGION
+						{ 32.6, 65, ORGRIMMAR },
+						-- #elseif AFTER CATA
+						{ 33.5, 64.9, ORGRIMMAR },
+						-- #else
+						{ 56.2, 74.2, DUROTAR },
+						-- #endif
+					},
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["groups"] = {
+						objective(2, {	-- 0/1 Darkspear Gumdrop
+							["questID"] = 8312,	-- Hallow's End Treats for Spoops!
+							["provider"] = { "i", 20495 },	-- Darkspear Gumdrop
+						}),
+					},
+				}),
+				q(8354, {	-- Chicken Clucking for a Mint (Horde)
+					["qg"] = 6741,	-- Innkeeper Norman <Innkeeper>
+					["coord"] = { 67.8, 38.6, UNDERCITY },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["groups"] = {
+						objective(3, {	-- 0/1 Undercity Mint
+							["questID"] = 8312,	-- Hallow's End Treats for Spoops!
+							["provider"] = { "i", 20491 },	-- Undercity Mint
+						}),
+					},
+				}),
+				q(8360, {	-- Dancing for Marzipan (Horde)
+					["qg"] = 6746,	-- Innkeeper Pala <Innkeeper>
+					["coord"] = { 45.8, 64.4, THUNDER_BLUFF },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["groups"] = {
+						objective(4, {	-- 0/1 Thunder Bluff Marzipan
+							["questID"] = 8312,	-- Hallow's End Treats for Spoops!
+							["provider"] = { "i", 20497 },	-- Thunder Bluff Marzipan
+						}),
+					},
+				}),
+				-- #if AFTER CATA
+				i(33226),	-- Tricky Treat
+				-- #else
+				i(20557),	-- Hallow's End Pumpkin Treat
+				-- #endif
+			},
+		}),
+		q(11357, {	-- Masked Orphan Matron
+			["qgs"] = {
+				19169,	-- Blood Elf Commoner
+				19175,	-- Orc Commoner
+				19176,	-- Tauren Commoner
+				19177,	-- Troll Commoner
+				19178,	-- Forsaken Commoner
+				20102,	-- Goblin Commoner
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["maps"] = {
+				TANARIS,
+				WINTERSPRING,
+				ORGRIMMAR,
+				THUNDER_BLUFF,
+				UNDERCITY,
+				EVERSONG_WOODS,
+				NETHERSTORM,
+				SHATTRATH_CITY,
+				-- #if AFTER CATA
+				NORTHERN_BARRENS,
+				THE_CAPE_OF_STRANGLETHORN,
+				-- #else
+				THE_BARRENS,
+				STRANGLETHORN_VALE,
+				-- #endif
+				-- #if AFTER WRATH
+				NORTHREND_DALARAN,
+				THE_STORM_PEAKS,
+				-- #endif
+			},
+			["races"] = HORDE_ONLY,
+			["isBreadcrumb"] = true
+		}),
+		q(29392, {	-- Missing Heirlooms (Alliance)
+			["qg"] = 53949,	-- Anson Hastings
+			["sourceQuest"] = 29430,	-- A Friend in Need (Alliance)
+			["coords"] = {
+				-- #if AFTER LEGION
+				{ 60.2, 75.2, STORMWIND_CITY },
+				-- #else
+				{ 61.1, 70.6, STORMWIND_CITY },
+				-- #endif
+			},
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(29415, {	-- Missing Heirlooms (Horde)
+			["qg"] = 54141,	-- Edgar Goodwin
+			["sourceQuest"] = 29431,	-- A Friend in Need (Horde)
+			["coord"] = { 54.4, 77.6, ORGRIMMAR },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(39719, {	-- Mutiny on the Boneship
+			["qg"] = 96705,	-- Orukan
+			["timeline"] = { ADDED_6_0_2 },
+			["maps"] = {
+				FROSTWALL,
+				LUNARFALL,
+				DRAENOR_SHADOWMOON_VALLEY,
+			},
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(100, 100, 40),
+			["groups"] = {
+				objective(1, {	-- Captain Bonerender slain
+					["provider"] = { "n", 96535 },	-- Captain Bonerender
+					["coord"] = { 38.8, 86.2, DRAENOR_SHADOWMOON_VALLEY },
+				}),
+				i(128658),	-- Spooky Supplies
+			},
+		}),
+		q(8322, {	-- Rotten Eggs
+			["qg"] = 15197,	-- Darkcaller Yanka
+			["coords"] = {
+				{ 55.6, 69.9, TIRISFAL_GLADES },
+				{ 51.4, 59.0, HILLSBRAD_FOOTHILLS },
+			},
+			["timeline"] = { REMOVED_4_0_3 },
+			["races"] = HORDE_ONLY,
+			["isYearly"] = true,
+			["cost"] = {
+				{ "i", 20605, 1 },	-- Rotten Eggs
+			},
+			["lvl"] = 30,
+		}),
+		q(8409, {	-- Ruined Kegs
+			["provider"] = { "o", 180570 },	-- Keg
+			["sourceQuest"] = 8322,	-- Rotten Eggs
+			["coord"] = { 51.4, 59.0, HILLSBRAD_FOOTHILLS },
+			["timeline"] = { REMOVED_4_0_3 },
+			["races"] = HORDE_ONLY,
+			["isYearly"] = true,
+			["lvl"] = 30,
+			["groups"] = {
+				i(20557),	-- Hallow's End Pumpkin Treat
+			},
+		}),
+		q(29399, {	-- Shopping Around (Alliance)
+			["qg"] = 8719,	-- Auctioneer Fitch
+			["sourceQuest"] = 29398,	-- Fencing the Goods (Alliance)
+			["coords"] = {
+				-- #if AFTER LEGION
+				{ 61.2, 70.8, STORMWIND_CITY },
+				-- #else
+				{ 61.1, 70.6, STORMWIND_CITY },
+				-- #endif
+			},
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(29425, {	-- Shopping Around (Horde)
+			["qg"] = 44866,	-- Auctioneer Drezmit
+			["sourceQuest"] = 29416,	-- Fencing the Goods (Horde)
+			["coord"] = { 54, 73.4, ORGRIMMAR },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(1657, {	-- Stinking Up Southshore
+			["qg"] = 15197,	-- Darkcaller Yanka
+			["coord"] = { 55.6, 69.9, TIRISFAL_GLADES },
+			["maps"] = { HILLSBRAD_FOOTHILLS },
+			["timeline"] = { REMOVED_4_0_3 },
+			["races"] = HORDE_ONLY,
+			["isYearly"] = true,
+			["lvl"] = 25,
+			["groups"] = {
+				objective(1, {	-- Toss Stink Bomb into Southshore
+					["provider"] = { "i", 20387 },	-- Forsaken Stink Bomb Cluster
+					["coord"] = { 49.8, 57.9, HILLSBRAD_FOOTHILLS },
+				}),
+				i(20557),	-- Hallow's End Pumpkin Treat
+			},
+		}),
+		q(39716, {	-- Smashing Squashlings
+			["qg"] = 96705,	-- Orukan
+			["timeline"] = { ADDED_6_0_2 },
+			["maps"] = {
+				FROSTWALL,
+				LUNARFALL,
+				DRAENOR_SHADOWMOON_VALLEY,
+			},
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(100, 100, 40),
+			["groups"] = {
+				objective(1, {	-- 0/6 Growing Squashling
+					["provider"] = { "n", 96545 },	-- Growing Squashling
+					["coord"] = { 40.4, 82.0, DRAENOR_SHADOWMOON_VALLEY },
+				}),
+				i(128658),	-- Spooky Supplies
+			},
+		}),
+		q(12133, {	-- Smash the Pumpkin (Alliance)
+			["provider"] = { "o", 186887 },	-- Large Jack-o'-Lantern
+			["coords"] = {
+				{ 60.8, 53.6, AZUREMYST_ISLE },
+				{ 53.4, 51.5, DUN_MOROGH },
+				{ 42.6, 64.6, ELWYNN_FOREST },
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["cost"] = {
+				{ "i", 36876, 1 },	-- Scorched Holy Symbol
+			},
+			["races"] = ALLIANCE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				i(34077),	-- Crudely Wrapped Gift
+			},
+		}),
+		q(12155, {	-- Smash the Pumpkin (Horde)
+			["provider"] = { "o", 186887 },	-- Large Jack-o'-Lantern
+			["coords"] = {
+				{ 52.6, 41.5, DUROTAR },
+				{ 47.2, 46.4, EVERSONG_WOODS },
+				{ 60.8, 53.6, TIRISFAL_GLADES },
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["cost"] = {
+				{ "i", 36876, 1 },	-- Scorched Holy Symbol
+			},
+			["races"] = HORDE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				i(34077),	-- Crudely Wrapped Gift
+			},
+		}),
+		q(29054, {	-- Stink Bombs Away! (Alliance)
+			["qg"] = 51934,	-- Gretchen Fenlow
+			["sourceQuest"] = 29074,	-- A Season for Celebration (Alliance)
+			["coord"] = { 32.2, 50.8, ELWYNN_FOREST },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/25 Bombs Dropped
+					["provider"] = { "n", 52548 },	-- Gertrude Fenlow
+					["coord"] = { 32.2, 50.6, ELWYNN_FOREST },
+				}),
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(29374, {	-- Stink Bombs Away! (Horde)
+			["qg"] = 53763,	-- Candace Fenlow
+			-- #if AFTER 8.0.1
+			["sourceQuests"] = {
+				29400,	-- A Season for Celebration (Horde)
+				53122,	-- A Season for Celebration (Horde - New Tirisfal Glades)
+			},
+			-- #else
+			["sourceQuest"] = 29400,	-- A Season for Celebration (Horde)
+			-- #endif
+			["coord"] = { 62.4, 66.7, TIRISFAL_GLADES },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = HORDE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/25 Bombs Dropped
+					["provider"] = { "n", 53764 },	-- Crina Fenlow
+					["coord"] = { 62.2, 67.0, TIRISFAL_GLADES },
+				}),
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(11131, {	-- Stop the Fires! (Alliance)
+			["qg"] = 24519,	-- Costumed Orphan Matron
+			["sourceQuests"] = {
+				11440,	-- Fire Brigade Practice [Azuremyst Isle]
+				11439,	-- Fire Brigade Practice [Dun Morogh]
+				11360,	-- Fire Brigade Practice [Elwynn Forest]
+			},
+			["coords"] = {
+				{ 60.8, 53.6, AZUREMYST_ISLE },
+				{ 53.4, 51.5, DUN_MOROGH },
+				{ 42.6, 64.6, ELWYNN_FOREST },
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/1 Put Out the Fires
+					["provider"] = { "i", 32971 },	-- Water Bucket
+				}),
+				i(20557),	-- Hallow's End Pumpkin Treat
+				i(34068),	-- Weighted Jack-o'-Lantern
+			},
+		}),
+		q(11219, {	-- Stop the Fires! (Horde)
+			["qg"] = 23973,	-- Masked Orphan Matron
+			["sourceQuests"] = {
+				11361,	-- Fire Training [Durotar]
+				11450,	-- Fire Training [Eversong Woods]
+				11449,	-- Fire Training [Tirisfal Glades]
+			},
+			["coords"] = {
+				{ 52.6, 41.5, DUROTAR },
+				{ 47.2, 46.4, EVERSONG_WOODS },
+				{ 60.8, 53.6, TIRISFAL_GLADES },
+			},
+			["timeline"] = { ADDED_2_0_1 },
+			["races"] = HORDE_ONLY,
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(10, 10, 10),	-- TODO: Confirm level requirement.
+			["groups"] = {
+				objective(1, {	-- 0/1 Put Out the Fires
+					["provider"] = { "i", 32971 },	-- Water Bucket
+				}),
+				i(20557),	-- Hallow's End Pumpkin Treat
+				i(34068),	-- Weighted Jack-o'-Lantern
+			},
+		}),
+		q(29402, {	-- Taking Precautions (Alliance)
+			["qg"] = 54021,	-- Hudson Barnes
+			["sourceQuest"] = 29399,	-- Shopping Around (Alliance)
+			["coord"] = { 64, 46.4, STORMWIND_CITY },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+			["groups"] = {
+				-- #if AFTER 5.0.4
+				objective(1, {	-- 0/2 Strange Dust
+					["provider"] = { "i", 10940 },	-- Strange Dust
+				}),
+				objective(2, {	-- 0/5 Crystal Vial
+					["provider"] = { "i", 3371 },	-- Crystal Vial
+				}),
+				-- #else
+				objective(1, {	-- 0/5 Crystal Vial
+					["provider"] = { "i", 3371 },	-- Crystal Vial
+				}),
+				objective(2, {	-- 0/5 Arcane Powder
+					["provider"] = { "i", 17020 },	-- Arcane Powder
+				}),
+				-- #endif
+				objective(3, {	-- 0/5 Blood Nettle
+					["providers"] = {
+						{ "i",  71035 },	-- Blood Nettle
+						{ "o", 209059 },	-- Blood Nettle
+					},
+					["coord"] = { 51.5, 10.0, STORMWIND_CITY },
+				}),
+			},
+		}),
+		q(29426, {	-- Taking Precautions (Horde)
+			["qg"] = 54146,	-- Delian Sunshade
+			["sourceQuest"] = 29425,	-- Shopping Around (Horde)
+			["coord"] = { 58, 48.2, ORGRIMMAR },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+			["groups"] = {
+				-- #if AFTER 5.0.4
+				objective(1, {	-- 0/2 Strange Dust
+					["provider"] = { "i", 10940 },	-- Strange Dust
+				}),
+				objective(2, {	-- 0/5 Crystal Vial
+					["provider"] = { "i", 3371 },	-- Crystal Vial
+				}),
+				-- #else
+				objective(1, {	-- 0/5 Crystal Vial
+					["provider"] = { "i", 3371 },	-- Crystal Vial
+				}),
+				objective(2, {	-- 0/5 Arcane Powder
+					["provider"] = { "i", 17020 },	-- Arcane Powder
+				}),
+				-- #endif
+				objective(3, {	-- 0/5 Blood Nettle
+					["providers"] = {
+						{ "i",  71035 },	-- Blood Nettle
+						{ "o", 209059 },	-- Blood Nettle
+					},
+					["coord"] = { 45.9, 49.5, ORGRIMMAR },
+				}),
+			},
+		}),
+		q(29403, {	-- The Collector's Agent (Alliance)
+			["qg"] = 54021,	-- Hudson Barnes
+			["sourceQuest"] = 29402,	-- Taking Precautions (Alliance)
+			["coord"] = { 64, 46.4, STORMWIND_CITY },
+			["timeline"] = { ADDED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+			["groups"] = {
+				objective(1, {	-- Meeting Disrupted
+					["provider"] = { "n", 54114 },	-- Unleashed Void
+					["coord"] = { 55.2, 43.6, STORMWIND_CITY },
+				}),
+			},
+		}),
+		q(29427, {	-- The Collector's Agent (Horde)
+			["qg"] = 54146,	-- Delian Sunshade
+			["sourceQuest"] = 29426,	-- Taking Precautions (Horde)
+			["coord"] = { 58, 48.2, ORGRIMMAR },
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { TIRISFAL_GLADES },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+			["groups"] = {
+				objective(1, {	-- Meeting Disrupted
+					["provider"] = { "n", 54114 },	-- Unleashed Void
+					["coord"] = { 65.8, 74.2, TIRISFAL_GLADES },
+				}),
+			},
+		}),
+		q(29413, {	-- The Creepy Crate (Alliance)
+			["provider"] = { "o", 209076 },	-- Anson's Crate
+			["sourceQuest"] = 29411,	-- What Now? (Alliance)
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { STORMWIND_CITY },
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+			["groups"] = {
+				i(71076, {	-- Creepy Crate (PET!)
+					["timeline"] = { ADDED_4_2_0}
+				}),
+			},
+		}),
+		q(29429, {	-- The Creepy Crate (Horde)
+			["provider"] = { "o", 209095 },	-- Edgar's Crate
+			["sourceQuest"] = 29428,	-- What Now? (Horde)
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { ORGRIMMAR },
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+			["groups"] = {
+				i(71076, {	-- Creepy Crate (PET!)
+					["timeline"] = { ADDED_4_2_0}
+				}),
+			},
+		}),
+		q(11135, {	-- The Headless Horseman (Alliance)
+			["qg"] = 24519,	-- Costumed Orphan Matron
+			["coords"] = {
+				{ 49.2, 51.3, AZUREMYST_ISLE },
+				-- #if AFTER CATA
+				{ 53.3, 51.5, DUN_MOROGH },
+				-- #elseif AFTER TBC
+				{ 46.2, 53.1, DUN_MOROGH },
+				-- #endif
+				{ 42.6, 64.4, ELWYNN_FOREST },
+			},
+			["timeline"] = { ADDED_2_0_1, REMOVED_4_0_1 },
+			["races"] = ALLIANCE_ONLY,
+			-- #if AFTER WRATH
+			["lvl"] = 75,
+			-- #elseif AFTER TBC
+			["lvl"] = 65,
+			-- #endif
+		}),
+		q(11220, {	-- The Headless Horseman (Horde)
+			["qg"] = 23973,	-- Masked Orphan Matron
+			["coords"] = {
+				{ 52.6, 41.2, DUROTAR },
+				{ 47.3, 46.5, EVERSONG_WOODS },
+				{ 60.9, 53.0, TIRISFAL_GLADES },
+			},
+			["timeline"] = { ADDED_2_0_1, REMOVED_4_0_1 },
+			["races"] = HORDE_ONLY,
+			-- #if AFTER WRATH
+			["lvl"] = 75,
+			-- #elseif AFTER TBC
+			["lvl"] = 65,
+			-- #endif
+		}),
+		q(8373, {	-- The Power of Pine
+			["qg"] = 15199,	-- Sergeant Hartman
+			["coord"] = { 50, 57.2, HILLSBRAD_FOOTHILLS },
+			["timeline"] = { REMOVED_4_0_3 },
+			["races"] = ALLIANCE_ONLY,
+			["isYearly"] = true,
+			["lvl"] = 25,
+			["groups"] = {
+				objective(1, {	-- Clean up a stink bomb that's been dropped on Southshore!
+					["provider"] = { "i", 20604 },	-- Stink Bomb Cleaner
+				}),
+				i(20557),	-- Hallow's End Pumpkin Treat
+			},
+		}),
+		q(43162, {	-- Under the Crooked Tree
+			["qg"] = 109734,	-- Hag of the Crooked Tree
+			-- ["sourceQuest"] = 43259,	-- Beware of the Crooked Tree	[not required 2023-10-25]
+			["coord"] = { 34.9, 56.0, VALSHARAH },
+			["timeline"] = { ADDED_7_0_3 },
+			["isDaily"] = true,
+			["lvl"] = lvlsquish(98, 98, 40),	-- TODO: Check Level Requirement
+			["groups"] = {
+				objective(1, {	-- Drink from the cauldron and release Aria Sorrowheart's spirit
+					["provider"] = { "n", 109825 },	-- Aria Sorrowheart
+					["coord"] = { 34.8, 55.6, VALSHARAH },
+				}),
+				i(139137, {	-- Hag's Belongings
+					["sym"] = {
+						{ "selectparent", 3 },	-- Select the holiday root.
+						{ "pop" },	-- Get the Rewards.
+						{ "where", "headerID", REWARDS },	-- Select the "Rewards" header.
+						{ "pop" },	-- Get the Rewards.
+						{ "contains", "itemID", 33226, unpack(WANDS_IDS) },	-- Tricky Treat & All the Wands
+						{ "exclude", "itemID", 20413 },	-- Exclude Hallowed Wand - Random
+					},
+					["groups"] = {
+						i(139133),	-- Hat of the First Sister
+						i(139134),	-- Hat of the Second Sister
+						i(139135),	-- Hat of the Third Sister
+						i(139136),	-- Hat of the Youngest Sister
+					}
+				}),
+			},
+		}),
+		q(29411, {	-- What Now? (Alliance)
+			["provider"] = { "o", 209072 },	-- Stolen Crate
+			["sourceQuest"] = 29403,	-- The Collector's Agent (Alliance)
+			["description"] = "Does not matter who you give it to, you still get the pet!",
+			["coord"] = { 55.3, 43.5, STORMWIND_CITY },
+			["timeline"] = { ADDED_4_0_1 },
+			["cost"] = {
+				{ "i", 71057, 1 },	-- Recovered Crate
+			},
+			["races"] = ALLIANCE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(29428, {	-- What Now? (Horde)
+			["provider"] = { "o", 209094 },	-- Stolen Crate
+			["sourceQuest"] = 29427,	-- The Collector's Agent (Horde)
+			["description"] = "Does not matter who you give it to, you still get the pet!",
+			["coord"] = { 65.8, 74.8, TIRISFAL_GLADES },
+			["timeline"] = { ADDED_4_0_1 },
+			["maps"] = { ORGRIMMAR },
+			["cost"] = {
+				{ "i", 71057, 1 },	-- Recovered Crate
+			},
+			["races"] = HORDE_ONLY,
+			["lvl"] = lvlsquish(10, 10, 1),
+		}),
+		q(64546,	-- Visions of Sire Denathrius
+		bubbleDownSelf({
+			["timeline"] = { ADDED_9_1_0 },
+			["customCollect"] = "SL_COV_VEN",
+		},{
+			["description"] = "Speak with Theotar within The Ember Court scenario to spawn the 'Vision of Sire Denathrius'. During the final Tribute stage, accept the quest to receive the permanent unlock for your Ember Court.",
+			["crs"] = {
+				165196,	-- Theotar (Inside Ember Court)
+				164966,	-- Temel <The Party Herald> (with a hat)
+			},
+			["coords"] = {
+				{ 28.0, 43.0, REVENDRETH },	-- with hat, outside Sinfall
+			},
+			["provider"] = { "n", 180458 },	-- Vision of Sire Denathrius
+			["repeatable"] = true,	-- probably yearly, Blizzard API says it's daily, in practice it unflaggs right after completion
+			["maps"] = { 1644 },	-- The Ember Court
+			["groups"] = {
+				i(181442, {	-- Vision of Sire Denathrius
+					["questID"] = 61458,
+				}),
+			},
+		})),
+		q(76075, {	-- A Ghostly Message
+			["providers"] = {
+				{ "n", 53869 },	-- Orphan Matron Seacole (A)
+				{ "n", 53865 },	-- Orphan Matron Nanee (H)
+			},
+			["timeline"] = { ADDED_10_1_7 },
+			["coords"] = {
+				{ 31.9, 50, ELWYNN_FOREST },	-- Alliance
+				{ 62.4, 66.6, TIRISFAL_GLADES },	-- Horde
+			},
+			["groups"] = {
+				i(206596),	-- Tome of Thomas Thomson (QI!)
+			},
+		}),
+		q(76072, {	-- Shades of Scarlet
+			["provider"] = { "n", 206158 },	-- Sir Thomas
+			["sourceQuest"] = 76075,	-- A Ghostly Message
+			["timeline"] = { ADDED_10_1_7 },
+			["coord"] = { 81.2, 44.6, TIRISFAL_GLADES },
+			["groups"] = {
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(76073, {	-- No Laughing Matter
+			["provider"] = { "n", 205473 },	-- Sir Thomas
+			["sourceQuest"] = 76072,	-- Shades of Scarlet
+			["timeline"] = { ADDED_10_1_7 },
+			["coord"] = { 82.4, 32.7, TIRISFAL_GLADES },
+			["groups"] = {
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(76074, {	-- The Headless Horseman, Returned
+			["provider"] = { "n", 205448 },	-- Suzannah
+			["sourceQuest"] = 76073,	-- No Laughing Matter
+			["timeline"] = { ADDED_10_1_7 },
+			["coord"] = { 83.5, 30.8, TIRISFAL_GLADES },
+			["groups"] = {
+				i(33226),	-- Tricky Treat
+			},
+		}),
+		q(77779, {	-- The Tale of Sir Thomas
+			["provider"] = { "n", 209609 },	-- Sir Thomas
+			["sourceQuest"] = 76074,	-- The Headless Horseman, Returned
+			["timeline"] = { ADDED_10_1_7 },
+			["coord"] = { 43, 53, SCARLET_MONASTERY },
+			["groups"] = {
+				i(208769),	-- Tome of Thomas Thomson
+			},
+		}),
 	}),
 	n(RARES, {
 		["timeline"] = { ADDED_6_2_2 },
