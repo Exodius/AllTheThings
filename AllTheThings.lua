@@ -4715,32 +4715,26 @@ local function Refresh(self)
 	if totalRowCount <= 0 then return; end
 
 	-- Fill the remaining rows up to the (visible) row count.
-	local container, rowCount, totalHeight, windowPad, minIndent = self.Container, 0, 0, 0, nil;
-	local current = math.max(1, math.min(self.ScrollBar.CurrentValue, totalRowCount));
+	local container, windowPad, minIndent = self.Container, 0, nil;
+	local current = math.max(1, math.min(self.ScrollBar.CurrentValue, totalRowCount)) + 1
 
 	-- Ensure that the first row doesn't move out of position.
 	local row = container.rows[1] or CreateRow(container);
 	SetRowData(self, row, rowData[1]);
-	local containerHeight = container:GetHeight();
-	totalHeight = totalHeight + row:GetHeight();
-	current = current + 1;
-	rowCount = rowCount + 1;
 
-	for i=2,totalRowCount do
+	local containerHeight = container:GetHeight();
+	local rowHeight = row:GetHeight()
+	local rowCount = math_floor(containerHeight / rowHeight)
+
+	for i=2,rowCount do
 		row = container.rows[i] or CreateRow(container);
 		SetRowData(self, row, rowData[current]);
-		totalHeight = totalHeight + row:GetHeight();
-		if totalHeight > containerHeight then
-			break;
-		else
-			-- track the minimum indentation within the set of rows so they can be adjusted later
-			if row.indent and (not minIndent or row.indent < minIndent) then
-				minIndent = row.indent;
-				-- print("new minIndent",minIndent)
-			end
-			current = current + 1;
-			rowCount = rowCount + 1;
+		-- track the minimum indentation within the set of rows so they can be adjusted later
+		if row.indent and (not minIndent or row.indent < minIndent) then
+			minIndent = row.indent;
+			-- print("new minIndent",minIndent)
 		end
+		current = current + 1;
 	end
 
 	-- Readjust the indent of visible rows
