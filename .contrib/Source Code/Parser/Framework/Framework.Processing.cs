@@ -778,7 +778,7 @@ namespace ATT
                         cachedItem.TryGetValue("itemID", out long cachedItemID);
                         cachedItem.TryGetValue("recipeID", out long spellID);
                         cachedItem.TryGetValue("name", out string itemName);
-                        LogDebugFormatted(LogFormats["ItemRecipeFormat"], cachedItemID, spellID, itemName);
+                        LogDebugFormatted(LogFormats["ItemRecipeFormat"], cachedItemID, spellID, itemName, "Directly Sourced with RecipeID");
                     }
                 }
             }
@@ -912,11 +912,6 @@ namespace ATT
                 return false;
 
             Objects.PerformWipes(data);
-
-            // if (data.TryGetValue("itemID", out long itemID) && itemID == 43951)
-            // {
-
-            // }
 
             // Finally post-merge anything which is supposed to merge into this group now that it (and its children) have been fully validated
             Objects.PostProcessMergeInto(data);
@@ -3453,6 +3448,7 @@ namespace ATT
             if (!data.TryGetValue("requireSkill", out long requiredSkill))
                 return;
 
+            Items.TryGetName(data, out string name);
             // see if a matching recipe name exists for this skill, and use that recipeID
             if (Objects.FindRecipeForData(requiredSkill, data, out long recipeID))
             {
@@ -3463,8 +3459,7 @@ namespace ATT
                 if (!data.TryGetValue("u", out long u) || (u != 1 && u != 2))
                 {
                     // this can always be reported because it should always be actual, available in-game recipes which have no associated RecipeID
-                    Items.TryGetName(data, out string name);
-                    Log($"Failed to find RecipeID for '{name}' with data: {ToJSON(data)}");
+                    LogWarn($"Failed to find RecipeID for '{name}' with data: {ToJSON(data)}");
                 }
             }
         }
