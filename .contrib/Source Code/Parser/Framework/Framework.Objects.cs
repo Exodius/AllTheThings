@@ -719,6 +719,9 @@ namespace ATT
                 if (recipeID > 0)
                     return false;
 
+                // don't guess Recipes for anything Unsorted
+                if (ProcessingUnsortedCategory) return false;
+
                 data.TryGetValue("spellID", out long spellID);
                 // get the name of the recipe item (i.e. Technique: blah blah)
                 Items.TryGetName(data, out string recipeItemName);

@@ -3454,12 +3454,12 @@ namespace ATT
             {
                 data["recipeID"] = recipeID;
             }
-            else if (recipeID == 0)
+            else if (recipeID == 0 && !ProcessingUnsortedCategory)
             {
                 if (!data.TryGetValue("u", out long u) || (u != 1 && u != 2))
                 {
                     // this can always be reported because it should always be actual, available in-game recipes which have no associated RecipeID
-                    LogWarn($"Failed to find RecipeID for '{name}' with data: {ToJSON(data)}");
+                    LogWarn($"Failed to guess RecipeID for '{name}' with data: {ToJSON(data)}");
                 }
             }
         }
