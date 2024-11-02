@@ -4810,8 +4810,10 @@ local function Refresh(self)
 		if row and row.__ref ~= row.ref then
 			-- app.PrintDebug("owner.ref",app:SearchLink(row.ref))
 			-- force tooltip to refresh since the scroll has changed for but the tooltip is still visible
-			RowOnLeave(row)
-			RowOnEnter(row)
+			local OnLeave = row:GetScript("OnLeave")
+			local OnEnter = row:GetScript("OnEnter")
+			OnLeave(row)
+			OnEnter(row)
 		end
 	end
 end
