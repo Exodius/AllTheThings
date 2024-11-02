@@ -1591,6 +1591,13 @@ usUnavailable = function(t)
 	return regionUnavailable("US", t);
 end
 
+-- Temporary function to force Items to use the Misc filter so that they do not get turned into Recipes by the Parser
+-- until the 'guessing' logic is eventually relegated when Prof DB's are sufficient
+TempForceMisc = function(t)
+	t.f = MISC
+	return t
+end
+
 -- Create a Header. Returns a UNIQUE ID, starting at 0.
 (function()
 if not NextHeaderID then

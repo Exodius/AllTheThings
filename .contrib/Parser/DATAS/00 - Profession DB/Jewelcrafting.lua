@@ -171,6 +171,29 @@ i(21956, 26914); -- Design: Dark Iron Scorpid (Guessed via Filter Recipe with Sp
 
 --- UNSORTED TIMELINES FROM PARSER WARNINGS ---
 
+-----------------
+-- PATCH 6.0.1 --
+-----------------
+i(116092, 170715); -- Design: Whispering Taladite Ring (Guessed via Filter Recipe with SpellID)
+i(116095, 170718); -- Design: Whispering Taladite Pendant (Guessed via Filter Recipe with SpellID)
+i(116100, 170723); -- Design: Versatility Taladite (Guessed via Filter Recipe with SpellID)
+i(116078, 170701); -- Design: Taladite Recrystalizer (Guessed via Filter Recipe with SpellID)
+i(116079, 170702); -- Design: Taladite Amplifier (Guessed via Filter Recipe with SpellID)
+i(116101, 170724); -- Design: Stamina Taladite (Guessed via Filter Recipe with SpellID)
+i(116091, 170714); -- Design: Shifting Taladite Ring (Guessed via Filter Recipe with SpellID)
+i(116094, 170717); -- Design: Shifting Taladite Pendant (Guessed via Filter Recipe with SpellID)
+i(116108, 170731); -- Design: Reflecting Prism (Guessed via Filter Recipe with SpellID)
+i(116109, 170732); -- Design: Prismatic Focusing Lens (Guessed via Filter Recipe with SpellID)
+i(116098, 170721); -- Design: Mastery Taladite (Guessed via Filter Recipe with SpellID)
+i(116097, 170720); -- Design: Haste Taladite (Guessed via Filter Recipe with SpellID)
+i(116106, 170729); -- Design: Greater Versatility Taladite (Guessed via Filter Recipe with SpellID)
+i(116107, 170730); -- Design: Greater Stamina Taladite (Guessed via Filter Recipe with SpellID)
+i(116104, 170727); -- Design: Greater Mastery Taladite (Guessed via Filter Recipe with SpellID)
+i(116103, 170726); -- Design: Greater Haste Taladite (Guessed via Filter Recipe with SpellID)
+i(116102, 170725); -- Design: Greater Critical Strike Taladite (Guessed via Filter Recipe with SpellI
+i(116090, 170713); -- Design: Glowing Taladite Ring (Guessed via Filter Recipe with SpellID)
+i(116093, 170716); -- Design: Glowing Taladite Pendant (Guessed via Filter Recipe with SpellID)
+i(116096, 170719); -- Design: Critical Strike Taladite (Guessed via Filter Recipe with SpellID)
 
 -----------------
 -- PATCH 6.2.0 --

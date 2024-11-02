@@ -42,22 +42,19 @@ root(ROOTS.ExpansionFeatures,
 						}),
 					}),
 					n(VENDORS, {
-						i(115359, {	-- Draenor Jewelcrafting
-							["f"] = MISC,
-							["g"] = {
-								r(170709),	-- Whispering Iron Choker
-								r(170706),	-- Whispering Iron Band
-								r(170712),	-- Whispering Blackrock Band
-								r(170708),	-- Shifting Iron Choker
-								r(170705),	-- Shifting Iron Band
-								r(170711),	-- Shifting Blackrock Band
-								r(170707),	-- Glowing Iron Choker
-								r(170704),	-- Glowing Iron Band
-								r(170710),	-- Glowing Blackrock Band
-								r(176087),	-- Secrets of Draenor Jewelcrafting
-								r(170700),	-- Taladite Crystal
-							},
-						}),
+						TempForceMisc(i(115359, {	-- Draenor Jewelcrafting
+							r(170709),	-- Whispering Iron Choker
+							r(170706),	-- Whispering Iron Band
+							r(170712),	-- Whispering Blackrock Band
+							r(170708),	-- Shifting Iron Choker
+							r(170705),	-- Shifting Iron Band
+							r(170711),	-- Shifting Blackrock Band
+							r(170707),	-- Glowing Iron Choker
+							r(170704),	-- Glowing Iron Band
+							r(170710),	-- Glowing Blackrock Band
+							r(176087),	-- Secrets of Draenor Jewelcrafting
+							r(170700),	-- Taladite Crystal
+						})),
 						i(116096, {	-- Design: Critical Strike Taladite
 							["cost"] = { { "i", 118723, 1 }, },	-- 1x Secret of Draenor Jewelcrafting
 						}),

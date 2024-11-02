@@ -5549,11 +5549,10 @@ root(ROOTS.Holidays, n(TIMEWALKING_HEADER, applyevent(EVENTS.TIMEWALKING_WARLORD
 					{"sub", "common_wod_dungeon_drop_tw", 24, FINGER},
 				},
 				["g"] = {
-					ig(127772, {	-- Gemcutter Module: Haste
+					TempForceMisc(ig(127772, {	-- Gemcutter Module: Haste
 						["requireSkill"] = JEWELCRAFTING,
 						["description"] = "Take this recipe to the \"Apexis Gemcutter\" in Tanaan Jungle to learn.  If you have this recipe already you will need to revisit the vendor to cache the recipe.",
-						["f"] = MISC,
-					}),
+					})),
 					i(110033),	-- Arcanic of the High Sage
 					i(110034),	-- Viryx's Indomitable Bulwark
 					i(110011),	-- Fires of the Sun
