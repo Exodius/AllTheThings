@@ -436,7 +436,7 @@ root(ROOTS.BlackMarket, bubbleDown({ ["u"] = BLACK_MARKET, },{
 	i(45037),	-- Epic Purple Shirt
 	i(110672, {	-- Grimoire of the Four Winds
 		["u"] = REMOVED_FROM_GAME,
-		["collectible"] = false,
+		["f"] = MISC,
 	}),
 	-- Heart of Fear Heroic Trash Drops. Only where available from the BMAH while HoF was current Content.
 	un(REMOVED_FROM_GAME, i(86993)),	-- Darting Damselfly Cuffs

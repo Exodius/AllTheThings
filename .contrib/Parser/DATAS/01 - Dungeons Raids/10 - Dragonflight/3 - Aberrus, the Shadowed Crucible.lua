@@ -709,7 +709,7 @@ root(ROOTS.Instances, expansion(EXPANSION.DF, bubbleDown({ ["timeline"] = { ADDE
 					i(205256, {	-- Satchel of Pilfered Recipes
 						i(194642),	-- Design: Choker of Shielding (RECIPE!)
 						i(201740, {	-- Elemental Codex of Ultimate Power
-							["collectible"] = false,
+							["f"] = MISC,
 							["g"] = {
 								r(370543),	-- Elemental Potion of Ultimate Power (RECIPE!)
 								r(370672),	-- Potion Cauldron of Ultimate Power (RECIPE!)
