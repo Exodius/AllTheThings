@@ -15357,7 +15357,6 @@ L.QUEST_NAMES = {
 	[77974] = "First Lock",
 	[78912] = "When donating to the Gala (daily)",
 	[79104] = "Increased Renewed Proto-Drake: Love Armor Droprate (Daily Accountwide)",
-	[79573] = "The War Within Campaign Completed [Account]",
 	[79706] = "Stay awhile and listen: Faerin Lothar",
 	[79971] = "Stay awhile and listen: Alleria Windrunner",
 	[80020] = "Stay awhile and listen: Locus-Walker",
@@ -42878,6 +42877,9 @@ for i,objectID in ipairs(CANDY_BUCKETS) do ObjectNames[objectID] = "Cubo de cara
 for i,objectID in ipairs(HORDE_BONFIRES) do ObjectNames[objectID] = "Fogata de la Horda"; end
 end
 if simplifiedLocale == "zh" then
+localize(_.CategoryNames, {
+	[3] = "塔罗牌",
+});
 localize(L.HEADER_NAMES, {
 	[-1000000] = "东部",
 	[-1000001] = "北部",
@@ -42955,7 +42957,8 @@ localize(L.HEADER_NAMES, {
 	[-1000190] = "疯狂宝箱",
 	[-1000199] = "甲虫的召唤",
 	[-1000201] = "暗月马戏团",
-	[-1000203] = "暗月马戏团舞游戏",
+	[-1000202] = "小游戏",
+	[-1000203] = "暗月马戏团跳舞游戏",
 	[-1000204] = "不死鸟大挑战",
 	[-1000205] = "射击场",
 	[-1000206] = "打豺狼人",

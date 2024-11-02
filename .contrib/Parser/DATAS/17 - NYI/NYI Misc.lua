@@ -121,10 +121,6 @@ root(ROOTS.NeverImplemented, filter(MISC, {
 			i(52446),	-- Illustrious Jewelcrafter's Token
 		})),
 
-		-- 4.2.0
-		expansion(EXPANSION.CATA, patch(2,0), bubbleDownSelf({ ["timeline"] = { CREATED_4_2_0 } }, {
-		})),
-
 		-- 4.3.0
 		expansion(EXPANSION.CATA, patch(3,0), bubbleDownSelf({ ["timeline"] = { CREATED_4_3_0 } }, {
 			i(78892),	-- Perfect Geode
