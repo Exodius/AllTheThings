@@ -2428,7 +2428,6 @@ root(ROOTS.NeverImplemented, {
 			expansion(EXPANSION.DF, patch(2,0), bubbleDown({ ["timeline"] = { CREATED_10_2_0 } }, {
 				n(ARMOR, {
 					i(211069),	-- Azure Treads of the Kalu'ak
-					i(210849),	-- Trader's Azure Sarong
 					i(210856),	-- Trader's Faded Sarong
 					i(210851),	-- Trader's Grassy Sarong
 					i(210859),	-- Trader's Plum Sarong
@@ -2446,8 +2445,6 @@ root(ROOTS.NeverImplemented, {
 					i(190692),	-- Champion's Battle Standard
 					i(190847),	-- Deathmantle Assassin's Barb
 					i(190090),	-- Dessicated Bouquet
-					i(212627),	-- Dueler's Azure Shoulder Cape
-					i(212617),	-- Dueler's Crimson Shoulder Cape
 					i(212625),	-- Dueler's Grassy Shoulder Cape
 					i(212618),	-- Dueler's Plum Shoulder Cape
 					i(190893),	-- Jeweled Valkyrion Cape
@@ -2458,7 +2455,6 @@ root(ROOTS.NeverImplemented, {
 					i(212713),	-- Spring Reveler's Cornsilk Dress
 					i(212987),	-- Spring Reveler's Cornsilk Pants
 					i(212717),	-- Spring Reveler's Cornsilk Sun Hat
-					i(212612),	-- Wings of the Amethyst Monarch
 					i(212610),	-- Wings of the Emerald Monarch
 				}),
 				n(SETS, {

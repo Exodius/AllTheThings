@@ -452,6 +452,7 @@ i(42188, 56011);	-- Sapphire Spellthread
 --- TRAINER ---
 i(0, 60969);	-- Flying Carpet
 i(0, 60971);	-- Magnificent Flying Carpet
+i(0, 56016);	-- Wispcloak
 
 -------------------
 --- PATCH 3.1.0 ---
@@ -907,9 +908,10 @@ i(0, 239412);	-- Celumbra, the Night's Dichotomy
 -- PATCH 7.3.0 --
 -----------------
 --- ITEM ---
-i(151746, 247807);	-- Lightweave Breeches [Rank 1]
 i(151747, 247808);	-- Lightweave Breeches [Rank 2]
 i(151748, 247809);	-- Lightweave Breeches [Rank 3]
+--- QUEST ---
+i(0, 247807);	-- Lightweave Breeches [Rank 1]
 
 -----------------
 -- PATCH 8.0.1 --

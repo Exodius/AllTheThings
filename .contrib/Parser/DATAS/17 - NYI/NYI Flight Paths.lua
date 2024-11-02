@@ -21,10 +21,6 @@ root(ROOTS.NeverImplemented, n(FLIGHT_PATHS, {
 			fp(54, {["description"] = "Transport, Feathermoon"}),
 			fp(59, {["description"] = "Dun Baldar, Alterac Valley"}),
 			fp(60, {["description"] = "Frostwolf Keep, Alterac Valley"}),
-			-- #if NOT ANYCLASSIC
-			fp(62, {["description"] = "Nighthaven, Moonglade"}),
-			fp(63, {["description"] = "Nighthaven, Moonglade"}),
-			-- #endif
 			fp(78, {["description"] = "Naxxramas"}),
 		}),
 	}),
@@ -739,7 +735,6 @@ root(ROOTS.NeverImplemented, n(FLIGHT_PATHS, {
 	expansion(EXPANSION.TWW, {
 		-- 11.0.2
 		expansion(EXPANSION.TWW, patch(0,2), bubbleDownSelf({ ["timeline"] = { CREATED_11_0_2 } }, {
-			fp(3003, {["description"] = "The Crown of Shadows"}),
 		})),
 	}),
 }));

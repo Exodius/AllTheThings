@@ -1124,11 +1124,11 @@ root(ROOTS.Unsorted, {
 				--- Quest Rewards ---
 				i(220156),	-- Bubbling Wax
 				--- Renown Quest Rewards ---
-				i(226151),	-- Wax-Coated Coffer Unlocker
 				i(226154),	-- Wax-Sealed Crafty Crest
 				i(226152),	-- Wax-sealed Crests
 				--- Attached to Quests via API ---
-				i(215359),	-- Very Large Valdrakken Accord Supply Pack
+				-- i(215359),	-- Very Large Valdrakken Accord Supply Pack
+				-- i(226151),	-- Wax-Coated Coffer Unlocker
 
 				--- Snuffling ---
 				i(224650),	-- Wax-Sealed Pouch
@@ -1190,10 +1190,6 @@ root(ROOTS.Unsorted, {
 					i(224823),	-- Shredded Weavercloth
 					i(222348),	-- Unraveling
 					i(222788),	-- Khaz Algar Unraveling
-					--------
-					r(446975),	-- Artisan Tailor's Coat
-					r(447001),	-- Daybreak Spellthread
-					r(447000),	-- Sunset Spellthread
 				}),
 			}),
 			n(PVP, {
