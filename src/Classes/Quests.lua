@@ -863,6 +863,7 @@ if app.IsRetail then
 		BatchRefresh = nil
 	end
 
+	local Register_CRITERIA_UPDATE = app.EmptyFunction
 	local function RefreshQuestCompletionState(questID)
 		-- app.PrintDebug("RefreshQuestCompletionState",questID)
 		wipe(RetailDirtyQuests);
@@ -878,7 +879,7 @@ if app.IsRetail then
 			end
 		end
 
-		app:RegisterEvent("CRITERIA_UPDATE");
+		Register_CRITERIA_UPDATE()
 		-- app.PrintDebugPrior("RefreshedQuestCompletionState")
 	end
 	RefreshAllQuestInfo = function()
@@ -901,6 +902,11 @@ if app.IsRetail then
 	app.AddEventHandler("OnStartup", QueryCompletedQuests);
 	app.AddEventHandler("OnRecalculate", QueryCompletedQuests);
 	app.AddEventHandler("OnPlayerLevelUp", RefreshAllQuestInfo);
+	app.AddEventHandler("OnReady", function()
+		Register_CRITERIA_UPDATE = function()
+			app:RegisterEvent("CRITERIA_UPDATE");
+		end
+	end)
 else
 	---@diagnostic disable-next-line: undefined-global
 	local GetQuestsCompleted = GetQuestsCompleted;
