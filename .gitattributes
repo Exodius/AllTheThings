@@ -10,7 +10,7 @@
 *.toc       text eol=crlf
 # VS solution file
 *.sln       text eol=crlf
-# VS project file
+# C# project file
 *.csproj    text eol=crlf
 # C# source code
 *.cs        text eol=crlf
