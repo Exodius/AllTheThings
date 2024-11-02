@@ -491,6 +491,11 @@ namespace ATT
             // Check to make sure the data is valid.
             if (data == null) return false;
 
+            // if (data.TryGetValue("encounterID", out long TEMP) && TEMP == 826)
+            // {
+
+            // }
+
             if (DebugMode && MergeItemData)
             {
                 // Capture references to specified Debug DB keys for Debug output
@@ -582,6 +587,8 @@ namespace ATT
 
                     Dictionary<string, object> clone = new Dictionary<string, object>(data);
                     clone.Remove("g");
+                    // cost can be variable so don't merge into Debug DBs
+                    clone.Remove("cost");
                     // special case for criteria, to list under their achievement instead of into it since they contain the same achID
                     if (data.ContainsKey("criteriaID"))
                     {
