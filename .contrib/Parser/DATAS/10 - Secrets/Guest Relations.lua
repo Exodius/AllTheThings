@@ -136,44 +136,69 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 				["crs"] = 230711,	-- Maru (Spirit)
 			}),
 			q(84236, {	-- The Great Detective
-				["provider"] = { "n", 226766 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
+				["sourceQuests"] = { 84868 },	-- A Whiff of Help
+				["provider"] = { "n", 226683 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
 				["coord"] = { 63.0, 50.2, TANARIS },
 			}),
 			q(84237, {	-- The "Great" Detective
-				["description"] = "Exhaust dialogue with all Team Solid npcs at 63.8, 51.0 until the quest shows 48% clue progress. Interact with the Abandoned Beach Chair at 66.0, 59.5. Use your Torch of Pyrreth at 66.23, 40.64 to reveal Herrkrop then exhaust dialogue again with nearby npcs. Finally, talk to Athelton Jones to complete the quest requirements.",
+				["description"] = "1. Talk to the members of Team Solid in following order until the quest shows 48% progress.\n- Ellanoir\n- Duryllin\n- Juddson Rakes\n- Ellanoir\n2. Interact with the Abandoned Beach Chair at the Southbreak Shore.\n.3 Use your Torch of Pyrreth at Wavestrider Beach to reveal Herrkrop's body.\n4. Talk to all nearby NPCs.\n5. Talk to Athelton Jones to complete the quest requirements.",
 				["provider"] = { "n", 226796 },	-- Athektin Jones
 				["sourceQuests"] = { 84236 },	-- The Great Detective
 				["coord"] = { 63.9, 51.7, TANARIS },
-				["crs"] = {
-					226804,	-- Duryllin
-					226805,	-- Ellanoir
-					226803,	-- Juddson Rakes
-					226810,	-- Herrkrop
-					226812,	-- Scrapes
-					226810,	-- Nat Pagle
-					226814,	-- Julia Henning
-					226796,	-- Athelton Jones
+				["g"] = {
+					n(226805, {	-- Ellanoir
+						["coord"] = { 63.8, 51.0, TANARIS },
+					}),
+					n(226804, {	-- Duryllin
+						["coord"] = { 63.8, 51.1, TANARIS },
+					}),
+					n(226803, {	-- Juddson Rakes
+						["coord"] = { 63.8, 51.1, TANARIS },
+					}),
+					o(459263, {	-- Abandoned Beach Chair
+						["coord"] = { 66.0, 59.5, TANARIS },
+						["description"] = "Investigate the Abandoned Beach Chair.",
+					}),
+					n(226810, {	-- Herrkrop
+						["provider"] = { "i", 208092 },	-- Torch of Pyrreth
+						["coord"] = { 66.2, 40.6, TANARIS },
+					}),
+					n(226812, {	-- Scrapes
+						["coord"] = { 66.2, 40.7, TANARIS },
+					}),
+					n(228477, {	-- Nat Pagle
+						["coord"] = { 66.2, 40.7, TANARIS },
+					}),
+					n(226814, {	-- Julia Henning
+						["coord"] = { 65.7, 41.3, TANARIS },
+					}),
+					n(226796, {	-- Athelton Jones
+						["coord"] = { 66.3, 40.6, TANARIS },
+					}),
 				},
 			}),
 			q(84278, {	-- Tracking Quest
-				["description"] = "Use the Goblin Transport at 68.0, 40.8 to travel to Borean Tundra, then find Rexxar at 77.3, 46.1.",
-				["provider"] = { "n", 226766 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
+				["description"] = "Use the Goblin Transport at 68.0, 40.8 to travel to Borean Tundra, then find Rexxar.",
+				["provider"] = { "n", 226683 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
 				["sourceQuests"] = { 84237 },	-- The 'Great' Detective
 				["coord"] = { 63.0, 50.2, TANARIS },
 				["g"] = {
 					i(227551),	-- Note from Rexxar (QI!)
-					o(457025, { ["coord"] = { 68.0, 40.8, TANARIS } }),	-- Pre-Calibrated Goblin Transport Vessel
+					o(457025, {	-- Pre-Calibrated Goblin Transport Vessel
+						["coord"] = { 68.0, 40.8, TANARIS },
+					}),
+					n(226952, {	-- Rexxar
+						["coord"] = { 77.3, 46.2, BOREAN_TUNDRA },
+					}),
+					
 				},
 			}),
 			q(84296, {	-- The Trail's Gone Cold
-				["description"] = "Locate 3 diary pages around the marked shed, (85.9, 34.0), (88.1, 34.6) - Use Torch, (88.1, 34.6). Interact with the spyglass atop the Glimmering Pillar in Sholazar Basin at 49.7, 36.0. Use your Torch of Pyreth at 16.0, 58.8 in Icecrown. Finally, Talk to Rexxar with your Spirit's Whistle.",
+				["description"] = "1. Locate 3 diary pages around the marked shed and then go to Sholazar Basin.\n2. Interact with the Mounted Spyglass atop the Glimmering Pillar and then head to Icecrown.\n3. Use your Torch of Pyreth at Scrapes.\n4. Summon Rexxar with your Spirit's Whistle and tell him about a shapeshifter.",
 				["sourceQuests"] = { 84278 },	-- Tracking Quest
 				["provider"] = { "n", 226952  },	-- Rexxar
-				["coord"] = { 77.3, 46.1, BOREAN_TUNDRA },
-				["crs"] = {
-					228550,	-- Rexxar
-					228634,	-- Scrapes
-				},
+				["coord"] = { 77.3, 46.2, BOREAN_TUNDRA },
+				["crs"] = { 228550 },	-- Rexxar
 				["g"] = {
 					i(227664),	-- Spirit's Whistle (QI!)
 					o(457156, {	-- Torn Note
@@ -199,31 +224,45 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 					o(457197, {	-- Mounted Spyglass
 						["coord"] = { 49.7, 36.0, SHOLAZAR_BASIN },
 					}),
+					n(228634, {	-- Scrapes
+						["coord"] = { 16.0, 58.8, ICECROWN },
+					}),
 				},
 			}),
 			q(84334, {	-- Warn the Detective
-				["provider"] = { "n", 226766 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
+				["provider"] = { "n", 226683 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
 				["sourceQuests"] = { 84296 },	-- The Trail's Gone Cold
 				["coord"] = { 63.0, 50.2, TANARIS },
 			}),
 			q(84336, {	-- Spot The Difference
-				["description"] = "Speak to Hemet, Leeroy, and Addie to suss out the detectives' stories, then accuse one. Chase them to 59.66, 62.18 and kill them.",
+				["description"] = "Speak to Hemet, Leeroy, and Addie to suss out the detectives' stories, then accuse one. Chase the intruder east of Bootlegger Outpost and kill him.",
 				["qgs"] = {
 					226796,	-- Athelton Jones
 					228661,	-- Athelton Jones (!)
 				},
 				["sourceQuests"] = { 84334 },	-- Warn the Detective
 				["coord"] = { 61.0, 50.6, TANARIS },
-				["crs"] = {
-					228250,	-- Hemet Nesingwary Sr.
-					158192,	-- Leeroy Jenkins
-					227731,	-- Addie Fizzlebog
-					228553,	-- Y'illiya Xennin
+				["g"] = {
+					n(227731, {	-- Addie Fizzlebog
+						["coord"] = { 63.5, 51.7, TANARIS },
+					}),
+					n(228250, {	-- Hemet Nesingwary Sr.
+						["coord"] = { 62.5, 51.9, TANARIS },
+					}),
+					n(158192, {	-- Leeroy Jenkins
+						["coord"] = { 63.3, 52.3, TANARIS },
+					}),
+					n(228661, {	-- Athelton Jones (!)
+						["coord"] = { 63.3, 52.3, TANARIS },
+					}),
+					n(228663, {	-- Y'illiya Xennin
+						["coord"] = { 60.0, 62.5, TANARIS },
+					}),
 				},
 			}),
 			-- End of Chapter 1 --
 		}),
-		-- Week 2: November 4th --
+		-- Chapter 2: November 4th --
 		n(VENDORS, {
 			n(226766, {	-- Benatauk <Unco Benny>
 				["description"] = "You need to get up to the quest 'A Whiff of Help' in the chain and accept it in order to buy the items.",
