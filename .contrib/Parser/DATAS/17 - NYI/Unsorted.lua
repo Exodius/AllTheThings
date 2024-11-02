@@ -151,8 +151,6 @@ root(ROOTS.Unsorted, {
 			i(231812),	-- Hozen Poetry
 			i(231813),	-- Siren Isle Manifest
 			i(232372),	-- Crate of Bygone Riches
-			i(232430),	-- Plunderlord's Stormridden Tricorne
-			i(232431),	-- First Mate's Dashing Cap
 			i(232439),	-- Rune-Seared Spear
 			i(232519),	-- Razeshi B.
 			i(232569),	-- Cyclonic Runekey
@@ -160,24 +158,6 @@ root(ROOTS.Unsorted, {
 			i(232571),	-- Whirling Runekey
 			i(232572),	-- Torrential Runekey
 			i(232573),	-- Thunderous Runekey
-			i(232579),	-- Plunderlord's Stormridden Neck-Severer
-			i(232580),	-- Plunderlord's Stormridden Rapier
-			i(232581),	-- Plunderlord's Stormridden Cutlass
-			i(232582),	-- Plunderlord's Stormridden Sigil
-			i(232583),	-- Plunderlord's Stormridden Hand Cannon
-			i(232584),	-- Plunderlord's Stormridden Pilferers
-			i(232585),	-- Plunderlord's Old Eye Patch
-			i(232586),	-- Plunderlord's Old Hat
-			i(232587),	-- Plunderlord's Stormridden Spaulders
-			i(232588),	-- Plunderlord's Stormridden Drapery
-			i(232589),	-- Plunderlord's Stormridden Waistcoat
-			i(232590),	-- Plunderlord's Stormridden Cuffs
-			i(232591),	-- Plunderlord's Stormridden Cinch
-			i(232592),	-- Plunderlord's Stormridden Trousers
-			i(232593),	-- Plunderlord's Stormridden Muckscrapers
-			i(232594),	-- First Mate's Dashing Headgear
-			i(232595),	-- Swabbie's Shovel
-			i(232596),	-- Swabbie's Oar
 			i(232597),	-- Swabbie's Oar
 			i(232605),	-- Thunderous Fragment
 			i(232629),	-- Distilled Knowledge of Timeways
@@ -355,15 +335,7 @@ root(ROOTS.Unsorted, {
 			i(233237),	-- Lively Pack of Lunar Explosives
 			i(233238),	-- Azure Pack of Lunar Explosives
 			i(233239),	-- Sunny Pack of Lunar Explosives
-			i(233240),	-- Polly Roger
-			i(233241),	-- Hooktalon
-			i(233242),	-- Royal Seafeather
-			i(233243),	-- Silver Tidestallion
-			i(233247),	-- Sparklesnap
-			i(233248),	-- Glamrok
 			i(233249),	-- Golden Clockwork Mace
-			i(233251),	-- Bubbles
-			i(233252),	-- Happy
 			i(233253),	-- Purple Clockwork Mace
 			i(233254),	-- Blue Clockwork Mace
 			i(233255),	-- Green Clockwork Mace

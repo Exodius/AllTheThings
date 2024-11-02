@@ -4256,3 +4256,15 @@ i(231294, 4682);	-- Reven
 i(231356, 4686);	-- Specter
 --- UNSORTED ---
 i(229993, 4669);	-- Bluedoo
+
+------------------
+-- PATCH 11.0.5 --
+------------------
+--- ITEM ---
+--i(0, ???);	-- Parley
+--i(233247, ???);	-- Sparklesnap
+
+-- New itemID learnables for pet species previously only learned by spell.
+--i(233251, 4426);			-- Bubbles
+--i(233248, 4425);			-- Glamrok
+--i(233252, 4435);			-- Happy

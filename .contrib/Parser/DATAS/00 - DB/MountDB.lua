@@ -1814,7 +1814,6 @@ i(217987, 441325);	-- Remembered Wind Rider
 i(0, 405623);		-- Armadillo Roller
 i(223570, 449416);	-- Ebonhide Ramolith
 i(226506, 459193);	-- Hand of Reshkigaal
-i(226042, 457656);	-- Plunderlord's Midnight Crocolisk
 i(226044, 457659);	-- Plunderlord's Weathered Crocolisk
 i(223321, 448984);	-- [PH] ArathiLynxMount (Black Fur, Black Armor)
 i(223319, 448980);	-- [PH] ArathiLynxMount (Gold Fur, Yellow Armor)
@@ -1847,7 +1846,6 @@ i(224148, 451487);	-- [PH] NerubianWarbeastMount (Cyan)
 i(224149, 451488);	-- [PH] NerubianWarbeastMount (Orange)
 i(223573, 449421);	-- [PH] Proto Ram Earthen (Sand Skin, Grand Horns, Dark Saddle)
 i(223574, 449419);	-- [PH] Proto Ram Earthen (White Skin, Grand Horns, White Saddle)
-i(223313, 448934);	-- [PH] Shadow Elemental (Black)
 i(223587, 449465);	-- [PH] Silver Armored Fel Bat Gladiator Mount
 i(223277, 448682);	-- [PH] SpiderUndergroundMount (Green)
 i(220786, 0);		-- Delver's Dirigible
@@ -1914,3 +1912,16 @@ i(231374, 468353);	-- Enchanted Spellweave Carpet
 i(224398, 452643);	-- Frayfeather Hippogryph
 i(211087, 428067);	-- Hateforged Blazecycle
 i(0, 465235);		-- Trader's Gilded Brutosaur
+
+------------------
+-- PATCH 11.0.5 --
+------------------
+i(233241, 471696);	-- Hooktalon
+i(226042, 457656);	-- Plunderlord's Midnight Crocolisk
+i(223313, 448934);	-- Shadow of Doubt
+i(232991, 472752);	-- The Breaker's Song
+
+-- New itemID learnables for mounts previously only learned by spell.
+--i(233240, 437162);	-- Polly Roger
+--i(233242, 254812);	-- Royal Seafeather
+--i(233243, 300154);	-- Silver Tidestallion

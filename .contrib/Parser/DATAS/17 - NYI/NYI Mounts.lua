@@ -847,9 +847,6 @@ root(ROOTS.NeverImplemented, filter(MOUNTS, {
 			i(223570, {	-- Ebonhide Ramolith (MOUNT!)
 				["displayID"] = 117966,
 			}),
-			i(226042, {	-- Plunderlord's Midnight Crocolisk (MOUNT!) [Trading Post?]
-				["displayID"] = 121170,
-			}),
 			i(226044, {	-- Plunderlord's Weathered Crocolisk (MOUNT!) [Trading Post?]
 				["displayID"] = 121171,
 			}),
