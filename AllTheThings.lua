@@ -4690,7 +4690,6 @@ end
 ---@class ATTGameTooltip: GameTooltip
 local GameTooltip = GameTooltip;
 local RowOnEnter, RowOnLeave;
-local CreateRow;
 local function Refresh(self)
 	if not self:IsVisible() then return; end
 	-- app.PrintDebug(Colorize("Refresh:", app.Colors.TooltipDescription),self.Suffix)
@@ -4719,7 +4718,7 @@ local function Refresh(self)
 	local current = math.max(1, math.min(self.ScrollBar.CurrentValue, totalRowCount)) + 1
 
 	-- Ensure that the first row doesn't move out of position.
-	local row = container.rows[1] or CreateRow(container);
+	local row = container.rows[1]
 	SetRowData(self, row, rowData[1]);
 
 	local containerHeight = container:GetHeight();
@@ -4727,7 +4726,7 @@ local function Refresh(self)
 	local rowCount = math_floor(containerHeight / rowHeight)
 
 	for i=2,rowCount do
-		row = container.rows[i] or CreateRow(container);
+		row = container.rows[i]
 		SetRowData(self, row, rowData[current]);
 		-- track the minimum indentation within the set of rows so they can be adjusted later
 		if row.indent and (not minIndent or row.indent < minIndent) then
@@ -6028,7 +6027,7 @@ RowOnLeave = function (self)
 	GameTooltip:ClearLines();
 	GameTooltip:Hide();
 end
-CreateRow = function(self)
+local CreateRow = function(self)
 	---@class ATTRowButtonClass: Button
 	local row = CreateFrame("Button", nil, self);
 	row.index = #self.rows;
@@ -6271,6 +6270,11 @@ local function ToggleExtraFilters(self, active)
 		if Setter then Setter(active) end
 	end
 end
+local function NewWindowRowContainer(container)
+	return setmetatable({}, { __index = function(t,key)
+		return CreateRow(container)
+	end})
+end
 function app:GetWindow(suffix, parent, onUpdate)
 	if app.GetCustomWindowParam(suffix, "reset") then
 		ResetWindow(suffix);
@@ -6368,7 +6372,7 @@ function app:GetWindow(suffix, parent, onUpdate)
 	container:SetPoint("BOTTOM", window, "BOTTOM", 0, 6);
 	-- container:SetClipsChildren(true);
 	window.Container = container;
-	container.rows = {};
+	container.rows = NewWindowRowContainer(container)
 	container:Show();
 
 	-- Setup the Event Handlers
