@@ -1008,18 +1008,10 @@ root(ROOTS.Unsorted, {
 			i(232631),	-- Wrapped Spear
 			--
 			i(228911),	-- Xal'atath's Rusty Coin
-
 			i(232905),	-- Malown's Slam
 
-			i(232478),	-- Area 52 Tabard
+			i(228938),	-- Area 52 Tabard
 			i(233053),	-- Crown of the Violet Rose
-
-
-			i(229418),	-- Reins of the Trader's Gilded Brutosaur
-			i(230184),	-- Chaos-Forged Gryphon
-			i(230185),	-- Chaos-Forged Hippogryph
-			i(230200),	-- Chaos-Forged Dreadwing
-			i(230201),	-- Chaos-Forged Wind Rider
 			i(234413),	-- Satchel of Exotic Mysteries
 
 			--
@@ -1032,7 +1024,6 @@ root(ROOTS.Unsorted, {
 			i(228938),	-- Peculiar Gem
 			i(228941),	-- Inert Peculiar Key
 			i(234425),	-- Forgotten Folio
-			i(234448),	-- Bright Ideas Thinking Cap
 		})),
 		expansion(EXPANSION.TWW, patch(0,2), bubbleDownSelf({ ["timeline"] = { ADDED_11_0_2 } }, {
 			explorationHeader({

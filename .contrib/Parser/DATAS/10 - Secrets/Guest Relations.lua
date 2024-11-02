@@ -32,6 +32,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 				},
 			}),
 			ach(40872, {	-- I Saved the Party and All I Got Was This Lousy Hat (automated)
+				i(234448),	-- Bright Ideas Thinking Cap
 				i(231906),	-- High-Alert Thinking Cap
 			}),
 			ach(40967),		-- Ratts' Revenge

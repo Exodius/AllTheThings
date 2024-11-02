@@ -1333,7 +1333,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 				}),
 				candybucket(13472, {	-- Candy Bucket — Dalaran : Northrend, Underbelly, Neutral
 					["provider"] = { "o", 194072 },	-- Candy Bucket, Dalaran
-					["coord"] = { 27.2, 41.4, NORTHREND_THE_UNDERBELLY },
+					["coord"] = { 380, 59.9, NORTHREND_THE_UNDERBELLY },
 					["timeline"] = { ADDED_3_0_2 },
 				}),
 				candybucket(28993, {	-- Candy Bucket — Desolace, Karnum's Glade, Neutral

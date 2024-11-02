@@ -559,7 +559,6 @@ root(ROOTS.Sourceless, bubbleDownFiltered({
 
 			-- 7.2.0
 			expansion(EXPANSION.LEGION, patch(2,0), bubbleDownSelf({ ["timeline"] = { ADDED_7_2_0 } }, {
-				q(46955),	-- Akazamzarak Silenced
 				q(47215),	-- Tracking Quest
 			})),
 
