@@ -82,6 +82,104 @@ i(47010, 66576); -- Design: Accurate Dreadstone
 -- #ENDIF
 -- #ENDIF
 
+--- UNSORTED TIMELINES FROM PARSER WARNINGS ---
+i(137852, 195937); -- Design: Vindictive Pandemonite Choker (Guessed via Filter Recipe with SpellID)
+i(137851, 195936); -- Design: Tranquil Necklace of Prophecy (Guessed via Filter Recipe with SpellID)
+i(137864, 209608); -- Design: Shadowruby Band (Guessed via Filter Recipe with SpellID)
+i(137854, 195939); -- Design: Intrepid Necklace of Prophecy (Guessed via Filter Recipe with SpellID)
+i(137848, 195933); -- Design: Blessed Dawnlight Medallion (Guessed via Filter Recipe with SpellID)
+i(137857, 195942); -- Design: Raging Furystone Gorget (Guessed via Filter Recipe with SpellID)
+i(137825, 195910); -- Design: Dawnlight Band (Guessed via Filter Recipe with SpellID)
+i(137853, 195938); -- Design: Sylvan Maelstrom Amulet (Guessed via Filter Recipe with SpellID)
+i(137856, 195941); -- Design: Righteous Dawnlight Medallion (Guessed via Filter Recipe with SpellID)
+i(137858, 195943); -- Design: Grim Furystone Gorget (Guessed via Filter Recipe with SpellID)
+i(137824, 195909); -- Design: Maelstrom Band (Guessed via Filter Recipe with SpellID)
+i(151735, 247767); -- Design: Empyrial Titan Crown (Guessed via Filter Recipe with SpellID)
+i(151732, 247764); -- Design: Empyrial Elemental Crown (Guessed via Filter Recipe with SpellID)
+i(151729, 247758); -- Design: Empyrial Deep Crown (Guessed via Filter Recipe with SpellID)
+i(151726, 247755); -- Design: Empyrial Cosmic Crown (Guessed via Filter Recipe with SpellID)
+i(137847, 195932); -- Design: Sorcerous Shadowruby Pendant (Guessed via Filter Recipe with SpellID)
+-- #IF AFTER CATA
+i(41797, 55401); -- Design: Austere Earthsiege Diamond (Guessed via Filter Recipe with SpellID)
+i(41793, 54019); -- Design: Fierce Monarch Topaz (Guessed via Filter Recipe with SpellID)
+i(41791, 53948); -- Design: Subtle Autumn's Glow (Guessed via Filter Recipe with SpellID)
+i(41798, 55397); -- Design: Bracing Earthsiege Diamond (Guessed via Filter Recipe with SpellID)
+i(41794, 53988); -- Design: Deadly Monarch Topaz (Guessed via Filter Recipe with SpellID)
+i(41792, 53991); -- Design: Deft Monarch Topaz (Guessed via Filter Recipe with SpellID)
+i(41799, 55398); -- Design: Eternal Earthsiege Diamond (Guessed via Filter Recipe with SpellID)
+i(41795, 53965); -- Design: Timeless Twilight Opal (Guessed via Filter Recipe with SpellID)
+i(41796, 53980); -- Design: Glinting Twilight Opal (Guessed via Filter Recipe with SpellID)
+i(41790, 53951); -- Design: Precise Scarlet Ruby (Guessed via Filter Recipe with SpellID)
+-- #ENDIF
+i(24159, 31054); -- Design: Khorium Band of Frost (Guessed via Filter Recipe with SpellID)
+i(24172, 31077); -- Design: Coronet of Verdant Flame (Guessed via Filter Recipe with SpellID)
+i(24160, 31055); -- Design: Khorium Inferno Band (Guessed via Filter Recipe with SpellID)
+i(24173, 31078); -- Design: Circlet of Arcane Might (Guessed via Filter Recipe with SpellID)
+
+-- #IF NOT ANYCLASSIC
+-- Maybe confirm with /Jewelcrafting.lua to move them around as needed by patch
+i(35304, 31092); -- Design: Solid Star of Elune (Guessed via Filter Recipe with SpellID)
+i(35307, 31098); -- Design: Rigid Star of Elune (Guessed via Filter Recipe with SpellID)
+i(35305, 31088); -- Design: Brilliant Living Ruby (Guessed via Filter Recipe with SpellID)
+i(35199, 46123); -- Design: Ring of Flowing Life (Guessed via Filter Recipe with SpellID)
+i(35201, 46125); -- Design: Pendant of Sunfire (Guessed via Filter Recipe with SpellID)
+i(35198, 46122); -- Design: Loop of Forged Power (Guessed via Filter Recipe with SpellID)
+i(35203, 46127); -- Design: Hard Khorium Choker (Guessed via Filter Recipe with SpellID)
+i(35200, 46124); -- Design: Hard Khorium Band (Guessed via Filter Recipe with SpellID)
+i(35202, 46126); -- Design: Amulet of Flowing Life (Guessed via Filter Recipe with SpellID)
+i(32307, 39737); -- Design: Veiled Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(32289, 39718); -- Design: Stormy Empyrean Sapphire (Guessed via Filter Recipe with SpellID)
+i(32297, 39727); -- Design: Sovereign Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(32298, 39728); -- Design: Shifting Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(32296, 39721); -- Design: Rigid Empyrean Sapphire (Guessed via Filter Recipe with SpellID)
+i(32295, 39724); -- Design: Mystic Lionseye (Guessed via Filter Recipe with SpellID)
+i(32303, 39733); -- Design: Inscribed Pyrestone (Guessed via Filter Recipe with SpellID)
+i(32285, 39714); -- Design: Flashing Crimson Spinel (Guessed via Filter Recipe with SpellID)
+i(32292, 39721); -- Design: Rigid Empyrean Sapphire (Guessed via Filter Recipe with SpellID)
+i(32309, 39739); -- Design: Regal Seaspray Emerald (Guessed via Filter Recipe with SpellID)
+i(32302, 39741); -- Design: Purified Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(32308, 39738); -- Design: Deadly Pyrestone (Guessed via Filter Recipe with SpellID)
+i(32301, 39731); -- Design: Timeless Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(35764, 47054); -- Design: Steady Seaspray Emerald (Guessed via Filter Recipe with SpellID)
+i(32299, 39728); -- Design: Shifting Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(32305, 47055); -- Design: Reckless Pyrestone (Guessed via Filter Recipe with SpellID)
+i(35762, 47055); -- Design: Reckless Pyrestone (Guessed via Filter Recipe with SpellID)
+i(32310, 39740); -- Design: Radiant Seaspray Emerald (Guessed via Filter Recipe with SpellID)
+i(35763, 47056); -- Design: Quick Lionseye (Guessed via Filter Recipe with SpellID)
+i(32311, 39741); -- Design: Purified Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(32304, 39734); -- Design: Potent Pyrestone (Guessed via Filter Recipe with SpellID)
+i(32312, 39742); -- Design: Jagged Seaspray Emerald (Guessed via Filter Recipe with SpellID)
+i(32300, 39736); -- Design: Glinting Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(32306, 39736); -- Design: Glinting Shadowsong Amethyst (Guessed via Filter Recipe with SpellID)
+i(35765, 47053); -- Design: Forceful Seaspray Emerald (Guessed via Filter Recipe with SpellID)
+i(32284, 39713); -- Design: Subtle Lionseye (Guessed via Filter Recipe with SpellID)
+i(32287, 39716); -- Design: Sparkling Empyrean Sapphire (Guessed via Filter Recipe with SpellID)
+i(32286, 39715); -- Design: Solid Empyrean Sapphire (Guessed via Filter Recipe with SpellID)
+i(32291, 39720); -- Design: Smooth Lionseye (Guessed via Filter Recipe with SpellID)
+i(32293, 39720); -- Design: Smooth Lionseye (Guessed via Filter Recipe with SpellID)
+i(32277, 39706); -- Design: Delicate Crimson Spinel (Guessed via Filter Recipe with SpellID)
+i(32283, 39706); -- Design: Delicate Crimson Spinel (Guessed via Filter Recipe with SpellID)
+i(32290, 39711); -- Design: Brilliant Crimson Spinel (Guessed via Filter Recipe with SpellID)
+i(32281, 39711); -- Design: Brilliant Crimson Spinel (Guessed via Filter Recipe with SpellID)
+i(32282, 39711); -- Design: Brilliant Crimson Spinel (Guessed via Filter Recipe with SpellID)
+i(32274, 39705); -- Design: Bold Crimson Spinel (Guessed via Filter Recipe with SpellID)
+-- #ENDIF
+i(25902, 32866); -- Design: Powerful Earthstorm Diamond (Guessed via Filter Recipe with SpellID)
+i(25903, 32867); -- Design: Bracing Earthstorm Diamond (Guessed via Filter Recipe with SpellID)
+i(21955, 26912); -- Design: Black Diamond Crab (Guessed via Filter Recipe with SpellID)
+i(21956, 26914); -- Design: Dark Iron Scorpid (Guessed via Filter Recipe with SpellID)
+
+--- UNSORTED TIMELINES FROM PARSER WARNINGS ---
+
+
+-----------------
+-- PATCH 6.2.0 --
+-----------------
+i(127744, 187517); -- Design: Savage Taladite Amplifier (Guessed via Filter Recipe with SpellID)
+i(122714, 182127); -- Design: Primal Gemcutting (Guessed via Filter Recipe with SpellID)
+i(127726, 187493); -- Design: Mighty Taladite Amplifier (Guessed via Filter Recipe with SpellID)
+i(127723, 187495); -- Technique: Mighty Ensorcelled Tarot (Guessed via Filter Recipe with SpellID)
+
 -----------------
 -- PATCH 8.0.1 --
 -----------------
