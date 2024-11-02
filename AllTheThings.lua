@@ -6027,19 +6027,21 @@ RowOnLeave = function (self)
 	GameTooltip:ClearLines();
 	GameTooltip:Hide();
 end
-local CreateRow = function(self)
+local function CreateRow(rows, i)
+	local container, index = rows.__container, i - 1
 	---@class ATTRowButtonClass: Button
-	local row = CreateFrame("Button", nil, self);
-	row.index = #self.rows;
-	self.rows[row.index + 1] = row
-	if row.index == 0 then
+	local row = CreateFrame("Button", nil, container);
+	row.index = index
+	rows[i] = row
+	if index == 0 then
 		-- This means relative to the parent.
 		row:SetPoint("TOPLEFT");
 		row:SetPoint("TOPRIGHT");
 	else
 		-- This means relative to the row above this one.
-		row:SetPoint("TOPLEFT", self.rows[row.index], "BOTTOMLEFT");
-		row:SetPoint("TOPRIGHT", self.rows[row.index], "BOTTOMRIGHT");
+		local aboveRow = rows[index] or CreateRow(rows, index)
+		row:SetPoint("TOPLEFT", aboveRow, "BOTTOMLEFT");
+		row:SetPoint("TOPRIGHT", aboveRow, "BOTTOMRIGHT");
 	end
 
 	-- Setup highlighting and event handling
@@ -6271,8 +6273,8 @@ local function ToggleExtraFilters(self, active)
 	end
 end
 local function NewWindowRowContainer(container)
-	return setmetatable({}, { __index = function(t,key)
-		return CreateRow(container)
+	return setmetatable({__container=container}, { __index = function(t,i)
+		return CreateRow(t,i)
 	end})
 end
 function app:GetWindow(suffix, parent, onUpdate)
