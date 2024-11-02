@@ -37,7 +37,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 			ach(40967),		-- Ratts' Revenge
 		}),
 		n(QUESTS, {
-			-- Week 1: Tutorial Questline --
+			-- Chapter 1 --
 			q(84143, {	-- Lost and Busy
 				["provider"] = { "n", 226683 },	-- Alyx <Volunteer Assistant Guest Relations Manager>
 				["coord"] = { 63.0, 50.2, TANARIS },
@@ -195,11 +195,9 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 							i(227671),	-- Torn Diary, Page 6 (QI!)
 						}
 					}),
-					--[[ Need objectid
-					o(999, {	-- Mounted Spyglass
+					o(457197, {	-- Mounted Spyglass
 						["coord"] = { 49.7, 36.0, SHOLAZAR_BASIN },
 					}),
-					]]--
 				},
 			}),
 			q(84334, {	-- Warn the Detective
@@ -285,7 +283,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 					},
 				}),
 				n(91079, {	-- Vashti the Wandering Merchant <General Goods>
-					["description"] = "Can be found pathing up and down the road between Felblaze Ingress and The Ruined Sanctum in Azuna.",
+					["description"] = "Can be found pathing up and down the road between Felblaze Ingress and The Ruined Sanctum in Azsuna.",
 					["coord"] = { 65.2, 36.4, AZSUNA },
 					["g"] = {
 						i(228986, {	-- Aesthetician's Coupon Book

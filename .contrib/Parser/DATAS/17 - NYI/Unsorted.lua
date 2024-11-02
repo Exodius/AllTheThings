@@ -1004,7 +1004,6 @@ root(ROOTS.Unsorted, {
 			i(232475),	-- Defias Cuirass
 			i(232510),	-- Electric Eel
 			i(232511),	-- Electric Eel
-			i(232521),	-- Glyph of Arcane Familiar
 			--
 			i(232631),	-- Wrapped Spear
 			--
@@ -1016,38 +1015,22 @@ root(ROOTS.Unsorted, {
 			i(233053),	-- Crown of the Violet Rose
 
 
-			i(229366),	-- Brrrgl
 			i(229418),	-- Reins of the Trader's Gilded Brutosaur
 			i(230184),	-- Chaos-Forged Gryphon
 			i(230185),	-- Chaos-Forged Hippogryph
 			i(230200),	-- Chaos-Forged Dreadwing
 			i(230201),	-- Chaos-Forged Wind Rider
-			i(231290),	-- Reven's Comfy Carrier
-			i(231294),	-- Reven
 			i(234413),	-- Satchel of Exotic Mysteries
 
 			--
 			i(44124),	-- Peculiar Key
 			i(118067),	-- Old Chain Link
-			i(226200),	-- Soggy Celebration Crate
-			i(227363),	-- Hear Historic Tales at the Storyteller Stage!
-			i(227364),	-- Red Hair
-			i(227443),	-- Strange Torch
-			i(227775),	-- Golden Chalice
-			i(227777),	-- Fragment of an Ancient Statue
-			i(227785),	-- Jeweled Eye
-			i(227790),	-- Cool Guts
-			i(228618),	-- Benatauk's Crystal Ocular Lenses
-			i(228619),	-- Benatauk's Thought Calculating Apparatus
-			i(228620),	-- Benatauk's Downy Helmet Liner
 			i(228934),	-- Carefully Penned Note
 			i(228935),	-- Unfinished Note
 			i(228936),	-- Hastily Scrawled Note
 			i(228937),	-- Water-Resistant Note
 			i(228938),	-- Peculiar Gem
 			i(228941),	-- Inert Peculiar Key
-			i(229351),	-- Spiritual Incense
-			i(232263),	-- Hazy Celebration Crate
 			i(234425),	-- Forgotten Folio
 			i(234448),	-- Bright Ideas Thinking Cap
 		})),
