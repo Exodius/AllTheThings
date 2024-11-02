@@ -237,7 +237,7 @@ local LOREGRAIN = 9024;
 ------ EncounterToCRS ------
 local EncounterToCRS = {
 	[ROCCOR] = { 9025 },	-- Lord Roccor
-	[BAELGAR] = { 9016 },	-- Bael'Gar
+	[BAELGAR] = { 226303 },	-- Bael'Gar
 	[INCENDIUS] = { 9017 },	-- Lord Incendius
 	[ARGELMACH] = { 226306 },	-- Golem Lord Argelmach
 	[THE_SEVEN] = {
