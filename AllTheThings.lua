@@ -4549,25 +4549,28 @@ local function AdjustRowIndent(row, indentAdjust)
 	-- app.PrintDebug("row texture at",x,indentAdjust,offset)
 	row.Texture:SetPoint("LEFT", row, "LEFT", offset, 0);
 end
-local IconPortraitTooltipExtraSettings = {
-	questID = "IconPortraitsForQuests",
-};
-local SetPortraitTexture, SetPortraitTextureFromDisplayID
-	= SetPortraitTexture, SetPortraitTextureFromCreatureDisplayID;
+local PortaitSettingsCache = setmetatable({}, {__index = app.ReturnTrue })
+do
+	local function CachePortraitSettings()
+		PortaitSettingsCache.ALL = app.Settings:GetTooltipSetting("IconPortraits")
+		PortaitSettingsCache.questID = app.Settings:GetTooltipSetting("IconPortraitsForQuests")
+	end
+	app.AddEventHandler("OnStartup", CachePortraitSettings)
+	app.AddEventHandler("OnRenderDirty", CachePortraitSettings)
+end
+local SetPortraitTexture,SetPortraitTextureFromDisplayID
+	= SetPortraitTexture,SetPortraitTextureFromCreatureDisplayID
 local function SetPortraitIcon(self, data)
-	if app.Settings:GetTooltipSetting("IconPortraits") then
-		local extraSetting = IconPortraitTooltipExtraSettings[data.key];
-		if not extraSetting or app.Settings:GetTooltipSetting(extraSetting) then
-			local displayID = GetDisplayID(data);
-			if displayID then
-				SetPortraitTextureFromDisplayID(self, displayID);
-				self:SetTexCoord(0, 1, 0, 1);
-				return true;
-			elseif data.unit and not data.icon then
-				SetPortraitTexture(self, data.unit);
-				self:SetTexCoord(0, 1, 0, 1);
-				return true;
-			end
+	if PortaitSettingsCache.ALL and PortaitSettingsCache[data.key] then
+		local displayID = GetDisplayID(data);
+		if displayID then
+			SetPortraitTextureFromDisplayID(self, displayID);
+			self:SetTexCoord(0, 1, 0, 1);
+			return true;
+		elseif data.unit and not data.icon then
+			SetPortraitTexture(self, data.unit);
+			self:SetTexCoord(0, 1, 0, 1);
+			return true;
 		end
 	end
 
@@ -9766,8 +9769,6 @@ customWindowUpdates.Tradeskills = function(self, force, got)
 	if not app:GetDataCache() then	-- This module requires a valid data cache to function correctly.
 		return;
 	end
-	local C_TradeSkillUI_GetSalvagableItemIDs
-		= C_TradeSkillUI.GetSalvagableItemIDs
 	if not self.initialized then
 		self.initialized = true;
 		self.SkillsInit = {};
