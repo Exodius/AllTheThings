@@ -91,3 +91,7 @@ setup.cfg export-ignore
 contrib export-ignore
 .contrib export-ignore
 .github export-ignore
+###############################################################################
+# used to Git LFS (Large File Storage) using `git lfs`
+###############################################################################
+*.exe filter=lfs diff=lfs merge=lfs -text
