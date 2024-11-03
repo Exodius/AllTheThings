@@ -1151,6 +1151,19 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 			}),
 		}),
 	})),
+	n(WOW_ANNIVERSARY_NINETEEN, bubbleDown({ ["timeline"] = { ADDED_10_2_0, REMOVED_10_2_0 } }, {
+		ach(18702),	-- WoW's 19th Anniversary
+		n(MAILBOX, {
+			i(208211, {	-- Anniversary Gift
+				i(208210),	-- Celebration Package
+				i(172013),	-- Celebration Firework
+				i(171177),	-- Invitation from the Timewalkers
+				i(208543, {	-- Lil' Frostwing (PET!)
+					ach(19192),	-- Lil' Frostwing
+				}),
+			}),
+		}),
+	})),
 
 	-- Stuff that's still in the game
 	n(WOW_ANNIVERSARY_TWELVE, bubbleDownSelf({ ["timeline"] = { ADDED_7_0_3 } },{
@@ -2302,20 +2315,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 			}),
 		}),
 	})),
-	n(WOW_ANNIVERSARY_EIGHTEEN, bubbleDownSelf({ ["timeline"] = { ADDED_10_0_0 } },{
-	})),
 	n(WOW_ANNIVERSARY_NINETEEN, bubbleDownSelf({ ["timeline"] = { ADDED_10_2_0 } },{
-		ach(18702),	-- WoW's 19th Anniversary
-		n(MAILBOX, {
-			i(208211, {	-- Anniversary Gift
-				i(208210),	-- Celebration Package
-				i(172013),	-- Celebration Firework
-				i(171177),	-- Invitation from the Timewalkers
-				i(208543, {	-- Lil' Frostwing (PET!)
-					ach(19192),	-- Lil' Frostwing
-				}),
-			}),
-		}),
 		n(VENDORS, {
 			n(158061, {	-- Historian Ma'di
 				["coord"] = { 50.7, 41.1, CAVERNS_OF_TIME },
