@@ -45,12 +45,21 @@ root(ROOTS.Holidays, applyevent(EVENTS.TIMEWALKING, n(TIMEWALKING_HEADER, bubble
 	["groups"] = {
 		n(ACHIEVEMENTS, bubbleDownSelf({ ["timeline"] = { ADDED_10_1_7 } }, {
 			ach(19079, {	-- Master of the Turbulent Timeways
-			["description"] = "Each week finish 4 dungeons with Distilled Knowledge of Timeways buff active, upon reaching 4 stacks the buff changes into Mastery of Timeways, completing that week's criteria.",
-			["groups"] = {
-				crit(62267),	-- Gain Mastery of Timeways for 5 weeks
-				i(205208),	-- Sandy Shalewing (MOUNT!)
-			},
+				["description"] = "Each week finish 4 dungeons with Distilled Knowledge of Timeways buff active, upon reaching 4 stacks the buff changes into Mastery of Timeways, completing that week's criteria.",
+				["groups"] = {
+					crit(62267),	-- Gain Mastery of Timeways for 5 weeks
+					i(205208),	-- Sandy Shalewing (MOUNT!)
+				},
 			}),
+			--[[ TODO: Needs criteria
+			ach(41056, bubbleDownSelf({ ["timeline"] = { ADDED_11_0_7 } }, {	-- Master of the Turbulent Timeways II
+				["description"] = "Each week finish 4 dungeons with Distilled Knowledge of Timeways buff active, upon reaching 4 stacks the buff changes into Mastery of Timeways, completing that week's criteria.",
+				["groups"] = {
+					--crit(???),	-- Gain Mastery of Timeways for 5 weeks
+					i(232624),	-- Timely Buzzbee (MOUNT!)
+				},
+			})),
+			]]--
 		})),
 		n(COMMON_BOSS_DROPS, {
 			i(133543, {	-- Infinite Timereaver (MOUNT!)
