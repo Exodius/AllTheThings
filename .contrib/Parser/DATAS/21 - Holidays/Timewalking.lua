@@ -317,53 +317,6 @@ root(ROOTS.Holidays, n(TIMEWALKING_HEADER, applyevent(EVENTS.TIMEWALKING_CLASSIC
 				},
 			}),
 		}),
-		inst_tw(1277, {	-- Dire Maul - Gordok Commons
-			e(411, {	-- Guard Mol'dar
-				["crs"] = { 14326 },	-- Guard Mol'dar
-				["g"] = {
-					i(18493),	-- Bulky Iron Spaulders
-					i(18494),	-- Denwatcher's Shoulders
-					i(18498),	-- Hedgecutter
-					i(18496),	-- Heliotrope Cloak
-					i(18451),	-- Hyena Hide Belt
-					i(18462),	-- Jagged Bone Fist
-					i(18463),	-- Ogre Pocket Knife
-					i(18450),	-- Robe of Combustion
-					i(18497),	-- Sublime Wristguards
-					i(18460),	-- Unsophisticated Hand Cannon
-				},
-			}),
-			e(412, {	-- Stomper Kreeg
-				["crs"] = { 14322 },	-- Stomper Kreeg
-				["g"] = {
-					i(18464),	-- Gordok Nose Ring
-					i(18425),	-- Kreeg's Mug
-				},
-			}),
-			e(416, {	-- Cho'Rush the Observer
-				["crs"] = { 14324 },	-- Cho'Rush the Observer
-				["g"] = {
-					i(18484),	-- Cho'Rush's Blade
-					i(18459),	-- Gallant's Wristguards
-					i(18527),	-- Harmonious Gauntlets
-					i(18490),	-- Insightful Hood
-					i(18483),	-- Mana Channeling Wand
-					i(18485),	-- Observer's Shield
-				},
-			}),
-			e(417, {	-- King Gordok
-				["crs"] = { 11501 },	-- King Gordok
-				["g"] = {
-					i(18522),	-- Band of the Ogre King
-					i(18520),	-- Barbarous Blade
-					i(18525),	-- Bracers of Prosperity
-					i(18523),	-- Brightly Glowing Stone
-					i(18526),	-- Crown of the Ogre King
-					i(18521),	-- Grimy Metal Boots
-					i(18524),	-- Leggings of Destruction
-				},
-			}),
-		}),
 		inst_tw(1276, {	-- Dire Maul - Warpwood Quarter
 			e(404, {	-- Lethtendris
 				["crs"] = { 14327 },	-- Lethtendris
