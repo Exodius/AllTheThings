@@ -201,7 +201,7 @@ WOW_ANNIVERSARY_NINETEEN = createHeader({
 WOW_ANNIVERSARY_TWENTY = createHeader({
 	readable = "WoW's 20th Anniversary",
 	icon = 133783,
-	eventID = 1509,	-- There is also 1508 (EU?)
+	eventID = 1509,
 	eventSchedule = {
 		0, -- October 22nd through Jan 7th
 		2024, 10, 22,	-- 10/22/2024
