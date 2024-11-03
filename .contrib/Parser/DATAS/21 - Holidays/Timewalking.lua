@@ -651,6 +651,18 @@ root(ROOTS.Holidays, n(TIMEWALKING_HEADER, applyevent(EVENTS.TIMEWALKING_CLASSIC
 	})),
 })));
 
+-- Only instances still in rotation should be in this list.
+-- This will prevent instances that don't have Timewalking currently from showing in the mini list.
+AddInstancesToRotation(EXPANSION.CLASSIC, {
+	-- Dungeons
+	63,		-- Deadmines
+	230,	-- Dire Maul - Capital Gardens
+	1276,	-- Dire Maul - Warpwood Quarter
+	236,	-- Stratholme - Main Gate
+	1292,	-- Stratholme - Service Entrance
+	241,	-- Zul'Farrak
+});
+
 -- The Burning Crusade Timewalking
 root(ROOTS.Holidays, n(TIMEWALKING_HEADER, applyevent(EVENTS.TIMEWALKING_OUTLAND_DUNGEON_EVENT, {
 	expansion(EXPANSION.TBC, bubbleDownSelf({ ["timeline"] = { ADDED_6_2_2 } }, {
