@@ -692,8 +692,6 @@ namespace ATT
                             data.Remove("modID");
                             item.Remove("bonusID");
                             data.Remove("bonusID");
-                            // set the recipeID in the item dictionary so it will merge back in later
-                            item["recipeID"] = spellID;
                         }
                         break;
                 }
@@ -751,76 +749,6 @@ namespace ATT
                 {
                     if (sources.TryGetValue("mainHand", out long s))
                         data["sourceID"] = s;
-                }
-            }
-
-            // Throw away automatic Spell ID assignments for certain filter types.
-            if (data.TryGetValue("spellID", out f))
-            {
-                switch (filter)
-                {
-                    case Objects.Filters.Recipe:
-                        data["recipeID"] = f;
-                        break;
-                        //default:
-                        //    data.Remove("spellID");
-                        //    break;
-                }
-            }
-
-            if (data.TryGetValue("recipeID", out f))
-            {
-                if (DebugMode)
-                {
-                    var cachedItem = Items.GetNull(data);
-                    if (cachedItem != null)
-                    {
-                        cachedItem.TryGetValue("itemID", out long cachedItemID);
-                        cachedItem.TryGetValue("recipeID", out long spellID);
-                        cachedItem.TryGetValue("name", out string itemName);
-                        LogDebugFormatted(LogFormats["ItemRecipeFormat"], cachedItemID, spellID, itemName, "Directly Sourced with RecipeID");
-                    }
-                }
-            }
-
-            // TODO: this is temporary until all Item-Recipes are mapped in ItemRecipes.lua, it should only be necessary in DataConsolidation after that point
-            if (data.TryGetValue("requireSkill", out long requiredSkill))
-            {
-                if (Objects.SKILL_ID_CONVERSION_TABLE.TryGetValue(requiredSkill, out long newRequiredSkill))
-                {
-                    data["requireSkill"] = requiredSkill = newRequiredSkill;
-                }
-                else
-                {
-                    switch (requiredSkill)
-                    {
-                        // https://www.wowhead.com/skill=
-                        case 40:    // Rogue Poisons
-                        case 149:   // Wolf Riding
-                        case 150:   // Tiger Riding
-                        case 762:   // Riding
-                        case 849:   // Warlock
-                        case 0: // Explicitly ignoring.
-                            {
-                                // Ignore! (and remove!)
-                                data.Remove("requireSkill");
-                                requiredSkill = 0;
-                                break;
-                            }
-                        default:
-                            {
-                                Log($"Missing Skill ID in Conversion Table: {requiredSkill}{Environment.NewLine}{ToJSON(data)}");
-                                break;
-                            }
-                    }
-                }
-
-                // if this data has a recipeID, cache the information
-                // TODO: this is temporary until all Item-Recipes are mapped in ItemRecipes.lua
-                if (data.TryGetValue("recipeID", out long recipeID))
-                {
-                    Items.TryGetName(data, out string recipeName);
-                    Objects.AddRecipe(requiredSkill, recipeName, recipeID);
                 }
             }
 
@@ -3440,6 +3368,9 @@ namespace ATT
         /// <param name="data"></param>
         private static void TryFindRecipeID(IDictionary<string, object> data)
         {
+            // All Recipes have currently been migrated to ProfDBs, Parser no longer needs to 'guess' Recipes!
+            return;
+
             // don't apply a recipeID to data which is not an item or is a Toy or has a questID (Reaves Modules... argghhh)
             if (!data.ContainsKey("itemID") || data.ContainsKey("questID"))
                 return;
