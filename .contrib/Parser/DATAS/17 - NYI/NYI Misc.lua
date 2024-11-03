@@ -135,33 +135,6 @@ root(ROOTS.NeverImplemented, filter(MISC, {
 		-- 5.0.1
 		expansion(EXPANSION.MOP, patch(0,1), bubbleDownSelf({ ["timeline"] = { CREATED_5_0_4 } }, {
 			i(79907),	-- Spear of Xuen (Old Version)
-			i(87239),	-- Recipe: Banquet of the Steamer
-			i(74673),	-- Recipe: Fire Spirit Salmon
-			i(87241),	-- Recipe: Great Banquet of the Steamer
-			i(74672),	-- Recipe: Shrimp Dumplings
-			i(74674),	-- Recipe: Steamed Crab Surprise
-			i(87235),	-- Recipe: Banquet of the Pot
-			i(74670),	-- Recipe: Braised Turtle
-			i(87237),	-- Recipe: Great Banquet of the Pot
-			i(74671),	-- Recipe: Mogu Fish Stew
-			i(74669),	-- Recipe: Swirling Mist Soup
-			i(87227),	-- Recipe: Banquet of the Grill
-			i(74665),	-- Recipe: Black Pepper Ribs and Shrimp
-			i(74663),	-- Recipe: Charbroiled Tiger Steak
-			i(74664),	-- Recipe: Eternal Blossom Fish
-			i(87229),	-- Recipe: Great Banquet of the Grill
-			i(87243),	-- Recipe: Banquet of the Oven
-			i(74677),	-- Recipe: Chun Tian Spring Rolls
-			i(87245),	-- Recipe: Great Banquet of the Oven
-			i(74676),	-- Recipe: Twin Fish Platter
-			i(74675),	-- Recipe: Wildfowl Roast
-			i(87247),	-- Recipe: Banquet of the Brew
-			i(87249),	-- Recipe: Great Banquet of the Brew
-			i(87231),	-- Recipe: Banquet of the Wok
-			i(87233),	-- Recipe: Great Banquet of the Wok
-			i(74666),	-- Recipe: Sauteed Carrots
-			i(74668),	-- Recipe: Sea Mist Rice Noodles
-			i(74667),	-- Recipe: Valley Stir Fry
 		})),
 
 		-- 5.1.0
@@ -242,16 +215,6 @@ root(ROOTS.NeverImplemented, filter(MISC, {
 			i(108595),	-- Recall Stone
 			i(100897),	-- Skel'tik the Baleful's Reward
 			i(100949),	-- Thunderlord Cache Reward
-			i(120131),	-- Recipe: Secrets of Draenor Jewelcrafting
-			i(116087),	-- Design: Glowing Blackrock Band
-			i(116081),	-- Design: Glowing Iron Band
-			i(116084),	-- Design: Glowing Iron Choker
-			i(116088),	-- Design: Shifting Blackrock Band
-			i(116082),	-- Design: Shifting Iron Band
-			i(116085),	-- Design: Shifting Iron Choker
-			i(116089),	-- Design: Whispering Blackrock Band
-			i(116083),	-- Design: Whispering Iron Band
-			i(116086),	-- Design: Whispering Iron Choker
 		})),
 
 		-- 6.1.0
