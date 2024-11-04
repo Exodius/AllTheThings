@@ -207,9 +207,9 @@ WOW_ANNIVERSARY_TWENTY = createHeader({
 		2024, 10, 22,	-- 10/22/2024
 		2025, 01, 07,	-- 01/07/2025
 	},
-	-- text = {
-	-- 	en = WOWAPI_GetAchievementName(18702),
-	-- },
+	text = {
+		en = WOWAPI_GetAchievementName(41220),
+	},
 	text = {
 		en = "WoW's 20th Anniversary",
 		cn = "魔兽世界二十周年",
@@ -2332,6 +2332,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 			},
 			["g"] = {
 				n(ACHIEVEMENTS, {
+					ach(41220),	-- WoW's 20th Anniversary
 					ach(40999, {		-- You're in Your Blackrock Depths
 						crit(70642, {	-- Lord Roccor
 							["_encounter"] = { ROCCOR, DIFFICULTY.RAID.MULTI.ALL_WITHOUT_MYTHIC },
@@ -2546,6 +2547,9 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				-- The Storm Peaks 226162
 				-- Icecrown 226161
 				-- Grizzly Hills 226160
+				-- Valley of the Four Winds 224532
+				-- Kun-Lai Summit 224531
+				-- Jade Forest 224062
 			}),
 			ach(40997),		-- The Gatecrashers (automated)
 			ach(40995),		-- The Originals (automated)

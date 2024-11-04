@@ -190,7 +190,7 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 					n(226952, {	-- Rexxar
 						["coord"] = { 77.3, 46.2, BOREAN_TUNDRA },
 					}),
-					
+
 				},
 			}),
 			q(84296, {	-- The Trail's Gone Cold
