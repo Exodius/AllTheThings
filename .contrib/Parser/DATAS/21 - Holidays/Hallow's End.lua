@@ -75,7 +75,7 @@ local CANDY_AND_TOY_VENDOR_GROUPS = {
 	}),
 	i(70722, {	-- Little Wickerman (TOY!)
 		["timeline"] = { ADDED_4_2_0 },
-		["cost"] = { { "i", 33226, 100 }, },	-- 100x Tricky Treat
+		["cost"] = { { "i", 33226, 150 }, },	-- 150x Tricky Treat
 	}),
 	i(37011, {	-- Magic Broom (MOUNT!)
 		["cost"] = { { "i", 33226, 150 }, },	-- 150x Tricky Treat
@@ -142,7 +142,11 @@ local CANDY_AND_TOY_VENDOR_GROUPS = {
 	}),
 	i(70722, {	-- Little Wickerman (TOY!)
 		["timeline"] = { ADDED_4_2_0 },
+		-- #if BEFORE 11.0.7
 		["cost"] = { { "i", 33226, 150 }, },	-- 150x Tricky Treat
+		-- #else
+		["cost"] = { { "i", 33226, 100 }, },	-- 100x Tricky Treat
+		-- #endif
 	}),
 	i(37011, {	-- Magic Broom (MOUNT!)
 		["cost"] = { { "i", 33226, 150 }, },	-- 150x Tricky Treat
