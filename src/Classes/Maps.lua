@@ -1100,7 +1100,7 @@ app.AddEventRegistration("LOOT_CLOSED", function()
 	app:UnregisterEvent("LOOT_CLOSED");
 	app:RegisterEvent("UPDATE_INSTANCE_INFO");
 	RequestRaidInfo();
-end)
+end, true)
 local function Event_UPDATE_INSTANCE_INFO()
 	app:UnregisterEvent("UPDATE_INSTANCE_INFO");
 	AfterCombatCallback(RefreshSavesCallback);
