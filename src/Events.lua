@@ -126,11 +126,21 @@ end
 local Runner = app.CreateRunner("events")
 -- Runner.SetPerFrameDefault(5)
 local Callback = app.CallbackHandlers.Callback
+local IgnoredDebugEvents = {
+	RowOnEnter = true,
+	RowOnLeave = true
+}
+local function DebugEventTriggered(eventName,...)
+	if IgnoredDebugEvents[eventName] then return end
+	app.PrintDebug(app.Modules.Color.Colorize(eventName,app.Colors.Renown),...)
+end
 local function DebugEventStart(eventName,...)
-	app.PrintDebug(app.Modules.Color.Colorize(eventName,app.Colors.Time),...)
+	if IgnoredDebugEvents[eventName] then return end
+	app.PrintDebug(app.Modules.Color.Colorize(eventName,Runner.IsRunning() and app.Colors.Time or app.Colors.AddedWithPatch),...)
 end
 local function DebugEventDone(eventName,...)
-	app.PrintDebug(app.Modules.Color.Colorize(eventName,app.Colors.Horde),...)
+	if IgnoredDebugEvents[eventName] then return end
+	app.PrintDebug(app.Modules.Color.Colorize(eventName,Runner.IsRunning() and app.Colors.Horde or app.Colors.RemovedWithPatch),...)
 end
 local SequenceEventsStack = {}
 local function OnEndSequenceEvents()
@@ -182,7 +192,7 @@ app.HandleEvent = function(eventName, ...)
 		end
 		-- Runner.Run(DebugEventDone, eventName)
 	else
-		-- app.PrintDebug(app.Modules.Color.Colorize(eventName,app.Colors.Renown),...)
+		-- DebugEventTriggered(eventName, ...)
 		-- DebugEventStart(eventName, ...)
 		for i,handler in ipairs(EventHandlers[eventName]) do
 			handler(...);
@@ -202,6 +212,6 @@ end})
 -- Allows performing an Event on the next frame instead of immediately.
 -- Also enforces that a single handle of that Event is performed that frame, thus for clarity, parameters are NOT supported
 app.CallbackEvent = function(eventName)
-	-- app.PrintDebug(app.Modules.Color.Colorize(eventName,app.Colors.ChatLinkHQT))
+	-- app.PrintDebug(app.Modules.Color.Colorize(eventName,app.Colors.Insane))
 	Callback(CallbackEventFunctions[eventName], eventName)
 end
