@@ -82,6 +82,13 @@ local RunnerEvents = {
 	OnUpdateWindows = app.IsRetail,
 	-- OnRefreshWindows = true,
 }
+-- Represents Events which must always be run synchronously in the same frame as when they are triggered. These should be user-based triggers
+-- typically where their execution must be handled ASAP, even if other Events are running through the Runner
+local ImmediateEvents = {
+	RowOnEnter = true,
+	RowOnLeave = true,
+	RowOnClick = true,
+}
 -- Represents Events which should always fire upon completion of a prior Event. These cannot be passed arguments currently
 local EventSequence = {
 	OnLoad = {
@@ -182,7 +189,7 @@ app.HandleEvent = function(eventName, ...)
 	-- to the refresh event. would rather spread that out over multiple frames so it remains unnoticeable
 	-- additionally, since some events can process on a Runner, then following Events need to also be pushed onto
 	-- the Event Runner so that they execute in the expected sequence
-	if #SequenceEventsStack > 0 or RunnerEvents[eventName] or Runner.IsRunning() then
+	if not ImmediateEvents[eventName] and (#SequenceEventsStack > 0 or RunnerEvents[eventName] or Runner.IsRunning()) then
 		-- app.PrintDebug(app.Modules.Color.Colorize(eventName,app.Colors.LockedWarning),...)
 		-- Runner.Run(DebugEventStart, eventName, ...)
 		for i,handler in ipairs(EventHandlers[eventName]) do
