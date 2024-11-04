@@ -616,23 +616,13 @@ namespace ATT
             // Crieve wants objectives and doesn't agree with this, but will allow it outside of Classic Builds.
             if (data.ContainsKey("objectiveID") && !Program.PreProcessorTags.ContainsKey("OBJECTIVES")) return false;
 
+            Validate_InheritedFields(data, parentData);
+
             if (!data.ContainsKey("timeline"))
             {
                 // Some objects have a default timeline applied, but this prevents sharedData/bubbleDown from having effect...
                 // Instead let's wrap this in a '_defaulttimeline' field and switch it to the 'timeline' field here if there ends up being no 'timeline'
-                // Additionally, we will assume 'timeline' automatically inherits if not explicitly defined in child group (via bubbleDown, etc.)
-                if (parentData.TryGetValue("timeline", out object inhTimeline))
-                {
-                    // there's a lot of this, ignore reporting unless really needing to debug
-                    //LogDebug($"INFO: Inherited Timeline used {ToJSON(inhTimeline)}", data);
-                    Timeline.Merge(data, inhTimeline);
-                    if (!data.TryGetValue("_inherited", out List<string> inheritedFields))
-                    {
-                        data["_inherited"] = inheritedFields = new List<string>();
-                    }
-                    inheritedFields.Add("timeline");
-                }
-                else if (data.TryGetValue("_defaulttimeline", out object defTimeline))
+                if (data.TryGetValue("_defaulttimeline", out object defTimeline))
                 {
                     LogDebugWarn($"Default Timeline used! {ToJSON(defTimeline)} Consider adding an accurate 'timeline' field", data);
                     Timeline.Merge(data, defTimeline);
@@ -1683,6 +1673,31 @@ namespace ATT
         private static void Validate_Achievement(IDictionary<string, object> data)
         {
             if (!data.TryGetValue("achID", out long achID) || data.ContainsKey("criteriaID")) return;
+        }
+
+        private static void Validate_InheritedFields(IDictionary<string, object> data, IDictionary<string, object> parentData)
+        {
+            foreach(string inheritedField in InheritingFields)
+            {
+                // parent must have the field in order in inherit it
+                if (!parentData.TryGetValue(inheritedField, out object inheritedValue))
+                    continue;
+
+                // don't assign a field that's already existing
+                if (data.ContainsKey(inheritedField))
+                    continue;
+
+                // use common merge logic
+                // LogDebug($"INFO: Inheriting field {inheritedField}={ToJSON(inheritedValue)}", data);
+                Objects.Merge(data, inheritedField, inheritedValue);
+
+                if (!data.TryGetValue("_inherited", out List<string> inheritedFields))
+                {
+                    data["_inherited"] = inheritedFields = new List<string>();
+                }
+                // track that this data had an inherited field
+                inheritedFields.Add(inheritedField);
+            }
         }
 
         private static void Incorporate_Achievement(IDictionary<string, object> data)

@@ -327,6 +327,22 @@ namespace ATT
             }
         }
 
+        private static HashSet<string> _inhertingFields;
+        private static HashSet<string> InheritingFields
+        {
+            get
+            {
+                if (_inhertingFields != null)
+                {
+                    return _inhertingFields;
+                }
+
+                string[] fields = Config["InheritingFields"] ?? Array.Empty<string>();
+                _inhertingFields = new HashSet<string>(fields);
+                return _inhertingFields;
+            }
+        }
+
         private static IDictionary<string, IDictionary<long, IDBType>> TypeDB { get; } = new Dictionary<string, IDictionary<long, IDBType>>();
 
         private static IDictionary<string, object> Exports { get; } = new Dictionary<string, object>();
