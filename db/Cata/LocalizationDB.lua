@@ -652,6 +652,8 @@ localize(L.HEADER_NAMES, {
 	[-1000115] = "Patch 2.x.x",
 	[-1000116] = "Patch 3.x.x",
 	[-1000117] = "Patch 4.x.x",
+	[-1000118] = "Patch 5.x.x",
+	[-1000119] = "Patch 6.x.x",
 	[-1000123] = "Armor Enchantments",
 	[-1000125] = "Weapon Enchantments",
 	[-1000127] = select(2,GetAchievementInfo(2091))..": Season 1",
@@ -745,6 +747,7 @@ localize(L.HEADER_NAMES, {
 	[-1000287] = select(2,GetAchievementInfo(5512)),
 	[-1000288] = select(2,GetAchievementInfo(5863)),
 	[-1000289] = select(2,GetAchievementInfo(6131)),
+	[-1000299] = select(2,GetAchievementInfo(15218)),
 	[-1000373] = "New Character",
 	[-1000380] = "Bounty",
 	[-1000860] = select(2,GetAchievementInfo(6002))..": Season 9",
@@ -866,6 +869,8 @@ localize(L.HEADER_ICONS, {
 	[-1000115] = _.asset("expansion_tbc"),
 	[-1000116] = _.asset("expansion_wotlk"),
 	[-1000117] = _.asset("expansion_cata"),
+	[-1000118] = _.asset("expansion_mop"),
+	[-1000119] = _.asset("expansion_wod"),
 	[-1000123] = 237019,
 	[-1000125] = 237018,
 	[-1000127] = 236534,
@@ -959,6 +964,7 @@ localize(L.HEADER_ICONS, {
 	[-1000287] = 133783,
 	[-1000288] = 133783,
 	[-1000289] = 133783,
+	[-1000299] = 133783,
 	[-1000373] = 1530081,
 	[-1000380] = 236188,
 	[-1000860] = 236235,
@@ -991,6 +997,7 @@ localize(L.HEADER_EVENTS, {
 	[-1000243] = 1181,
 	[-1000282] = 372,
 	[-1000284] = 590,
+	[-1000299] = 1262,
 	[-1000872] = 446916,
 	[-1001035] = 133889,
 	[-1001036] = 133899,
@@ -998,6 +1005,9 @@ localize(L.HEADER_EVENTS, {
 -- Programmatic Event Scheduling
 _.Modules.Events.SetEventInformation(446916, {
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=3,["monthDay"]=19,["weekday"]=3,["year"]=2024},{["hour"]=0,["minute"]=0,["month"]=4,["monthDay"]=30,["weekday"]=3,["year"]=2024})
+});
+_.Modules.Events.SetEventInformation(1262, {
+	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=11,["monthDay"]=6,["weekday"]=1,["year"]=2022},{["hour"]=0,["minute"]=0,["month"]=11,["monthDay"]=27,["weekday"]=1,["year"]=2022})
 });
 _.Modules.Events.SetEventInformation(590, {
 	_.Modules.Events.CreateSchedule({["hour"]=10,["minute"]=0,["month"]=10,["monthDay"]=22,["weekday"]=1,["year"]=2023},{["hour"]=10,["minute"]=0,["month"]=1,["monthDay"]=7,["weekday"]=1,["year"]=2024}),
@@ -6598,13 +6608,6 @@ local phases = {
 		lore = "|cFFFFAAAAIncluded Naxxramas, which was heralded by the Scourge Invasion.|r",
 		minimumBuildVersion = 11301,
 		buildVersion = 11306,
-		state = 2,
-	},
-	[1601] = {
-		name = "Scourge Invasion",
-		description = "|cFFAAFFAAThis was only available during the Scourge Invasion.|r",
-		lore = "|cFFFFAAAAIf the Scourge Invasion has ended on your server, simply turn this off.|r",
-		minimumBuildVersion = 11301,
 		state = 2,
 	},
 	[1602] = {
