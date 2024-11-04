@@ -88,34 +88,39 @@ root(ROOTS.Promotions, {
 				["timeline"] = { ADDED_11_0_5 },
 			}),
 			--[[ TODO: verify if codes can be redeemed on non-us accounts
+			i(999, {	-- Bot Wrangler’s Belt
+				["description"] = "Available to redeem for 300 points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
+				["timeline"] = { ADDED_11_0_5 },
+				["u"] = REAL_MONEY,
+			}),
 			i(999, {	-- Bot Wrangler’s Crimson Apron
-				["description"] = "Available to redeem for points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
+				["description"] = "Available to redeem for 300 points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
 				["timeline"] = { ADDED_11_0_5 },
 				["u"] = REAL_MONEY,
 			}),
 			i(999, {	-- Bot Wrangler’s Violet Apron
-				["description"] = "Available to redeem for points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
+				["description"] = "Available to redeem for 300 points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
 				["timeline"] = { ADDED_11_0_5 },
 				["u"] = REAL_MONEY,
 			}),
 			i(999, {	-- Chillbot 9000 (PET!)
-				["description"] = "Available to redeem for points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
+				["description"] = "Available to redeem for 400 points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
 				["timeline"] = { ADDED_11_0_5 },
 				["u"] = REAL_MONEY,
 			}),
 			i(999, {	-- Thrillbot 9000 (PET!)
-				["description"] = "Available to redeem for points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
+				["description"] = "Available to redeem for 400 points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
 				["timeline"] = { ADDED_11_0_5 },
 				["u"] = REAL_MONEY,
 			}),
 			]]--
 			i(211087, {	-- Hateforged Blazecycle (MOUNT!)
-				["description"] = "Available to redeem for points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
+				["description"] = "Available to redeem for 600 points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
 				["timeline"] = { ADDED_11_0_5 },
 				["u"] = REAL_MONEY,
 			}),
 			i(68385, {	-- Lil' Ragnaros (PET!)
-				["description"] = "Available to redeem for points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
+				["description"] = "Available to redeem for 400 points at DoritosDewRockstar.com. Points can be earned from entering codes found in specially marked Mountain Dew, Doritos and Rockstar Energy Drink products.",
 				["timeline"] = { ADDED_11_0_5 },
 				["u"] = REAL_MONEY,
 			}),
