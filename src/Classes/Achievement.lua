@@ -422,9 +422,6 @@ do
 			if app.IsAccountTracked("Achievements", id) then return 2 end
 		end,
 		saved = function(t)
-			local id = t.achievementID
-			-- character collected achievement
-			if app.IsCached("Achievements", id) then return 1 end
 			return cache.GetCachedField(t, "saved")
 		end,
 		index = function(t)
