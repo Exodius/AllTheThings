@@ -4249,7 +4249,7 @@ i(0, 4560);			-- Zaedu
 ------------------
 --- ITEM ---
 i(229366, 4629);	-- Brrrgl
---i(228793, ???);	-- Chillbot 9000
+i(228793, 4618);	-- Chillbot 9000
 i(224410, 4593);	-- Craggles
 i(222970, 4490);	-- Fuzzy
 i(231365, 4689);	-- Karazhan Syphoner
@@ -4259,7 +4259,7 @@ i(191946, 3265);	-- Mister Muskoxeles
 i(224406, 4592);	-- Misty
 i(231294, 4682);	-- Reven
 i(231356, 4686);	-- Specter
---i(228790, ???);	-- Thrillbot 9000
+i(228790, 4617);	-- Thrillbot 9000
 
 --- UNSORTED ---
 i(229993, 4669);	-- Bluedoo

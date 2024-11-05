@@ -1596,7 +1596,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 						{ 26.6, 7.30, ULDUM },
 						-- #if AFTER 8.3.0
 						{ 26.6, 7.30, NZOTH_ASSAULT_ULDUM },
-						-- endif
+						-- #endif
 					},
 					["timeline"] = { ADDED_4_1_0 },
 				}),

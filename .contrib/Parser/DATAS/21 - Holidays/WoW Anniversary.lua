@@ -2783,7 +2783,6 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 			q(83825),	-- The Case of a Good Book
 			q(84435),	-- The Case of an Old Soul
 			q(84933),	-- The Case of Great Aspirations
-			q(84882),	-- The Case of Misfortune
 			q(85477),	-- The Case of Missing Mementos
 			q(84469),	-- The Case of Pet Games
 			q(84912),	-- The Case of Staged Disaster
