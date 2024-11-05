@@ -855,6 +855,9 @@ root(ROOTS.Holidays, n(TIMEWALKING_HEADER, applyevent(EVENTS.TIMEWALKING_OUTLAND
 						i(232067, {	-- Amani'shi Voodoo Bow
 							["cost"] = {{"c", TIMEWARPED_BADGE, 1800}},
 						}),
+						i(232478, {	-- Area 52 Tabard
+							["cost"] = {{"c", TIMEWARPED_BADGE, 500}},
+						}),
 						i(232051, {	-- Ashtongue Channeler's Staff
 							["cost"] = {{"c", TIMEWARPED_BADGE, 1800}},
 						}),
@@ -917,6 +920,11 @@ root(ROOTS.Holidays, n(TIMEWALKING_HEADER, applyevent(EVENTS.TIMEWALKING_OUTLAND
 						}),
 						i(232024, {	-- Sunfury Stalker's Fists
 							["cost"] = {{"c", TIMEWARPED_BADGE, 1200}},
+						}),
+						i(23388, {	-- Tranquillien Tabard
+							["races"] = HORDE_ONLY,
+							["minReputation"] = { FACTION_TRANQUILLIEN, EXALTED },
+							["cost"] = {{"c", TIMEWARPED_BADGE, 500}},
 						}),
 						i(232345, {	-- Xu'rakas, Glaive of Command
 							["cost"] = {{"c", TIMEWARPED_BADGE, 3000}},
