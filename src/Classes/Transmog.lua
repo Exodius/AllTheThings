@@ -898,13 +898,14 @@ local function CheckSourceInformation(sourceID, info, sourceGroup)
 	end
 
 	if sourceInfo.categoryID > 0 and sourceGroup.missing then
+		local modItemID = app.GetGroupItemIDWithModID(sourceGroup)
 		-- Do not localize first part of the message, it is for contribs
 		tinsert(info, {
 			left = "Item Source not found in the " .. appName .. " " .. app.Version .. " database.\n" .. L.SOURCE_ID_MISSING,
 			color = app.Colors.ChatLinkError
 		});
 		tinsert(info, {
-			left = sourceID .. ":" .. tostring(sourceInfo.visualID),
+			left = "["..modItemID.."]="..sourceID .. " -- " .. tostring(sourceInfo.visualID)..")",
 			color = app.Colors.SourceIgnored
 		});
 	end
