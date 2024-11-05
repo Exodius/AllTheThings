@@ -421,6 +421,7 @@ do
 			-- account-wide collected achievement
 			if app.IsAccountTracked("Achievements", id) then return 2 end
 		end,
+		trackable = app.ReturnTrue,
 		saved = function(t)
 			return cache.GetCachedField(t, "saved")
 		end,
