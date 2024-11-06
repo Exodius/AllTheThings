@@ -207,9 +207,9 @@ WOW_ANNIVERSARY_TWENTY = createHeader({
 		2024, 10, 22,	-- 10/22/2024
 		2025, 01, 07,	-- 01/07/2025
 	},
-	-- text = {
-	-- 	en = WOWAPI_GetAchievementName(18702),
-	-- },
+	text = {
+		en = WOWAPI_GetAchievementName(41220),
+	},
 	text = {
 		en = "WoW's 20th Anniversary",
 		cn = "魔兽世界二十周年",
@@ -237,7 +237,7 @@ local LOREGRAIN = 9024;
 ------ EncounterToCRS ------
 local EncounterToCRS = {
 	[ROCCOR] = { 9025 },	-- Lord Roccor
-	[BAELGAR] = { 9016 },	-- Bael'Gar
+	[BAELGAR] = { 226303 },	-- Bael'Gar
 	[INCENDIUS] = { 9017 },	-- Lord Incendius
 	[ARGELMACH] = { 226306 },	-- Golem Lord Argelmach
 	[THE_SEVEN] = {
@@ -376,29 +376,20 @@ local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
 -- Common Symlink Drops
-local SYM_ALL_BRD_DROPS = {{"select","instanceID",1301},{"extract","itemID"},
-{"exclude","itemID",
-231490,	-- Arbiter's Blade
-231501,	-- Aristocratic Cuffs
-231507,	-- Battlechaser's Greaves
-231506,	-- Blisterbane Wrap
-231503,	-- Braincage
-232471,	-- Cache of Dark Iron Treasures
-231499,	-- Doomforged Straightedge
-231500,	-- Funeral Pyre Vestment
-231502,	-- Mar Alom's Grip
-231495,	-- Ribsplitter
-231504,	-- Runed Golem Shackles
-231497,	-- Searing Needle
-231498,	-- Spire of the Stoneshaper
-231505,	-- Stoneshield Cloak
-231496,	-- The Judge's Gavel
-232877,	-- Timely Goody Bag
-224278,	-- Timewarped Ironforge Blueprints
-231510,	-- Timewarped Relic Coffer Key [L]
-232365,	-- Timewarped Relic Coffer Key [N]
-232366,	-- Timewarped Relic Coffer Key [H]
-}}
+local SYM_ALL_BRD_DROPS = {{"select","headerID",WOW_ANNIVERSARY_TWENTY},{"pop"},
+{"where","instanceID",1301},{"pop"},
+{"where","headerID",VENDORS},{"extract","itemID"}}
+
+local function RelicCofferKeyPurchase(itemID)
+	local item = i(itemID, {
+		["cost"] = {
+			{"i",231510,40},	-- Timewarped Relic Coffer Key [L]
+			{"i",232365,40},	-- Timewarped Relic Coffer Key [N]
+			{"i",232366,40},	-- Timewarped Relic Coffer Key [H]
+		},
+	})
+	return item
+end
 
 root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, {
 	-- Stuff that's completely gone.
@@ -674,9 +665,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 								i(171498),	-- Savior's Grasp
 								i(171506),	-- Leggings of Eternity
 								i(171497),	-- Legguards of Endless Rage
-								i(122112, {	-- Hyjal Wisp (PET!)
-									["timeline"] = { ADDED_6_1_0 },
-								}),
+								i(122112),	-- Hyjal Wisp (PET!)
 							},
 						}),
 					}),
@@ -941,9 +930,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 								i(171588, {	-- Westfall Saber
 									["races"] = ALLIANCE_ONLY,
 								}),
-								i(142085, {	-- Nerubian Swarmer (PET!)
-									["timeline"] = { ADDED_7_1_0 },
-								}),
+								i(142085),	-- Nerubian Swarmer (PET!)
 							},
 						}),
 						e(1636, {	-- The Lich King
@@ -969,9 +956,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 								i(171573),	-- Warmace of Menethil
 								i(171579),	-- Windrunner's Heartseeker
 								i(50818),	-- Invincible (MOUNT!)
-								i(142098, {	-- Drudge Ghoul (PET!)
-									["timeline"] = { ADDED_7_1_0 },
-								}),
+								i(142098),	-- Drudge Ghoul (PET!)
 								i(122229),	-- Music Roll: Invincible
 								i(139547, {	-- Runes of the Darkening [Death Knight Hidden Appearance]
 									["sourceQuest"] = 38990,	-- The Call of Icecrown
@@ -1148,6 +1133,19 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				i(187709),	-- Celebration Package
 				i(172013),	-- Celebration Firework
 				i(171177),	-- Invitation from the Timewalkers
+			}),
+		}),
+	})),
+	n(WOW_ANNIVERSARY_NINETEEN, bubbleDown({ ["timeline"] = { ADDED_10_2_0, REMOVED_10_2_0 } }, {
+		ach(18702),	-- WoW's 19th Anniversary
+		n(MAILBOX, {
+			i(208211, {	-- Anniversary Gift
+				i(208210),	-- Celebration Package
+				i(172013),	-- Celebration Firework
+				i(171177),	-- Invitation from the Timewalkers
+				i(208543, {	-- Lil' Frostwing (PET!)
+					ach(19192),	-- Lil' Frostwing
+				}),
 			}),
 		}),
 	})),
@@ -2170,6 +2168,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				["coord"] = { 62.3, 51.8, TANARIS },
 				-- #endif
 				["isWeekly"] = true,
+				["timeline"] = { ADDED_8_2_5, REMOVED_8_2_5, ADDED_11_0_2 },
 				["_drop"] = { "g" },	-- drop MoH to remove this quest from the popout
 			}),
 		}),
@@ -2302,20 +2301,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 			}),
 		}),
 	})),
-	n(WOW_ANNIVERSARY_EIGHTEEN, bubbleDownSelf({ ["timeline"] = { ADDED_10_0_0 } },{
-	})),
 	n(WOW_ANNIVERSARY_NINETEEN, bubbleDownSelf({ ["timeline"] = { ADDED_10_2_0 } },{
-		ach(18702),	-- WoW's 19th Anniversary
-		n(MAILBOX, {
-			i(208211, {	-- Anniversary Gift
-				i(208210),	-- Celebration Package
-				i(172013),	-- Celebration Firework
-				i(171177),	-- Invitation from the Timewalkers
-				i(208543, {	-- Lil' Frostwing (PET!)
-					ach(19192),	-- Lil' Frostwing
-				}),
-			}),
-		}),
 		n(VENDORS, {
 			n(158061, {	-- Historian Ma'di
 				["coord"] = { 50.7, 41.1, CAVERNS_OF_TIME },
@@ -2337,6 +2323,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 			},
 			["g"] = {
 				n(ACHIEVEMENTS, {
+					ach(41220),	-- WoW's 20th Anniversary
 					ach(40999, {		-- You're in Your Blackrock Depths
 						crit(70642, {	-- Lord Roccor
 							["_encounter"] = { ROCCOR, DIFFICULTY.RAID.MULTI.ALL_WITHOUT_MYTHIC },
@@ -2413,19 +2400,120 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 					}),
 				}),
 				n(VENDORS, {
+					-- TODO: maybe once I have figured out better 'Sources' tech to list things with a Source and then assign alternate Sources
+					-- this can be cleaned up again while maintaining proper 'cost' links
+					RelicCofferKeyPurchase(231418),	-- Angerforge's Battle Axe
+					RelicCofferKeyPurchase(231480),	-- Anvilrage Dragoon's Trousers
+					RelicCofferKeyPurchase(231477),	-- Anvilrage Medic's Boots
+					RelicCofferKeyPurchase(231479),	-- Anvilrage Rogue's Belt of Knives
+					RelicCofferKeyPurchase(231488),	-- Anvilrage, Warden's Breastplate
+					RelicCofferKeyPurchase(231463),	-- Arbiter's Blade
+					RelicCofferKeyPurchase(231472),	-- Argelmach's Breaking Bar
+					RelicCofferKeyPurchase(231492),	-- Barman Shanker
+					RelicCofferKeyPurchase(231450),	-- Belt of the Eminent Mason
+					RelicCofferKeyPurchase(231447),	-- Bloodclot Band
+					RelicCofferKeyPurchase(231399),	-- Bloodfist
+					RelicCofferKeyPurchase(231493),	-- Bottle-Popper Ring
+					RelicCofferKeyPurchase(231457),	-- Bottled Magma
+					RelicCofferKeyPurchase(231486),	-- Burning Spirit Tender's Mitts
+					RelicCofferKeyPurchase(231424),	-- Burst of Knowledge
+					RelicCofferKeyPurchase(231415),	-- Cape of the Fire Salamander
+					RelicCofferKeyPurchase(231425),	-- Chief Architect's Monocle
+					RelicCofferKeyPurchase(231404),	-- Cinderhide Armsplints
+					RelicCofferKeyPurchase(231412),	-- Circle of Flame
+					RelicCofferKeyPurchase(231489),	-- Dark Warder's Pauldrons
+					RelicCofferKeyPurchase(231431),	-- Deathdealer Breastplate
+					RelicCofferKeyPurchase(231476),	-- Dope'rel's Calling Rune
+					RelicCofferKeyPurchase(231474),	-- Dope'rel's Finger Gloves
+					RelicCofferKeyPurchase(231482),	-- Dragoon's Volley Gun
+					RelicCofferKeyPurchase(231395),	-- Earthslag Shoulders
+					RelicCofferKeyPurchase(231440),	-- Ebonsteel Spaulders
+					RelicCofferKeyPurchase(231407),	-- Emberplate Armguards
+					RelicCofferKeyPurchase(231455),	-- Embershard Pendant
+					RelicCofferKeyPurchase(231437),	-- Emperor's Seal
+					RelicCofferKeyPurchase(231392),	-- Enthralled Sphere
+					RelicCofferKeyPurchase(231448),	-- Entrenching Boots
+					RelicCofferKeyPurchase(231451),	-- Ferrous Cord
+					RelicCofferKeyPurchase(231484),	-- Fireguard's Lava-Dipped Cleaver
+					RelicCofferKeyPurchase(231400),	-- Fists of Phalanx
+					RelicCofferKeyPurchase(231413),	-- Flame Wrath
+					RelicCofferKeyPurchase(231464),	-- Flame-Tempered Skinner
+					RelicCofferKeyPurchase(231468),	-- Flamekeeper's Fire Blanket
+					RelicCofferKeyPurchase(231478),	-- Flamekeeper's Handwraps
+					RelicCofferKeyPurchase(231483),	-- Flamelash's Fiery Spike
+					RelicCofferKeyPurchase(231467),	-- Flamelord's Emberstaff
+					RelicCofferKeyPurchase(231401),	-- Flamestrider Robes
+					RelicCofferKeyPurchase(231485),	-- Flamewalker Scale Spaulders
+					RelicCofferKeyPurchase(231406),	-- Flameweave Cuffs
+					RelicCofferKeyPurchase(231409),	-- Force of Magma
+					RelicCofferKeyPurchase(231414),	-- Force of Will
+					RelicCofferKeyPurchase(231444),	-- Foreman's Head Protector
+					RelicCofferKeyPurchase(231430),	-- Ghostshroud
+					RelicCofferKeyPurchase(231494),	-- Golem Carapace Opener
+					RelicCofferKeyPurchase(231443),	-- Golem Fitted Pauldrons
+					RelicCofferKeyPurchase(231471),	-- Golem Gearbox
+					RelicCofferKeyPurchase(231446),	-- Greaves of Withering Despair
+					RelicCofferKeyPurchase(231491),	-- Grebmar's Catch Pole
+					RelicCofferKeyPurchase(231465),	-- Grizzle's Skinne
+					RelicCofferKeyPurchase(231435),	-- Guiding Stave of Wisdom
+					RelicCofferKeyPurchase(231417),	-- Hand of Justice
+					RelicCofferKeyPurchase(231439),	-- Hands of the Exalted Herald
+					RelicCofferKeyPurchase(231434),	-- Haunting Specter Leggings
+					RelicCofferKeyPurchase(231456),	-- Heart of Roccor
+					RelicCofferKeyPurchase(231487),	-- Helm of the Molten Avatar
+					RelicCofferKeyPurchase(231393),	-- Houndmaster's Bow
+					RelicCofferKeyPurchase(231436),	-- Imperial Jewel
+					RelicCofferKeyPurchase(231427),	-- Impervious Giant
+					RelicCofferKeyPurchase(231458),	-- Insolent Dark Iron's Vest
+					RelicCofferKeyPurchase(231391),	-- Kentic Amice
+					RelicCofferKeyPurchase(231403),	-- Kindling Stave
+					RelicCofferKeyPurchase(231408),	-- Lavacrest Leggings
+					RelicCofferKeyPurchase(231388),	-- Lead Surveyor's Belt
+					RelicCofferKeyPurchase(231449),	-- Leggings of Frenzied Magic
+					RelicCofferKeyPurchase(231432),	-- Legplates of the Eternal Guardian
+					RelicCofferKeyPurchase(231419),	-- Lord General's Sword
+					RelicCofferKeyPurchase(231389),	-- Luminary Robe
+					RelicCofferKeyPurchase(231461),	-- Magma Giant's Crown
+					RelicCofferKeyPurchase(231454),	-- Magma-Shot Boomstick
+					RelicCofferKeyPurchase(231445),	-- Mantle of Lost Hope
+					RelicCofferKeyPurchase(231416),	-- Molten Fists
+					RelicCofferKeyPurchase(231462),	-- Molten Furnace
+					RelicCofferKeyPurchase(231398),	-- Molten Ironfoe
+					RelicCofferKeyPurchase(231396),	-- Naglering
+					RelicCofferKeyPurchase(231423),	-- Omnicast Boots
+					RelicCofferKeyPurchase(231405),	-- Pyremail Wristguards
+					RelicCofferKeyPurchase(231429),	-- Robes of the Royal Crown
+					RelicCofferKeyPurchase(231421),	-- Royal Decorated Armor
+					RelicCofferKeyPurchase(231397),	-- Rubicund Armguards
+					RelicCofferKeyPurchase(231410),	-- Rubidium Hammer
+					RelicCofferKeyPurchase(231475),	-- Sabaton's of Anger'rel
+					RelicCofferKeyPurchase(231481),	-- Sapper's Waistplate
+					RelicCofferKeyPurchase(231411),	-- Sash of the Burning Heart
+					RelicCofferKeyPurchase(231442),	-- Sash of the Grand Hunt
+					RelicCofferKeyPurchase(231402),	-- Searingscale Leggings
+					RelicCofferKeyPurchase(231420),	-- Second Wind
+					RelicCofferKeyPurchase(231426),	-- Senior Designer's Pantaloons
+					RelicCofferKeyPurchase(231453),	-- Shard Splinter
+					RelicCofferKeyPurchase(231470),	-- Spare Golem Frame
+					RelicCofferKeyPurchase(231469),	-- Spare Golem Pauldrons
+					RelicCofferKeyPurchase(231390),	-- Spritecaster Cape
+					RelicCofferKeyPurchase(231394),	-- Stoneshell Guard
+					RelicCofferKeyPurchase(231438),	-- Swiftwalker Boots
+					RelicCofferKeyPurchase(231433),	-- Thaurissan's Royal Scepter
+					RelicCofferKeyPurchase(231473),	-- The Fifth's Linked Treads
+					RelicCofferKeyPurchase(231428),	-- The Hammer of Grace
+					RelicCofferKeyPurchase(231422),	-- Warstrife Leggings
+					RelicCofferKeyPurchase(231441),	-- Wristguards of Renown
 					n(223881, {	-- Braggi Brazenbrass <Raidfinder Relic Coffer Key Exchanger>
 						["coord"] = { 63.0, 49.8, TANARIS },
-						["cost"] = {{ "i", 231510, 40 }},	-- Timewarped Relic Coffer Key
 						["sym"] = SYM_ALL_BRD_DROPS,
 					}),
 					n(233209, {	-- Kraegan Emberforge <Normal Relic Coffer Key Exchanger>
 						["coord"] = { 63.0, 49.8, TANARIS},
-						["cost"] = {{ "i", 232365, 40 }},	-- Timewarped Relic Coffer Key
 						["sym"] = SYM_ALL_BRD_DROPS,
 					}),
 					n(224322, {	-- Hilda Hellforge <Heroic Relic Coffer Key Exchanger>
 						["coord"] = { 63.0, 49.8, TANARIS},
-						["cost"] = {{ "i", 232366, 40 }},	-- Timewarped Relic Coffer Key
 						["sym"] = SYM_ALL_BRD_DROPS,
 					}),
 				}),
@@ -2551,6 +2639,9 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 				-- The Storm Peaks 226162
 				-- Icecrown 226161
 				-- Grizzly Hills 226160
+				-- Valley of the Four Winds 224532
+				-- Kun-Lai Summit 224531
+				-- Jade Forest 224062
 			}),
 			ach(40997),		-- The Gatecrashers (automated)
 			ach(40995),		-- The Originals (automated)
@@ -2689,10 +2780,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 			q(85195),	-- Chapter 3
 			q(85503),	-- Chapter 4
 			q(84924),	-- The Case of a Feathered Friend
-			q(83825),	-- The Case of a Good Book
 			q(84435),	-- The Case of an Old Soul
 			q(84933),	-- The Case of Great Aspirations
-			q(84882),	-- The Case of Misfortune
 			q(85477),	-- The Case of Missing Mementos
 			q(84469),	-- The Case of Pet Games
 			q(84912),	-- The Case of Staged Disaster
@@ -3125,87 +3214,99 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 					CAVERNS_OF_TIME,
 				},
 				["g"] = {
-					i(87771),	-- Reins of the Heavenly Onyx Cloud Serpent (MOUNT!)
-					i(227565),	-- Eternal Blossom Grips
-					i(227564),	-- Eternal Blossom Legguards
-					i(227556),	-- Firebird's Gloves
-					i(227557),	-- Firebird's Kilt
-					i(227575),	-- Gauntlets of the Lost Catacomb
-					i(227574),	-- Greaves of the Lost Catacomb
-					i(227573),	-- Gauntlets of Resounding Rings
-					i(227591),	-- Gloves of the Burning Scroll
-					i(227561),	-- Gloves of the Thousandfold Blades
-					i(227586),	-- Guardian Serpent Gloves
-					i(227587),	-- Guardian Serpent Leggings
-					i(227590),	-- Leggings of the Burning Scroll
-					i(227560),	-- Legguards of the Thousandfold Blades
-					i(227572),	-- Legplates of Resounding Rings
-					i(227624),	-- Malevolent Gladiator's Armbands of Prowess
-					i(227657),	-- Malevolent Gladiator's Armplates of Alacrity
-					i(227656),	-- Malevolent Gladiator's Armplates of Proficiency
-					i(227613),	-- Malevolent Gladiator's Armwraps of Accuracy
-					i(227612),	-- Malevolent Gladiator's Armwraps of Alacrity
-					i(227611),	-- Malevolent Gladiator's Belt of Cruelty
-					i(227614),	-- Malevolent Gladiator's Bindings of Prowess
-					i(227601),	-- Malevolent Gladiator's Boots of Alacrity
-					i(227600),	-- Malevolent Gladiator's Boots of Cruelty
-					i(227655),	-- Malevolent Gladiator's Bracers of Prowess
-					i(227641),	-- Malevolent Gladiator's Cape of Cruelty
-					i(227617),	-- Malevolent Gladiator's Chain Gauntlets
-					i(227619),	-- Malevolent Gladiator's Chain Leggings
-					i(227642),	-- Malevolent Gladiator's Cloak of Alacrity
-					i(227635),	-- Malevolent Gladiator's Cord of Accuracy
-					i(227634),	-- Malevolent Gladiator's Cord of Cruelty
-					i(227636),	-- Malevolent Gladiator's Cord of Meditation
-					i(227637),	-- Malevolent Gladiator's Cuffs of Accuracy
-					i(227654),	-- Malevolent Gladiator's Clasp of Cruelty
-					i(227639),	-- Malevolent Gladiator's Cuffs of Meditation
-					i(227638),	-- Malevolent Gladiator's Cuffs of Prowess
-					i(227640),	-- Malevolent Gladiator's Drape of Prowess
-					i(227647),	-- Malevolent Gladiator's Dreadplate Gauntlets
-					i(227650),	-- Malevolent Gladiator's Dreadplate Legguards
-					i(227629),	-- Malevolent Gladiator's Felweave Handguards
-					i(227632),	-- Malevolent Gladiator's Felweave Trousers
-					i(227616),	-- Malevolent Gladiator's Footguards of Alacrity
-					i(227602),	-- Malevolent Gladiator's Footguards of Alacrity
-					i(227652),	-- Malevolent Gladiator's Girdle of Accuracy
-					i(227653),	-- Malevolent Gladiator's Girdle of Prowess
-					i(227644),	-- Malevolent Gladiator's Greaves of Alacrity
-					i(227604),	-- Malevolent Gladiator's Ironskin Gloves
-					i(227607),	-- Malevolent Gladiator's Ironskin Legguards
-					i(227603),	-- Malevolent Gladiator's Leather Gloves
-					i(227606),	-- Malevolent Gladiator's Leather Legguards
-					i(227622),	-- Malevolent Gladiator's Links of Cruelty
-					i(227630),	-- Malevolent Gladiator's Mooncloth Gloves
-					i(227633),	-- Malevolent Gladiator's Mooncloth Leggings
-					i(227651),	-- Malevolent Gladiator's Plate Legguards
-					i(227646),	-- Malevolent Gladiator's Ornamented Gloves
-					i(227649),	-- Malevolent Gladiator's Ornamented Legplates
-					i(227648),	-- Malevolent Gladiator's Plate Gauntlets
-					i(227618),	-- Malevolent Gladiator's Ringmail Gauntlets
-					i(227620),	-- Malevolent Gladiator's Ringmail Leggings
-					i(227615),	-- Malevolent Gladiator's Sabatons of Cruelty
-					i(227628),	-- Malevolent Gladiator's Silk Handguards
-					i(227631),	-- Malevolent Gladiator's Silk Trousers
-					i(227626),	-- Malevolent Gladiator's Treads of Alacrity
-					i(227625),	-- Malevolent Gladiator's Treads of Cruelty
-					i(227627),	-- Malevolent Gladiator's Treads of Meditation
-					i(227609),	-- Malevolent Gladiator's Waistband of Cruelty
-					i(227621),	-- Malevolent Gladiator's Waistguard of Meditation
-					i(227645),	-- Malevolent Gladiator's Warboots of Alacrity
-					i(227643),	-- Malevolent Gladiator's Warboots of Cruelty
-					i(227610),	-- Malevolent Gladiator's Waistband of Accuracy
-					i(227623),	-- Malevolent Gladiator's Wristguards of Alacrity
-					i(227605),	-- Malevolent Gladiator's Wyrmhide Gloves
-					i(227608),	-- Malevolent Gladiator's Wyrmhide Legguards
-					i(227598),	-- Red Crane Grips
-					i(227599),	-- Red Crane Leggings
-					i(227588),	-- Sha-Skin Gloves
-					i(227589),	-- Sha-Skin Leggings
-					i(227577),	-- White Tiger Gauntlets
-					i(227576),	-- White Tiger Legplates
-					i(227559),	-- Yaungol Slayer's Gloves
-					i(227558),	-- Yaungol Slayer's Legguards
+					filter(MOUNTS, {
+						i(87771),	-- Reins of the Heavenly Onyx Cloud Serpent (MOUNT!)
+					}),
+					filter(CLOAKS, {
+						i(227641),	-- Malevolent Gladiator's Cape of Cruelty
+						i(227642),	-- Malevolent Gladiator's Cloak of Alacrity
+						i(227640),	-- Malevolent Gladiator's Drape of Prowess
+					}),
+					filter(CLOTH, {
+						i(227591),	-- Gloves of the Burning Scroll
+						i(227590),	-- Leggings of the Burning Scroll
+						i(227586),	-- Guardian Serpent Gloves
+						i(227587),	-- Guardian Serpent Leggings
+						i(227588),	-- Sha-Skin Gloves
+						i(227589),	-- Sha-Skin Leggings
+						i(227635),	-- Malevolent Gladiator's Cord of Accuracy
+						i(227634),	-- Malevolent Gladiator's Cord of Cruelty
+						i(227636),	-- Malevolent Gladiator's Cord of Meditation
+						i(227637),	-- Malevolent Gladiator's Cuffs of Accuracy
+						i(227639),	-- Malevolent Gladiator's Cuffs of Meditation
+						i(227638),	-- Malevolent Gladiator's Cuffs of Prowess
+						i(227629),	-- Malevolent Gladiator's Felweave Handguards
+						i(227632),	-- Malevolent Gladiator's Felweave Trousers
+						i(227630),	-- Malevolent Gladiator's Mooncloth Gloves
+						i(227633),	-- Malevolent Gladiator's Mooncloth Leggings
+						i(227628),	-- Malevolent Gladiator's Silk Handguards
+						i(227631),	-- Malevolent Gladiator's Silk Trousers
+						i(227626),	-- Malevolent Gladiator's Treads of Alacrity
+						i(227625),	-- Malevolent Gladiator's Treads of Cruelty
+						i(227627),	-- Malevolent Gladiator's Treads of Meditation
+					}),
+					filter(LEATHER, {
+						i(227565),	-- Eternal Blossom Grips
+						i(227564),	-- Eternal Blossom Legguards
+						i(227598),	-- Red Crane Grips
+						i(227599),	-- Red Crane Leggings
+						i(227561),	-- Gloves of the Thousandfold Blades
+						i(227560),	-- Legguards of the Thousandfold Blades
+						i(227613),	-- Malevolent Gladiator's Armwraps of Accuracy
+						i(227612),	-- Malevolent Gladiator's Armwraps of Alacrity
+						i(227611),	-- Malevolent Gladiator's Belt of Cruelty
+						i(227614),	-- Malevolent Gladiator's Bindings of Prowess
+						i(227601),	-- Malevolent Gladiator's Boots of Alacrity
+						i(227600),	-- Malevolent Gladiator's Boots of Cruelty
+						i(227602),	-- Malevolent Gladiator's Footguards of Alacrity
+						i(227604),	-- Malevolent Gladiator's Ironskin Gloves
+						i(227607),	-- Malevolent Gladiator's Ironskin Legguards
+						i(227603),	-- Malevolent Gladiator's Leather Gloves
+						i(227606),	-- Malevolent Gladiator's Leather Legguards
+						i(227609),	-- Malevolent Gladiator's Waistband of Cruelty
+						i(227610),	-- Malevolent Gladiator's Waistband of Accuracy
+						i(227605),	-- Malevolent Gladiator's Wyrmhide Gloves
+						i(227608),	-- Malevolent Gladiator's Wyrmhide Legguards
+					}),
+					filter(MAIL, {
+						i(227556),	-- Firebird's Gloves
+						i(227557),	-- Firebird's Kilt
+						i(227559),	-- Yaungol Slayer's Gloves
+						i(227558),	-- Yaungol Slayer's Legguards
+						i(227624),	-- Malevolent Gladiator's Armbands of Prowess
+						i(227617),	-- Malevolent Gladiator's Chain Gauntlets
+						i(227619),	-- Malevolent Gladiator's Chain Leggings
+						i(227616),	-- Malevolent Gladiator's Footguards of Alacrity
+						i(227622),	-- Malevolent Gladiator's Links of Cruelty
+						i(227618),	-- Malevolent Gladiator's Ringmail Gauntlets
+						i(227620),	-- Malevolent Gladiator's Ringmail Leggings
+						i(227615),	-- Malevolent Gladiator's Sabatons of Cruelty
+						i(227621),	-- Malevolent Gladiator's Waistguard of Meditation
+						i(227623),	-- Malevolent Gladiator's Wristguards of Alacrity
+					}),
+					filter(PLATE, {
+						i(227575),	-- Gauntlets of the Lost Catacomb
+						i(227574),	-- Greaves of the Lost Catacomb
+						i(227573),	-- Gauntlets of Resounding Rings
+						i(227572),	-- Legplates of Resounding Rings
+						i(227577),	-- White Tiger Gauntlets
+						i(227576),	-- White Tiger Legplates
+						i(227657),	-- Malevolent Gladiator's Armplates of Alacrity
+						i(227656),	-- Malevolent Gladiator's Armplates of Proficiency
+						i(227655),	-- Malevolent Gladiator's Bracers of Prowess
+						i(227654),	-- Malevolent Gladiator's Clasp of Cruelty
+						i(227647),	-- Malevolent Gladiator's Dreadplate Gauntlets
+						i(227650),	-- Malevolent Gladiator's Dreadplate Legguards
+						i(227652),	-- Malevolent Gladiator's Girdle of Accuracy
+						i(227653),	-- Malevolent Gladiator's Girdle of Prowess
+						i(227644),	-- Malevolent Gladiator's Greaves of Alacrity
+						i(227646),	-- Malevolent Gladiator's Ornamented Gloves
+						i(227649),	-- Malevolent Gladiator's Ornamented Legplates
+						i(227651),	-- Malevolent Gladiator's Plate Legguards
+						i(227648),	-- Malevolent Gladiator's Plate Gauntlets
+						i(227645),	-- Malevolent Gladiator's Warboots of Alacrity
+						i(227643),	-- Malevolent Gladiator's Warboots of Cruelty
+					}),
 				},
 			}),
 			n(227257, {	-- Archavon the Stone Watcher
@@ -3218,68 +3319,78 @@ root(ROOTS.Holidays, applyevent(EVENTS.WOW_ANNIVERSARY, n(WOW_ANNIVERSARY_ROOT, 
 					CAVERNS_OF_TIME,
 				},
 				["g"] = {
-					a(i(43959)),	-- Reins of the Grand Black War Mammoth (A) (MOUNT!)
-					h(i(44083)),	-- Reins of the Grand Black War Mammoth (H) (MOUNT!)
-					i(227213),	-- Hateful Gladiator's Chain Armor
-					i(227226),	-- Hateful Gladiator's Chain Gauntlets
-					i(227236),	-- Hateful Gladiator's Chain Leggings
-					i(227209),	-- Hateful Gladiator's Dreadplate Chestpiece
-					i(227223),	-- Hateful Gladiator's Dreadplate Gauntlets
-					i(227233),	-- Hateful Gladiator's Dreadplate Legguards
-					i(227231),	-- Hateful Gladiator's Felweave Handguards
-					i(227221),	-- Hateful Gladiator's Felweave Raiment
-					i(227241),	-- Hateful Gladiator's Felweave Trousers
-					i(227227),	-- Hateful Gladiator's Kodohide Gloves
-					i(227237),	-- Hateful Gladiator's Kodohide Legguards
-					i(227215),	-- Hateful Gladiator's Kodohide Robes
-					i(227228),	-- Hateful Gladiator's Leather Gloves
-					i(227238),	-- Hateful Gladiator's Leather Legguards
-					i(227214),	-- Hateful Gladiator's Leather Tunic
-					i(227229),	-- Hateful Gladiator's Mooncloth Gloves
-					i(227239),	-- Hateful Gladiator's Mooncloth Leggings
-					i(227218),	-- Hateful Gladiator's Mooncloth Robe
-					i(227211),	-- Hateful Gladiator's Ornamented Chestguard
-					i(227224),	-- Hateful Gladiator's Ornamented Gloves
-					i(227234),	-- Hateful Gladiator's Ornamented Legplates
-					i(227210),	-- Hateful Gladiator's Plate Chestpiece
-					i(227222),	-- Hateful Gladiator's Plate Gauntlets
-					i(227232),	-- Hateful Gladiator's Plate Legguards
-					i(227212),	-- Hateful Gladiator's Ringmail Armor
-					i(227225),	-- Hateful Gladiator's Ringmail Gauntlets
-					i(227235),	-- Hateful Gladiator's Ringmail Leggings
-					i(227230),	-- Hateful Gladiator's Silk Handguards
-					i(227220),	-- Hateful Gladiator's Silk Raiment
-					i(227240),	-- Hateful Gladiator's Silk Trousers
-					i(227266),	-- Heroes' Bonescythe Breastplate
-					i(227246),	-- Heroes' Bonescythe Gauntlets
-					i(227256),	-- Heroes' Bonescythe Legplates
-					i(227247),	-- Heroes' Cryptstalker Handguards
-					i(227257),	-- Heroes' Cryptstalker Legguards
-					i(227267),	-- Heroes' Cryptstalker Tunic
-					i(227269),	-- Heroes' Dreadnaught Battleplate
-					i(227249),	-- Heroes' Dreadnaught Gauntlets
-					i(227259),	-- Heroes' Dreadnaught Legplates
-					i(227245),	-- Heroes' Dreamwalker Handgrips
-					i(227255),	-- Heroes' Dreamwalker Legguards
-					i(227265),	-- Heroes' Dreamwalker Raiments
-					i(227248),	-- Heroes' Earthshatter Handguards
-					i(227258),	-- Heroes' Earthshatter Legguards
-					i(227268),	-- Heroes' Earthshatter Tunic
-					i(227242),	-- Heroes' Frostfire Gloves
-					i(227252),	-- Heroes' Frostfire Leggings
-					i(227262),	-- Heroes' Frostfire Robe
-					i(227244),	-- Heroes' Gloves of Faith
-					i(227254),	-- Heroes' Leggings of Faith
-					i(227243),	-- Heroes' Plagueheart Gloves
-					i(227253),	-- Heroes' Plagueheart Leggings
-					i(227263),	-- Heroes' Plagueheart Robe
-					i(227251),	-- Heroes' Redemption Gloves
-					i(227261),	-- Heroes' Redemption Greaves
-					i(227271),	-- Heroes' Redemption Tunic
-					i(227264),	-- Heroes' Robe of Faith
-					i(227270),	-- Heroes' Scourgeborne Battleplate
-					i(227250),	-- Heroes' Scourgeborne Gauntlets
-					i(227260),	-- Heroes' Scourgeborne Legplates
+					filter(MOUNTS, {
+						a(i(43959)),	-- Reins of the Grand Black War Mammoth (A) (MOUNT!)
+						h(i(44083)),	-- Reins of the Grand Black War Mammoth (H) (MOUNT!)
+					}),
+					filter(CLOTH, {
+						i(227244),	-- Heroes' Gloves of Faith
+						i(227254),	-- Heroes' Leggings of Faith
+						i(227264),	-- Heroes' Robe of Faith
+						i(227242),	-- Heroes' Frostfire Gloves
+						i(227252),	-- Heroes' Frostfire Leggings
+						i(227262),	-- Heroes' Frostfire Robe
+						i(227243),	-- Heroes' Plagueheart Gloves
+						i(227253),	-- Heroes' Plagueheart Leggings
+						i(227263),	-- Heroes' Plagueheart Robe
+						i(227231),	-- Hateful Gladiator's Felweave Handguards
+						i(227221),	-- Hateful Gladiator's Felweave Raiment
+						i(227241),	-- Hateful Gladiator's Felweave Trousers
+						i(227229),	-- Hateful Gladiator's Mooncloth Gloves
+						i(227239),	-- Hateful Gladiator's Mooncloth Leggings
+						i(227218),	-- Hateful Gladiator's Mooncloth Robe
+						i(227230),	-- Hateful Gladiator's Silk Handguards
+						i(227220),	-- Hateful Gladiator's Silk Raiment
+						i(227240),	-- Hateful Gladiator's Silk Trousers
+					}),
+					filter(LEATHER, {
+						i(227266),	-- Heroes' Bonescythe Breastplate
+						i(227246),	-- Heroes' Bonescythe Gauntlets
+						i(227256),	-- Heroes' Bonescythe Legplates
+						i(227245),	-- Heroes' Dreamwalker Handgrips
+						i(227255),	-- Heroes' Dreamwalker Legguards
+						i(227265),	-- Heroes' Dreamwalker Raiments
+						i(227227),	-- Hateful Gladiator's Kodohide Gloves
+						i(227237),	-- Hateful Gladiator's Kodohide Legguards
+						i(227215),	-- Hateful Gladiator's Kodohide Robes
+						i(227228),	-- Hateful Gladiator's Leather Gloves
+						i(227238),	-- Hateful Gladiator's Leather Legguards
+						i(227214),	-- Hateful Gladiator's Leather Tunic
+					}),
+					filter(MAIL, {
+						i(227247),	-- Heroes' Cryptstalker Handguards
+						i(227257),	-- Heroes' Cryptstalker Legguards
+						i(227267),	-- Heroes' Cryptstalker Tunic
+						i(227248),	-- Heroes' Earthshatter Handguards
+						i(227258),	-- Heroes' Earthshatter Legguards
+						i(227268),	-- Heroes' Earthshatter Tunic
+						i(227213),	-- Hateful Gladiator's Chain Armor
+						i(227226),	-- Hateful Gladiator's Chain Gauntlets
+						i(227236),	-- Hateful Gladiator's Chain Leggings
+						i(227212),	-- Hateful Gladiator's Ringmail Armor
+						i(227225),	-- Hateful Gladiator's Ringmail Gauntlets
+						i(227235),	-- Hateful Gladiator's Ringmail Leggings
+					}),
+					filter(PLATE, {
+						i(227269),	-- Heroes' Dreadnaught Battleplate
+						i(227249),	-- Heroes' Dreadnaught Gauntlets
+						i(227259),	-- Heroes' Dreadnaught Legplates
+						i(227251),	-- Heroes' Redemption Gloves
+						i(227261),	-- Heroes' Redemption Greaves
+						i(227271),	-- Heroes' Redemption Tunic
+						i(227270),	-- Heroes' Scourgeborne Battleplate
+						i(227250),	-- Heroes' Scourgeborne Gauntlets
+						i(227260),	-- Heroes' Scourgeborne Legplates
+						i(227209),	-- Hateful Gladiator's Dreadplate Chestpiece
+						i(227223),	-- Hateful Gladiator's Dreadplate Gauntlets
+						i(227233),	-- Hateful Gladiator's Dreadplate Legguards
+						i(227211),	-- Hateful Gladiator's Ornamented Chestguard
+						i(227224),	-- Hateful Gladiator's Ornamented Gloves
+						i(227234),	-- Hateful Gladiator's Ornamented Legplates
+						i(227210),	-- Hateful Gladiator's Plate Chestpiece
+						i(227222),	-- Hateful Gladiator's Plate Gauntlets
+						i(227232),	-- Hateful Gladiator's Plate Legguards
+					}),
 				},
 			}),
 		}),
