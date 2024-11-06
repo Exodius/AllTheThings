@@ -381,49 +381,48 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 					121912,	-- Ysondre
 				},
 				["g"] = {
-					i(226241),	-- Shredded Green Hills of Stranglethorn
+					i(226241),	-- Shredded Green Hills of Stranglethorn (QI!)
 					o(456041, {	-- Folded Paper
 						["description"] = "Next to the latrine behind the Fashion Show platform.",
 						["coord"] = { 63.6, 47.8, TANARIS },
 						["g"] = {
-							i(226236),	-- Green Hills of Stranglethorn - Page 21
+							i(226236),	-- Green Hills of Stranglethorn - Page 21 (QI!)
 						},
 					}),
-					i(226232, {	-- Green Hills of Stranglethorn - Page 6
+					i(226232, {	-- Green Hills of Stranglethorn - Page 6 (QI!)
 						["description"] = "Drops from any of the Anniversary World Bosses.",
 					}),
-					i(226233, {	-- Green Hills of Stranglethorn - Page 11
+					i(226233, {	-- Green Hills of Stranglethorn - Page 11 (QI!)
 						["description"] = "Drops from any of the Anniversary World Bosses.",
 					}),
 					o(456036, {	-- Loose Paper
 						["description"] = "In a Dog Bowl, in front of the Doghouse.",
 						["coord"] = { 61.9, 49.8, TANARIS },
 						["g"] = {
-							i(226234),	-- Green Hills of Stranglethorn - Page 16
+							i(226234),	-- Green Hills of Stranglethorn - Page 16 (QI!)
 						},
 					}),
 					n(227795, {	-- Sand Devil
 					["description"] = "In the Timeless Tunnel.",
 						["maps"] = { 74 },
 						["g"] = {
-							i(226237),	-- Green Hills of Stranglethorn - Page 25
-							i(226238),	-- Green Hills of Stranglethorn - Page 27
+							i(226237),	-- Green Hills of Stranglethorn - Page 25 (QI!)
+							i(226238),	-- Green Hills of Stranglethorn - Page 27 (QI!)
 						},
 					}),
 					o(456038, {	-- Wet Paper
 						["description"] = "Behind the Story Time Stage, next to the Hearthstone Table.",
 						["coord"] = { 64.5, 51.8, TANARIS },
 						["g"] = {
-							i(226235),	-- Green Hills of Stranglethorn - Page 18
+							i(226235),	-- Green Hills of Stranglethorn - Page 18 (QI!)
 						},
 					}),
 					n(227816, {	-- Cravitz Lorent <Shady Book Dealer>
 						["description"] = "Below the Fashion Frenzy platform.",
 						["coord"] = { 63.6, 48.8, TANARIS },
 						["g"] = {
-							i(226242, {	-- Green Hills of Stranglethorn
+							i(226242, {	-- Green Hills of Stranglethorn (QI!)
 								["description"] = "Ultimately, if you could not be bothered to search for the scattered pages,\nyou can buy this item from a vendor... |CFFFF0000Cheater...|r",
-								["cost"] = 1000000,	-- 100g
 							}),
 						},
 					}),
@@ -522,6 +521,8 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 				}),
 			}),
 			header(HEADERS.Quest, 83931, {
+				i(226362),	-- Torn Note (Black Market)
+				i(226364),	-- Torn Note (Fiona Caravan)
 				o(456039, {	-- Crumpled Letter
 					["description"] = "Next to the boxes behind Leeroy's tent.",
 					["sourceQuests"] = { 83825 },	-- Restoring A Great Tale
@@ -540,30 +541,14 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 					},
 					["questID"] = 83833,
 				}),
-				o(456037, {	-- Scrap of Paper
-					["description"] = "Behind the boxes in the Black Market under the Fashion Frenzy platform.",
-					["sourceQuests"] = { 83825 },	-- Restoring A Great Tale
-					["coord"] = { 63.4, 49.5, TANARIS },
-					["g"] = {
-						i(226362),	-- Torn Note
-					},
-				}),
-				o(456040, {	-- Scrap of Paper
-					["description"] = "By Fiona's Caravan, behind Fiona.",
-					["sourceQuests"] = { 83825 },	-- Restoring A Great Tale
-					["coord"] = { 63.3, 50.9, TANARIS },
-					["g"] = {
-						i(226364),	-- Torn Note
-					},
-				}),
 				o(456061, {	-- Battered Celebration Crate
 					["coord"] = { 29.4, 6.4, HOWLING_FJORD },
 					["g"] = {
-						i(226375),	-- Battered Celebration Crate
+						i(226375),	-- Battered Celebration Crate (QS!)
 					},
 				}),
 				q(83931, {	-- Battered Celebration Crate
-					["provider"] = { "i", 226375 },
+					["provider"] = { "i", 226375 },	-- Battered Celebration Crate
 				}),
 			}),
 		}),
@@ -573,6 +558,6 @@ root(ROOTS.Secrets, n(GUEST_RELATIONS, bubbleDownSelf({ ["timeline"] = { ADDED_1
 root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeline"] = { ADDED_11_0_5 } }, {
 	n(GUEST_RELATIONS, {
 		q(84617, name(HEADERS.Achievement, 40873)),	-- Accepting Harder Puzzles from Alyx. This unlocks notes on the bulletin board next to Alyx.
-		q(83824, name(HEADERS.Item, 226242)),	-- Triggered when restoring the 'Green Hills of Stranglethorn' by gathering all the missing pages
+		q(83824, name(HEADERS.Item, 226242)),	-- Triggered when restoring the 'Green Hills of Stranglethorn' by gathering all the missing pages.
 	}),
 })));
